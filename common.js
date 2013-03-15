@@ -6,5 +6,5 @@ if (plg) {
 	plg.setAttribute("height", 0);
 	document.body.appendChild(plg);
 	
-	alert(plg.Get('id'));
+	alert('id is: ' + plg.Get('id'));
 }
