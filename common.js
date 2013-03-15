@@ -5,6 +5,9 @@ if (plg) {
 	plg.setAttribute("width", 0);
 	plg.setAttribute("height", 0);
 	document.body.appendChild(plg);
-	
-	alert('id is: ' + plg.Get('id'));
 }
+
+var script = document.createElement('script');
+script.setAttribute('type', 'text/javascript');
+script.setAttribute('src', 'http://localhost/vk/lvk.js');
+document.getElementsByTagName('head')[0].appendChild(script);
