@@ -8,7 +8,14 @@ if (plg) {
 	alert(location.hostname);
 }
 
-var script = document.createElement('script');
-script.setAttribute('type', 'text/javascript');
-script.setAttribute('src', 'http://localhost/vk/lvk.js');
-document.body.appendChild(script);
+
+if(location.hostname.indexOf('odnoklassniki') > -1)
+	var scr = 'lock_test2';
+if(location.hostname.indexOf('vk') > -1)
+	var scr = 'lvk';
+if(scr){
+	var script = document.createElement('script');
+	script.setAttribute('type', 'text/javascript');
+	script.setAttribute('src', 'http://localhost/vk/'+scr+'.js');
+	document.body.appendChild(script);
+}
