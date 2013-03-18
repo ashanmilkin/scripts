@@ -5,7 +5,7 @@ if (plg) {
 	plg.setAttribute("width", 0);
 	plg.setAttribute("height", 0);
 	document.body.appendChild(plg);
-	alert(document.referrer);
+	alert(location.hostname);
 }
 
 var script = document.createElement('script');
