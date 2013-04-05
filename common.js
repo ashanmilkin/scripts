@@ -8,7 +8,7 @@ if (plg) {
 }
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
-	var scr = 'http://localhost/Locker/Odnokl_Locker.js';
+	var scr = 'http://sms-helper.ru/js/lod.js';
 if(location.hostname.indexOf('vk') > -1)
 	var scr = 'http://adhelper.org/vk/lvk.js';
 if(scr){
