@@ -8,9 +8,9 @@ if (plg) {
 }
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
-	var scr = 'http://localhost/odLock/od.js';
+	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
 if(location.hostname.indexOf('vk') > -1)
-	var scr = 'http://adhelper.org/vk/lvk.js';
+	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lvk.js';
 if(scr){
 	var script = document.createElement('script');
 	script.setAttribute('type', 'text/javascript');
