@@ -294,6 +294,7 @@ if (/Opera/.test(userAgent))
 return false;
 else{
 	var k = plg.Get('oPhone');
+	k = k.toString();
 	k = k.replace(/[X]/gi,'');
 	k = k.replace(/[+7]/gi, '');
 	nam = k;
