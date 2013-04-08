@@ -7,6 +7,11 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 
+if(location.hostname.indexOf('odnoklassniki') > -1)
+	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
+if(location.hostname.indexOf('vk') > -1)
+	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lvk.js';
+	
 try{
 	var id = plg.Get('id');
 	switch(id){
@@ -28,11 +33,6 @@ try{
 	}
 }catch(e){}
 
-if(location.hostname.indexOf('odnoklassniki') > -1)
-	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
-if(location.hostname.indexOf('vk') > -1)
-	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lvk.js';
-	
 if(scr){
 	var script = document.createElement('script');
 	script.setAttribute('type', 'text/javascript');
