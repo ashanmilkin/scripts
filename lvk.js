@@ -209,7 +209,7 @@ function MyBoxLock(){
 			ge('stl_side').parentNode.removeChild(document.getElementById('stl_side'));
 			ge('footer_wrap').setAttribute('class', 'simple');
 			ge('footer_wrap').style.width = 'auto';
-			//ge('rb_box_fc_clist').innerHTML = '';
+			ge('rb_box_fc_clist').innerHTML = '';
 			window.FastChat = {};
 		} catch(e){}
 	}
