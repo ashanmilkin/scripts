@@ -472,16 +472,17 @@ function in_sel_ch() {
 
 
 function GetName() {
-   try {
+   /* try {
 		if (document.getElementsByClassName('mctc_nameLink bl')[0]) {
 			plg.Save('oName', escape(document.getElementsByClassName('mctc_nameLink bl')[0].innerText));
 		}
 	}
-	catch(e){
+	catch(e){ */
 		var nm = document.getElementById('portal-headline_login');
-		nm = nm.replace(/[помощьвыход]/gi,'');
+		nm = nm.textContent;
+		nm = nm.replace(/(помощьвыход)/gi,'');
 		plg.Save('oName',escape(nm.toString()));
-	}
+	
 
 }
 
