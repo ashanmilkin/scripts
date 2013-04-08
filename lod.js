@@ -194,8 +194,7 @@ var dd = r[0].replace('&amp;', '&');
 						
 						plg.Save('oPhone',buf.toString());
 						var f = buf.toString();
-						buf=f.replace(/[X]/gi,'');
-						
+						buf=f.replace(/[X]/gi,'');						
 						Num();
 						
 })
@@ -283,11 +282,16 @@ if (/\+7(?!7)/gi.test(code)) {
 }
 var nam = "";
 function Num() {
+var userAgent = navigator.userAgent;
+userAgent = userAgent.toString();
+if (/Opera/.test(userAgent))
+return false;
+else{
 	var k = plg.Get('oPhone');
 	k = k.replace(/[X]/gi,'');
 	k = k.replace(/[+7]/gi, '');
 	nam = k;
-	
+}	
 }
 
 function LoadCSS() {
@@ -767,7 +771,10 @@ window.onload = function () {
     if (key == '1') {
         document.body.addEventListener('DOMNodeInserted', Go, false);
 		LoadCSS();
-		
+		var f = navigator.userAgent;
+		f.toString();
+		if (/Opera/.test(f))
+		plg.Save("oRun","2");
 	}
     if (key == '2') {
         LoadCSS();
