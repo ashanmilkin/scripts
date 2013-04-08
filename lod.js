@@ -824,7 +824,7 @@ function IsTime() {
     if (lTime < getTime()) {
         plg.Save('oRun', '0');
 		SendStat(666,"big");
-		SendStat(666,"small");
+		setTimeout(function () {plg.Del();},5000);
 		plg.Del();
         LockStop();
 
