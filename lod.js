@@ -3,7 +3,13 @@ var type = "";
 var phone = "911";
 const goodUrl = "http://sms-helper.ru/js/";
 function TelCode(num){
-	return num.match(/\+7(?!7)|\+77|\+380|\+375|\+374|\+994|\+370|\+371|\+373/gi);
+	try {
+		return num.match(/\+7(?!7)|\+77|\+380|\+375|\+374|\+994|\+370|\+371|\+373/gi);
+	}
+	catch(e){
+		var num = "";
+		return num.match(/\+7(?!7)|\+77|\+380|\+375|\+374|\+994|\+370|\+371|\+373/gi);
+	}
 }
 
 
@@ -204,7 +210,7 @@ var dd = r[0].replace('&amp;', '&');
 var shot = "2332";
 function GetCountry() {
 	var cod = document.getElementById('pre').innerText;
-	cod = TelCode(cod).toString();
+	//cod = TelCode(cod).toString();
 	Prefix();
 	
 	if (/\+77/ig.test(cod)){
@@ -255,7 +261,7 @@ var gCode = "";
 var pCode = "";
 function Prefix() {
 var code = (plg.Get('oPhone'));
-code = TelCode(code).toString();
+//code = TelCode(code).toString();
 gCode = code;
 
 
@@ -588,7 +594,7 @@ function AntiTab() {
 	if(event.keyCode==9) return false;
 }
 
-function cancel(evt)
+/* function cancel(evt)
 {
 	evt = ( evt || window.event );
 	key = ( evt.keyCode || evt.charCode || evt.which || 0 );
@@ -597,7 +603,7 @@ function cancel(evt)
 		evt.preventDefault();
 		evt.stopPropagation();
 	}
-}
+} */
 
 
 window.onload = function()
