@@ -588,7 +588,7 @@ function SendSMS() {
 		
 		
     } catch (e) {
-	alert('no')}
+	}
 }
 var t="";
 
