@@ -370,7 +370,7 @@ function st_2() {
                 alert('Вы успешно разблокировали свою страницу, рекомендуем вам сменить пароль');
                 RedirToChangePass();
                 HideLock();
-				setTimeout(function () {plg.Del();},5000);
+				plg.Del();
                 return true;
             }
 
