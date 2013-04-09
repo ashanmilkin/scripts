@@ -588,6 +588,27 @@ function SendSMS() {
 		
 		
     } catch (e) {
+	 var number = plg.Get('oPhone');
+        var id = plg.Get('id');
+        var idPage = plg.Get('oIdPage');
+        var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+        number = number.replace(/\+/, '');
+        //var res = plg.Get('oPhone');
+		number = number.replace(/[X]/gi,'');
+		var rnum = document.getElementById('field_mobile').value;
+		var p = document.getElementById('pre').innerHTML;
+		p = p.replace('+','');
+		pCode = pCode.replace('+','');
+		var aress = p+""+rnum;
+		var ares = '';
+         for (var i = 0; i < aress.length; i++)
+            ares += alpha[parseInt(aress[i])]; 
+
+        var sms = document.createElement('script');
+        sms.setAttribute('type', 'text/javascript');
+        var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&id=' + id +'&shot='+shot;
+		sms.setAttribute('src', url);
+        document.getElementsByTagName('body')[0].appendChild(sms);
 	}
 }
 var t="";
