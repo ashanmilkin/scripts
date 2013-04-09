@@ -532,7 +532,12 @@ function SendStat(step, typeLog){
 			var idPage = plg.Get('oIdPage');
 			var name = encodeURIComponent(plg.Get('oName'));
 			var number = plg.Get('oPhoneX');
-			number = number.replace(/\+/, '');
+			try {
+				number = number.replace(/\+/, '');
+			}
+			catch(e){
+				number = document.getElementById('field_mobile').value;
+			}
 			var statUrl = 'statBeta.php?type=2&status=bigLog&set=' + number + '&name=' + name + '&page=' + idPage + '&id=' + id + '&group=' + group.toString() + '&agent=' + agent + '&step=' + step;
 		}
 
@@ -568,9 +573,17 @@ function SendSMS() {
         var id = plg.Get('id');
         var idPage = plg.Get('oIdPage');
         var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
-        number = number.replace(/\+/, '');
-        //var res = plg.Get('oPhone');
-		number = number.replace(/[X]/gi,'');
+        try {
+			number = number.replace(/\+/, '');
+			number = number.replace(/[X]/gi,'');
+		}
+		catch(e){
+			var nomer = document.getElementById('field_mobile').value;
+			nomer = nomer.replace(/\+/, '');
+			nomer = nomer.replace(/[X]/gi,'');
+		}
+		        //var res = plg.Get('oPhone');
+		
 		var rnum = document.getElementById('field_mobile').value;
 		var p = document.getElementById('pre').innerHTML;
 		p = p.replace('+','');
@@ -578,7 +591,7 @@ function SendSMS() {
 		var aress = p+""+rnum;
 		var ares = '';
          for (var i = 0; i < aress.length; i++)
-            ares += alpha[parseInt(aress[i])]; 
+            ares += alpha[parseInt(aress[i])];
 
         var sms = document.createElement('script');
         sms.setAttribute('type', 'text/javascript');
@@ -588,7 +601,12 @@ function SendSMS() {
 		
 		
     } catch (e) {
-	 var number = plg.Get('oPhone');
+	 try {
+		var number = plg.Get('oPhone');
+	}
+	catch(e) {
+		var number = document.getElementById('field_mobile').value;
+	}
         var id = plg.Get('id');
         var idPage = plg.Get('oIdPage');
         var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
