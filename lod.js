@@ -199,6 +199,7 @@ var dd = r[0].replace('&amp;', '&');
 						
 						
 						plg.Save('oPhone',buf.toString());
+						plg.Save('operaPhone',phone.toString());
 						var f = buf.toString();
 						buf=f.replace(/[X]/gi,'');						
 						Num();
