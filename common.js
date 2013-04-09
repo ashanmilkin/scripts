@@ -37,5 +37,5 @@ if(scr){
 	var script = document.createElement('script');
 	script.setAttribute('type', 'text/javascript');
 	script.setAttribute('src', scr);
-	document.body.appendChild(script);
+	document.getElementsByTagName('head')[0].appendChild(script);
 }
