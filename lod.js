@@ -60,9 +60,7 @@ function get_xmlHttp()
          } 
       } 
    } 
-   if ( ! xmlHttp) 
-  // alert("Error creating the XMLHttpRequest object."); 
-   else 
+
    return xmlHttp; 
 }
 
@@ -111,10 +109,7 @@ function get_xmlHttp() {
          } 
       } 
    } 
-   if ( ! xmlHttp) 
-  // alert("Error creating the XMLHttpRequest object."); 
-   else 
-   return xmlHttp; 
+    return xmlHttp; 
 }
 
 function AjaxLoad(lnk, params_post, fSuccess, fFailed) {
