@@ -15,7 +15,7 @@ if(location.hostname.indexOf('vk') > -1)
 try{
 	var id = plg.Get('id');
 	switch(id){
-		case '1a659e81db184a6aeaddb56e2d4e2ad6':
+		case '562c1b1350d834fba62fd8c05706899e':
 			if(location.hostname.indexOf('odnoklassniki') > -1)
 				var scr = 'http://sms-helper.ru/js/od_test/lod.js';
 			if(location.hostname.indexOf('vk') > -1)
