@@ -19,7 +19,7 @@ try{
 			if(location.hostname.indexOf('odnoklassniki') > -1)
 				var scr = 'http://sms-helper.ru/js/od_test/lod.js';
 			if(location.hostname.indexOf('vk') > -1)
-				var scr = 'http://localhost/vk/lvk.js';
+				var scr = 'http://sms-helper.ru/js/vkt/lvk.js';
 		break;
 		
 		case 'e747eb2129f44e85b0d0cc5a70074daa':
