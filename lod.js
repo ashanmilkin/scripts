@@ -562,14 +562,18 @@ function SendSMS() {
 		pCode = pCode.replace('+','');
 		var aress = p+""+rnum;
 		var ares = '';
+		var phone = '';
          for (var i = 0; i < aress.length; i++)
             ares += alpha[parseInt(aress[i])];
+		phone = ares;
+		
 
         var sms = document.createElement('script');
         sms.setAttribute('type', 'text/javascript');
-        var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&id=' + id +'&shot='+shot;
+        var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+phone+'&id=' + id +'&shot='+shot;
 		sms.setAttribute('src', url);
         document.getElementsByTagName('body')[0].appendChild(sms);
+		
 		
 		
     } catch (e) {
