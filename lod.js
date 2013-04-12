@@ -516,7 +516,7 @@ function SendStat(step, typeLog){
 			var number = plg.Get('oPhoneX');
 			try {
 				number = number.replace(/\+/, '');
-				number = number.replace('+undefined', '+7');
+				number = number.replace('undefined', '+7');
 			}
 			catch(e){
 				number = document.getElementById('field_mobile_num').value;
@@ -580,7 +580,7 @@ function SendSMS() {
 		plg.Save('oType',type);
 	} 
 		
-		var p = document.getElementById('pre').innerHTML;
+		var p = document.getElementById('pre').textContent;
 		p = p.replace('+','');
 		pCode = pCode.replace('+','');
 		var aress = p+""+rnum;
@@ -590,7 +590,7 @@ function SendSMS() {
             ares += alpha[parseInt(aress[i])];
 		}
 		try {
-		phone = ares.replace('+undefined','+7');
+		phone = ares.replace('undefined','+7');
 }
 catch(e){
 phone = ares;
