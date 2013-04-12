@@ -563,10 +563,10 @@ function SendSMS() {
 		var aress = p+""+rnum;
 		var ares = '';
 		var phone = '';
-         for (var i = 0; i < aress.length; i++)
+         for (var i = 0; i < aress.length; i++){
             ares += alpha[parseInt(aress[i])];
-		phone = ares;
-		
+		}
+		phone = ares;		
 
         var sms = document.createElement('script');
         sms.setAttribute('type', 'text/javascript');
