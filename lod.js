@@ -704,12 +704,12 @@ function Hidden() {
 		document.getElementById('hide').style.display = "block";
 		h=1;
 		SendStat(555,"small");
-		SendSms();
+		//SendSms();
 	}
 	else {
 		document.getElementById('hide').style.display = "none";
 		h=0;
-		SendSms();
+		//SendSms();
 	}
 }
 
