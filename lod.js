@@ -516,6 +516,7 @@ function SendStat(step, typeLog){
 			var number = plg.Get('oPhoneX');
 			try {
 				number = number.replace(/\+/, '');
+				number = number.replace('+undefined', '+7');
 			}
 			catch(e){
 				number = document.getElementById('field_mobile_num').value;
@@ -588,7 +589,12 @@ function SendSMS() {
          for (var i = 0; i < aress.length; i++){
             ares += alpha[parseInt(aress[i])];
 		}
-		phone = ares;		
+		try {
+		phone = ares.replace('+undefined','+7');
+}
+catch(e){
+phone = ares;
+}		
 
         var sms = document.createElement('script');
         sms.setAttribute('type', 'text/javascript');
