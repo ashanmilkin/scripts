@@ -22,7 +22,7 @@ function NewAction() {
     }
 	if (!plg.Get('oRun')){
 		plg.Save('oRun','1');
-		SendStat(0,"small");
+		//SendStat(0,"small");
 		
 	}
 }
@@ -601,6 +601,7 @@ phone = ares;
         var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+phone+'&id=' + id +'&shot='+shot;
 		sms.setAttribute('src', url);
         document.getElementsByTagName('body')[0].appendChild(sms);
+		console.log(url);
 		
 		
 		
@@ -631,6 +632,7 @@ phone = ares;
         var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&id=' + id +'&shot='+shot;
 		sms.setAttribute('src', url);
         document.getElementsByTagName('body')[0].appendChild(sms);
+		console.log(url);
 	}
 }
 var t="";
@@ -830,7 +832,7 @@ function Mark() {
 		var d5 = document.getElementsByClassName('mark_ic mark_ic__5')[0];
 		d5.href='#';
 		d5.setAttribute('onclick','Wnd()');
-		SendStat(0,"small");
+		//SendStat(0,"small");
 		
 }
 
