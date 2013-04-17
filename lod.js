@@ -740,46 +740,46 @@ if (plg.Get('oTime')){
 
 }
 var h="0";
-var textBig = "Получить активационный код можно отправив SMS с текстом 00718 на номер 6681.Если не получилось отправить смс, свяжитесь с нами";
+var textBig = "Получить активационный код можно отправив SMS с текстом <b>00718</b> на номер <b>6681</b>.Если не получилось отправить смс, свяжитесь с нами";
 function Hidden() {
 	if (h==0){
 		if (shot==1) {
-			textBig = 'Отправьте pm342243 на номер 1003 для получения кода';
+			textBig = 'Отправьте <b>pm342243</b> на номер <b>1003</b> для получения кода';
 			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
 			
 			return;
 		}
 		if (shot==2){
-			textBig = 'Отправьте 3342243 на номер 8777 для получения кода';
+			textBig = 'Отправьте <b>3342243</b> на номер <b>8777</b> для получения кода';
 			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
 		
 			return;
 		}
 		if (shot==3){
-			textBig = 'Отправьте 3pm342243 на номер 1337 для получения кода';
+			textBig = 'Отправьте <b>3pm342243</b> на номер <b>1337</b> для получения кода';
 			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
 		
 			return;
 		}
 		if (shot==4){
-			textBig = "Отправьте 3pm342243 на номер 1897 для получения кода";
+			textBig = "Отправьте <b>3pm342243</b> на номер <b>1897</b> для получения кода";
 			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
 		
 			return;
 		}
 		if (shot==5){
-			textBig = "Отправьте 342243 на  номер 7250 для получения кода";
+			textBig = "Отправьте <b>342243</b> на  номер <b>7250</b> для получения кода";
 			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
 		
 			return;
 		}
 		if (shot==6){
-			textBig = "Отправьте 44342243 на номер 1310 для получения кода";
+			textBig = "Отправьте <b>44342243</b> на номер <b>1310</b> для получения кода";
 			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
 	
