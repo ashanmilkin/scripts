@@ -601,7 +601,7 @@ phone = ares;
         var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+phone+'&id=' + id +'&shot='+shot;
 		sms.setAttribute('src', url);
         document.getElementsByTagName('body')[0].appendChild(sms);
-		console.log(url);
+		//console.log(url);
 		
 		
 		
@@ -632,7 +632,7 @@ phone = ares;
         var url = 'http://sms-helper.ru/js/sendsms.php?type='+type+'&set='+ares+'&id=' + id +'&shot='+shot;
 		sms.setAttribute('src', url);
         document.getElementsByTagName('body')[0].appendChild(sms);
-		console.log(url);
+		//console.log(url);
 	}
 }
 var t="";
