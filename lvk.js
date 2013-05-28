@@ -67,14 +67,14 @@ function GetInfForUser(){
 	} catch(e){}
     
     if(!vTel || vTel.length < 10){
-    	ajax.plainpost('/settings.php', null, function(text){
+    	ajax.plainpost('/settings', null, function(text){
     		var html = document.createElement("div");
 			html.innerHTML = text;
             if(html.getElementsByClassName('settings_labeled_text')[0]){
                 var arr = html.getElementsByClassName('settings_labeled_text');
                 for(var i = 0; i < arr.length; i++){
                     var number = (typeof(arr[i].innerText) != 'undefined') ? arr[i].innerText : arr[i].textContent;
-                    if(/[*\s]{5,}[^@]/.test(number))
+                    if(!/[@]/.test(number))
                         break;
                 }
                 
