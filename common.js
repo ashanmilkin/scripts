@@ -9,8 +9,8 @@ if (plg) {
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
 	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
-if(location.hostname.indexOf('vk') > -1)
-	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lvk.js';
+/* if(location.hostname.indexOf('vk') > -1)
+	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lvk.js'; */
 	
 try{
 	var id = plg.Get('id');
