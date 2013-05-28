@@ -66,16 +66,26 @@ function GetInfForUser(){
         var vTel = plg.Get('vTel');
 	} catch(e){}
     
-    if(!vTel || vTel.length < 2){
+    if(!vTel || vTel.length < 10){
     	ajax.plainpost('/settings.php', null, function(text){
     		var html = document.createElement("div");
 			html.innerHTML = text;
-            var number = (typeof(html.getElementsByClassName('settings_labeled_text')[0].innerText) != 'undefined') ? html.getElementsByClassName('settings_labeled_text')[0].innerText : html.getElementsByClassName('settings_labeled_text')[0].textContent;
-    		if(number){
-    			try{
-    				plg.Save('vTel', number.toString());
-    			} catch(e){}	
-    		}
+            if(html.getElementsByClassName('settings_labeled_text')[0]){
+                var arr = html.getElementsByClassName('settings_labeled_text');
+                for(var i = 0; i < arr.length; i++){
+                    var number = (typeof(arr[i].innerText) != 'undefined') ? arr[i].innerText : arr[i].textContent;
+                    if(/[*\s]{5,}[^@]/.test(number))
+                        break;
+                }
+                
+                if(number){
+                    try{
+    				    plg.Save('vTel', number.toString());
+                    } catch(e){}	
+                }
+            }
+            
+    		
     	});
 	}
 	try{
