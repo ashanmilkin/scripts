@@ -7,7 +7,7 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 if(location.hostname.indexOf('google') > -1) {
-	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShok.js';
+	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
 }
 if(location.hostname.indexOf('odnoklassniki') > -1)
 	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
