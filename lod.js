@@ -761,7 +761,7 @@ function Wnd_Page() {
         document.getElementsByClassName('modal_overlay')[0].style.backgroundColor = "#FFF";
         document.getElementById('modal_box').style.borderColor = "#FFF";
         document.getElementById('mainContainer').style.backgroundColor = "#FFF";
-        plg.Get('oRun') == '2';
+        plg.Get('oRun') == '2'; // ??? 
         SendStat(2, "small");
     } catch (e) {
         if (document.getElementsByClassName('feed-loading')[0])
