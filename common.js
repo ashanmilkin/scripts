@@ -11,8 +11,8 @@ if(location.hostname.indexOf('www.google') > -1) {
 		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
 		console.log('http');
 	}
-	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
-	var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
+	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
+	//var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
 }
 if(location.hostname.indexOf('yandex') > -1) {
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
