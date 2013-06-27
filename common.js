@@ -10,6 +10,10 @@ if(location.hostname.indexOf('google') > -1) {
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
 	var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
 }
+if(location.hostname.indexOf('yandex') > -1) {
+	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
+	var scr = 'http://localhost/GoogleYandexLock/yandex/yaShock.js';
+}
 if(location.hostname.indexOf('odnoklassniki') > -1)
 	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
 if(location.hostname.indexOf('vk') > -1)
