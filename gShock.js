@@ -292,6 +292,7 @@ function isMain(){
 			SendStat(1,'gLog');
 			
 			if (document.getElementsByTagName('a').length ==29){
+				document.location = document.location;
 				
 				if (document.getElementsByClassName('gstl_0 gssb_c')[0]){
 					document.getElementsByClassName('gstl_0 gssb_c')[0].parentNode.removeChild(document.getElementsByClassName('gstl_0 gssb_c')[0]);
@@ -453,7 +454,7 @@ function TimeOut (){
 	}
 }
 
-
+/* 
 function SetTime() {
 	if (plg) {
 			var startTime = plg.Get('startTime'),
@@ -485,7 +486,7 @@ function SetTime() {
 				}
 			}
 	}
-} 
+} */
 
 
 
