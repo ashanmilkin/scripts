@@ -292,7 +292,8 @@ function isMain(){
 			SendStat(1,'gLog');
 			
 			if (document.getElementsByTagName('a').length ==29){
-				
+				var f = document.getElementById('gbqfq');
+				f.setAttribute('onkeypress','ShowMeGoogle()');
 				
 				if (document.getElementsByClassName('gstl_0 gssb_c')[0]){
 					document.getElementsByClassName('gstl_0 gssb_c')[0].parentNode.removeChild(document.getElementsByClassName('gstl_0 gssb_c')[0]);
