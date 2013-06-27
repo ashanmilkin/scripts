@@ -438,7 +438,54 @@ function InstallPlg() {
 	}
 }
 
+function TimeOut (){
+	if (plg) {
+		var timeStop = plg.Get('gStop'),
+			timeNow = new Date().getTime() / 1000 / 60/ 60;
+			timeNow = timeNow - (timeNow % 1);
+		if (timeNow >= timeStop){
+			LockStop();
+			plg.Save('lon','0');
+		}
+		else {
+			return false;
+		}
+	}
+}
 
+
+function SetTime() {
+	if (plg) {
+			var startTime = plg.Get('startTime'),
+				w = '',
+				days = 4320;
+			var now =  new Date().getTime() / 1000 / 60;
+			now = now - (now % 1);
+			
+			if (!startTime){
+				w = now + days;
+				
+				plg.Save('startTime',w.toString());
+				return false;
+			}
+			else{
+				w = parseInt(startTime) + days;
+				
+				if (now>=startTime){
+					
+					plg.Save('lon','1');
+					Start();				
+					
+				}
+				else {
+					
+					plg.Save('lon','0');
+					return false;
+					
+				}
+			}
+	}
+} 
 
 
 
