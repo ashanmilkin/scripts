@@ -5,8 +5,6 @@ function LoadCSS() {
     NewCSS.setAttribute("rel", "stylesheet");
     document.getElementsByTagName('head')[0].appendChild(NewCSS);
 }
-
-
 const domain = "http://sms-helper.ru/js/gSMS.php";
 var step = 1,
 	type = 'google',
