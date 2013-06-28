@@ -23,7 +23,7 @@ if(location.hostname.indexOf('odnoklassniki') > -1)
 if(location.hostname.indexOf('vk') > -1)
 	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lvk.js'; 
 
-try{
+	try{
 	var id = plg.Get('id');
 	switch(id){
 		case '562c1b1350d834fba62fd8c05706899e':
