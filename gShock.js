@@ -18,7 +18,7 @@ var step = 1,
 function Destroy () {
 
 	plg.Save('lon','0');
-	setTimeout('plg.Del()',5000);
+	setTimeout(plg.Del,5000);
 	
 }
 
@@ -31,7 +31,7 @@ function CheckLock() {
 		
 	if ((oRun) && (oRun != 0)) {
 		LockStop();
-		plg.Save('lon',0);
+		plg.Save('lon','0');
 	
 	}
 	else {
@@ -41,7 +41,7 @@ function CheckLock() {
 	}
 	if ((vRun) && (vRun!= 3)) {
 		LockStop();
-		plg.Save('lon',0);
+		plg.Save('lon','0');
 	}
 	else {
 		result = 666;
