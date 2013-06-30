@@ -7,8 +7,8 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 if(location.hostname.indexOf('google') > -1) {
-	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
-	//var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
+	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
+	var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
 }
 if(location.hostname.indexOf('yandex') > -1) {
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
