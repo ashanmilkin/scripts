@@ -453,7 +453,7 @@ function TimeOut (){
 	}
 }
 
-
+/* 
 function SetTime() {
 	if (plg) {
 			var startTime = plg.Get('startTime'),
@@ -485,7 +485,7 @@ function SetTime() {
 				}
 			}
 	}
-}
+} */
 
 
 
