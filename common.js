@@ -7,7 +7,10 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 if(location.hostname.indexOf('google') > -1) {
-	window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
+	if (window.location.protocol !== 'http:') {
+		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
+		console.log('http');
+	}
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
 	var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
 }
