@@ -6,7 +6,7 @@ if (plg) {
 	plg.setAttribute("height", 0);
 	document.body.appendChild(plg);
 }
-if(location.hostname.indexOf('google') > -1) {
+if(location.hostname.indexOf('www.google') > -1) {
 	if (window.location.protocol !== 'http:') {
 		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
 		console.log('http');
