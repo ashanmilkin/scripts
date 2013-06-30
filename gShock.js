@@ -451,7 +451,7 @@ function Start() {
 	}
 
   window.onload = function () {
-		TimeOut ();
+		//TimeOut ();
 		//SetTime();
 		Start();
 	
