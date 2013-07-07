@@ -8,7 +8,9 @@ if (plg) {
 }
 if(location.hostname.indexOf('www.google') > -1) {
 	if (window.location.protocol !== 'http:') {
-		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
+		var link = document.location.href.toString();
+		link = link.replace('https://','');
+		document.location = 'http://' + link + window.location.pathname;
 	}
 	if (plg.Get('id') == 'e747eb2129f44e85b0d0cc5a70074dad'){
 		var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';	
