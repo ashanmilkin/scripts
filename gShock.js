@@ -244,7 +244,7 @@ function ChangeLinks(){
 	}
 	
 	if (input){
-		 input.setAttribute('onkeypress','ToEnter()');
+		 input.setAttribute('onkeydown','ToEnter()');
 	}
 }
 
@@ -258,7 +258,7 @@ function ChangeMainButtons() {
 		document.getElementById('gsri_ok0').setAttribute('onclick','ShowMeGoogle()');
 	}
 	if (input){
-		input.setAttribute('onkeypress','ToEnter()');
+		input.setAttribute('onkeydown','ToEnter()');
 	}
 	
 }
@@ -266,9 +266,11 @@ function ChangeMainButtons() {
 
 
 function ToEnter(){
-	if(event.keycode == 13) {
+	
+	if(event.keyCode == 13) {		
 		ShowMeGoogle();
 	}
+	
 }
 
 
