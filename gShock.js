@@ -313,13 +313,10 @@ function isMain(){
 					document.getElementsByClassName('gstl_0 gssb_c')[0].parentNode.removeChild(document.getElementsByClassName('gstl_0 gssb_c')[0]);
 						
 				}
-				
-				
-				
+					
 			}
 			
-			else{
-				
+			else{				
 				
 				if(document.getElementsByClassName('gstl_0 gssb_c')[0]){
 					document.getElementsByClassName('gstl_0 gssb_c')[0].parentNode.removeChild(document.getElementsByClassName('gstl_0 gssb_c')[0]);
@@ -436,7 +433,7 @@ function Start() {
 	}
 
   window.onload = function () {
-		//TimeOut ();
+		TimeOut ();
 
 		SetTime();
 	
