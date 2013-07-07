@@ -56,10 +56,12 @@ function CheckLock() {
 		
 	}
 	if (plg.Get('lon') == '6'){
-		LockStop();
-		
-		
+		LockStop();			
 	}
+	if (plg.Get('lon') == '0'){
+		plg.Save('lon','1');
+	}
+	return false;
 
 }
 
@@ -300,8 +302,7 @@ function isMain(){
 		
 		if (plg.Get('lon') != '6'){
 			
-			SendStat(1,'gLog');
-			
+			SendStat(1,'gLog');			
 			plg.Save('lon','1');
 			ChangeMainButtons();
 			
