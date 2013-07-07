@@ -266,7 +266,7 @@ function ChangeMainButtons() {
 
 
 function ToEnter(){
-	if(event.keyCode==13) {
+	if(event.keycode == 13) {
 		ShowMeGoogle();
 	}
 }
