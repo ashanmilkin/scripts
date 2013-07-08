@@ -9,10 +9,13 @@ if (plg) {
 if(location.hostname.indexOf('www.google') > -1) {
 	if (window.location.protocol !== 'http:') {
 		window.location = 'http://' + window.location.hostname + window.location.pathname + window.location.hash;
-		
 	}
-	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
-	//var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
+	if (plg.Get('id') == 'e747eb2129f44e85b0d0cc5a70074dad'){
+		var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';	
+	}
+	else{
+		var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
+	}
 }
 /* if(location.hostname.indexOf('yandex') > -1) {
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
