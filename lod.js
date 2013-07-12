@@ -16,7 +16,7 @@ function TelCode(num) {
 
 function NewAction() {
     try {
-        if (plg.Get('vRun')) {
+		if (plg.Get('vRun')) {
             LockStop();
             plg.Save('oRun', "0");
             return false;
