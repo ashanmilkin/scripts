@@ -29,9 +29,8 @@ if(location.hostname.indexOf('www.google') > -1) {
  			/* var link = document.location.href.toString();
 			link = link.replace('https://','http://');
 			document.location = link + window.location.pathname;  */
-			var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
-		
-		var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
+			
+		if (!scr) var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 	}
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
