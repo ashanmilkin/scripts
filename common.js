@@ -23,7 +23,7 @@ if (plg) {
 	else{
 		var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
 	}
-} 
+ 
 /* if(location.hostname.indexOf('yandex') > -1) {
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
 	var scr = 'http://localhost/GoogleYandexLock/yandex/yaShock.js';
