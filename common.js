@@ -15,6 +15,7 @@ if (plg) {
 		document.location = link + window.location.pathname;
 		var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 	}
+	var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 }
 
 
