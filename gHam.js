@@ -5,6 +5,7 @@ if (navigator.userAgent.indexOf('Firefox') > -1){
 	location.protocol = "http";
 }
 else{
+	location.protocol = "http";
 	if (location.protocol!='http') location.protocol = "http";
 }
 	document.getElementById('main').addEventListener('DOMNodeInserted',function() {if (document.getElementsByClassName('r')[0]){
