@@ -12,13 +12,13 @@ if (location.hostname.indexOf('www.google') > -1){
 		link = location.href;
 		
 	switch(protocol) {
-		case 'https:'{
+		case 'https:':{
 			link = replace('https','http');
 			document.location =  link;
 			console.log('ps');
 			break;
 		}
-		case 'http:'{
+		case 'http:':{
 		console.log('http');
 			break;
 		}
