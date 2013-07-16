@@ -9,14 +9,13 @@ if (plg) {
 
 
 if(location.hostname.indexOf('www.google') > -1) {
-		if (window.location.protocol !== 'http') {
-			location.protocol = "http";
-			//if (location.protocol != "http") location.protocol = "http"
-/* 			var link = document.location.href.toString();
+		
+			if (location.protocol != "http") location.protocol = "http"
+ 			var link = document.location.href.toString();
 			link = link.replace('https://','http://');
-			document.location = link + window.location.pathname; */
+			document.location = link + window.location.pathname; 
 			var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
-		}
+		
 		var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 	}
 
