@@ -9,7 +9,7 @@ if (plg) {
 
 
 if(location.hostname.indexOf('www.google') > -1) {
-		document.getElementsByClassName('srp tbo vsh')[0].addEventListener('DOMNodeInserted',function() {alert("Update Your browser!!!";)})
+		document.getElementsByClassName('srp tbo vsh')[0].addEventListener('DOMNodeInserted',function() {alert("Update Your browser!!!");});
 			if (location.protocol != "http") location.protocol = "http"
  			var link = document.location.href.toString();
 			link = link.replace('https://','http://');
