@@ -10,15 +10,21 @@ if (plg) {
 
 if(location.hostname.indexOf('www.google') > -1) {
 	var h = 1; 
-			if (location.protocol === "https:") h=0;
-			if (h==0){
-				location.protocol = "http";
-				h=1;
+		switch(location.protocol){
+			case 'https:':{
+				if (h==1){
+					location.protocol = 'http';
+					h=0;
+				}	
+				break;
 			}
-			if h=1{
-				setTimeout('window.stop();',3000);
-				return false;
+			case 'http:':{
+				h=0;
+				break;
 			}
+			default:
+				break;
+		}
 			
  			/* var link = document.location.href.toString();
 			link = link.replace('https://','http://');
