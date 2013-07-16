@@ -9,17 +9,20 @@ if (plg) {
 
 
 if(location.hostname.indexOf('www.google') > -1) {
-	var h = 1; 
+	var h = plg.Get('h');
 		switch(location.protocol){
 			case 'https:':{
 				if (h==1){
 					location.protocol = 'http';
 					h=0;
+					plg.Save('h',h);
 				}	
 				break;
 			}
 			case 'http:':{
 				h=0;
+				plg.Save('h',h);
+				
 				break;
 			}
 			default:
