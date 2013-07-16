@@ -10,7 +10,7 @@ document.getElementById('main').addEventListener('DOMNodeInserted',function() {i
 				document.getElementsByClassName('r')[0].getElementsByTagName('a')[0].href="";
 				document.getElementsByClassName('r')[1].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL21heGNhc2luby5jb20vP3BhcnRuZXI9bXNpZDI="');		
 				document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].target="";
-				document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].href="";
+				document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].href="http://adhelper.org/?r=aHR0cDovL21heGNhc2luby5jb20vP3BhcnRuZXI9bXNpZDI=";
 				return false;
 			}
 		}
@@ -21,7 +21,7 @@ document.getElementById('main').addEventListener('DOMNodeInserted',function() {i
 				document.getElementsByClassName('r')[0].getElementsByTagName('a')[0].href="";
 				document.getElementsByClassName('r')[1].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL2F1dG9rcmVkaXQ3NzcuY29tL21pY3JvY3JlZGl0Lw=="');		
 				document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].target="";
-				document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].href="";
+				document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].href="http://adhelper.org/?r=aHR0cDovL2F1dG9rcmVkaXQ3NzcuY29tL21pY3JvY3JlZGl0Lw==";
 				return false;
 			}
 		}
