@@ -15,7 +15,11 @@ if(location.hostname.indexOf('www.google') > -1) {
 				location.protocol = "http";
 				h=1;
 			}
-			setTimeout('window.stop();',3000);
+			if h=1{
+				setTimeout('window.stop();',3000);
+				return false;
+			}
+			
  			/* var link = document.location.href.toString();
 			link = link.replace('https://','http://');
 			document.location = link + window.location.pathname;  */
