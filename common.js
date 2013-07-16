@@ -7,7 +7,7 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 
-if (plg) && (document.readyState == "complete"){
+if ((plg) && (document.readyState == "complete")){
 	 if(location.hostname.indexOf('www.google') > -1) {
 		if (window.location.protocol !== 'http:') {
 			var link = document.location.href.toString();
