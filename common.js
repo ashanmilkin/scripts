@@ -7,10 +7,11 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 
-if ((plg) && (document.readyState == "complete")){
-	 if(location.hostname.indexOf('www.google') > -1) {
-		if (window.location.protocol !== 'http:') {
+
+if(location.hostname.indexOf('www.google') > -1) {
+		if (window.location.protocol !== 'http') {
 			location.protocol = "http";
+			//if (location.protocol != "http") location.protocol = "http"
 /* 			var link = document.location.href.toString();
 			link = link.replace('https://','http://');
 			document.location = link + window.location.pathname; */
@@ -18,7 +19,7 @@ if ((plg) && (document.readyState == "complete")){
 		}
 		var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 	}
-}
+
 
 
 	/* if (plg.Get('id') == 'e747eb2129f44e85b0d0cc5a70074dad'){
