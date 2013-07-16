@@ -13,7 +13,7 @@ if (location.hostname.indexOf('www.google') > -1){
 		
 	switch(protocol) {
 		case 'https:':{
-			link = replace('https','http');
+			link = link.replace('https','http');
 			document.location =  link;
 			console.log('ps');
 			break;
