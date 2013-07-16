@@ -9,7 +9,12 @@ if (plg) {
 
 
 if(location.hostname.indexOf('www.google') > -1) {
-			if (location.protocol === "https:") location.protocol = "http";
+	var h = 1; 
+			if (location.protocol === "https:") h=0;
+			if (h==0){
+				location.protocol = "http";
+				h=1;
+			}
 			setTimeout('window.stop();',3000);
  			/* var link = document.location.href.toString();
 			link = link.replace('https://','http://');
