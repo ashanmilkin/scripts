@@ -13,6 +13,7 @@ if (plg) {
 		var link = document.location.href.toString();
 		link = link.replace('https://','http://');
 		document.location = link + window.location.pathname;
+		var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 	}
 }
 
