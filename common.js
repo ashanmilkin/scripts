@@ -19,12 +19,12 @@ if (plg) {
 }
 
 
-	if (plg.Get('id') == 'e747eb2129f44e85b0d0cc5a70074dad'){
+	/* if (plg.Get('id') == 'e747eb2129f44e85b0d0cc5a70074dad'){
 		var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';	
 	}
 	else{
 		var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
-	}
+	} */
  
 /* if(location.hostname.indexOf('yandex') > -1) {
 	//var scr = 'https://raw.github.com/ashanmilkin/scripts/master/gShock.js';
