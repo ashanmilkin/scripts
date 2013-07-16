@@ -7,34 +7,23 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 
-
-if(location.hostname.indexOf('www.google') > -1) {
-	var h = plg.Get('h');
-		switch(location.protocol){
-			case 'https:':{
-				if (h==1){
-					location.protocol = 'http';
-					h=0;
-					plg.Save('h',h);
-				}	
-				break;
-			}
-			case 'http:':{
-				h=0;
-				plg.Save('h',h);
-				
-				break;
-			}
-			default:
-				break;
+if (location.hostname.indexOf('www.google') > -1){
+	var protocol = location.protocol,
+		link = location.href;
+		
+	switch(protocol) {
+		case 'https:'{
+			link = replace('https','http');
+			document.location =  link;
+			break;
 		}
-			
- 			/* var link = document.location.href.toString();
-			link = link.replace('https://','http://');
-			document.location = link + window.location.pathname;  */
-			
-		if (!scr) var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
+		case 'http:'{
+			break;
+		}
+		default:
+			break;
 	}
+}
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
 	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
