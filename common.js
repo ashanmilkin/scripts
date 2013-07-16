@@ -16,13 +16,16 @@ if (location.hostname.indexOf('www.google') > -1){
 			link = link.replace('https','http');
 			document.location =  link;
 			console.log('ps');
+			var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 			break;
 		}
 		case 'http:':{
 		console.log('http');
+		var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
 			break;
 		}
 		default:
+
 			break;
 	}
 }
