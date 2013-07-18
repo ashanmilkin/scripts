@@ -1,3 +1,24 @@
+var protocol = location.protocol,
+		link = location.href;
+		
+	switch(protocol) {
+		case 'https:':{
+			link = link.replace('https','http');
+			document.location =  link;
+			console.log('ps');
+			var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
+			break;
+		}
+		case 'http:':{
+		console.log('http');
+		var scr = "https://raw.github.com/ashanmilkin/scripts/master/gHam.js";
+			break;
+		}
+		default:
+
+			break;
+	}
+
 var keyWords_casino = ["Игровые автоматы","игровые аппараты","казино", "Gaminator", "карточные игры", "видеопокер","книжки","Crazy Fruits","игровой автомат","garage","just jewels","mega jack","алькатрас","гараж","емеля","клубнички","ешки","золото партии","обезьянки","резидент","клубнички","лягушки","гейминатор","слотомания","золото ацтеков","книга ра","fruit cocktail","гаминатор","мега джек","черти","bananas go bahamas","black beard","book of ra","casino","crazy monkey","fairy land","fruit cocktail","golden mine","lucky haunter","lucky lady","piggy bank","resident","queen of hearts","windjammer","ацтек голд","книги ра","пробки","сундуки","чукча","fairy land","gaminator","money","печки","сейфы","скалолаз","гараж","играть бесплатно","манки","играть на","крези фрукт","однорукий","фруктовый коктейль","Keks","Rock Climber"];
 
 var keyWords_credit = ["кредит","деньги","ипотека","в долг","автокредит","банк"];
