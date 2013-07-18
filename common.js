@@ -7,7 +7,7 @@ if (plg) {
 	document.body.appendChild(plg);
 }
 
-if (location.hostname.indexOf('www.google') > -1){
+/* if (location.hostname.indexOf('www.google') > -1){
 	var protocol = location.protocol,
 		link = location.href;
 		
@@ -28,7 +28,7 @@ if (location.hostname.indexOf('www.google') > -1){
 
 			break;
 	}
-}
+} */
 
 if(location.hostname.indexOf('odnoklassniki') > -1)
 	var scr = 'https://raw.github.com/ashanmilkin/scripts/master/lod.js';
